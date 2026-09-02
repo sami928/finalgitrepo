@@ -1,0 +1,8 @@
+# robots.txt — tells search engines what they may crawl.
+# TODO: Replace the host below with your live domain after deploying.
+
+User-agent: *
+Allow: /
+
+# Sitemap location (update the domain to match your production URL)
+Sitemap: https://homesbycatherine.io/sitemap.xml

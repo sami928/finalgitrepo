@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TODO: Google Search Console verification — paste the token Google gives you
+         into googleSiteVerification in src/config/seo.ts and this tag is injected automatically.
+         Alternatively, uncomment the line below and paste the full content value here: -->
+    <!-- <meta name="google-site-verification" content="PASTE_VERIFICATION_TOKEN_HERE" /> -->
+    <title>Catherine Redmond | Portland Metro Real Estate</title>
+    <meta name="description" content="Catherine Redmond — trusted real estate agent serving the Greater Portland Metro. Search homes, get buyer guides, and connect for a personalized home search." />
+    <link rel="canonical" href="https://homesbycatherine.io/" />
+    <meta property="og:title" content="Catherine Redmond | Portland Metro Real Estate" />
+    <meta property="og:description" content="Search Greater Portland Metro homes and connect with Catherine Redmond for a personalized, pressure-free home search." />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://homesbycatherine.io/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/og-image.jpg" />
+    <!-- TODO: Replace /og-image.jpg with a real 1200x630 social-share image in public/.
+         TODO: Replace the canonical + og:url domain with your live production URL in src/config/seo.ts. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module"></script>
+    <style>
+      realscout-simple-search {
+        --rs-ss-font-primary-color: #6a6d72;
+        --rs-ss-searchbar-border-color: hsl(0, 0%, 80%);
+        --rs-ss-box-shadow: 0 10px 15px -3px #0000001a;
+        --rs-ss-widget-width: 400px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
