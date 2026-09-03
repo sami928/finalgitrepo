@@ -82,8 +82,14 @@ export function LeadForm({
         setErrorMsg(
           "You've already submitted a request recently. Catherine will be in touch soon — no need to submit again.",
         );
+      } else if (error.code === '42501') {
+        setErrorMsg(
+          'The form could not submit due to a permissions issue. Please email or call Catherine directly.',
+        );
       } else {
-        setErrorMsg('Something went wrong sending your request. Please try again.');
+        setErrorMsg(
+          `Something went wrong sending your request (${error.code || 'unknown'}). Please try again or contact Catherine directly.`,
+        );
       }
       return;
     }
