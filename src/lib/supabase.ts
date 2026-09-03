@@ -1,13 +1,17 @@
 import { createClient, type SupabaseClient } from '@supabase/supabase-js';
 
-const url = import.meta.env.VITE_SUPABASE_URL as string | undefined;
-const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined;
+const SUPABASE_URL =
+  import.meta.env.VITE_SUPABASE_URL ||
+  'https://czsktqnbnuzzwjcxzbux.supabase.co';
 
-export const isSupabaseConfigured = Boolean(url && anonKey);
+const SUPABASE_ANON_KEY =
+  import.meta.env.VITE_SUPABASE_ANON_KEY ||
+  'sb_publishable_GqdTw3JnWmgsDyo96hKg7g_4ZGPbSee';
 
-/** Null when VITE_SUPABASE_URL / VITE_SUPABASE_ANON_KEY are missing — app still renders. */
+export const isSupabaseConfigured = Boolean(SUPABASE_URL && SUPABASE_ANON_KEY);
+
 export const supabase: SupabaseClient | null = isSupabaseConfigured
-  ? createClient(url!, anonKey!, {
+  ? createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
       auth: { persistSession: false },
     })
   : null;
