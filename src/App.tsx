@@ -11,6 +11,7 @@ import { TestimonialsPage } from '@/pages/TestimonialsPage';
 import { ContactPage } from '@/pages/ContactPage';
 import { ResourcesPage } from '@/pages/ResourcesPage';
 import { HomeValuePage } from '@/pages/HomeValuePage';
+import { MlsSearchPage } from '@/pages/MlsSearchPage';
 
 export default function App() {
   const route = useRoute();
@@ -37,6 +38,9 @@ export default function App() {
       break;
     case '/resources':
       page = site.resourcesEnabled ? <ResourcesPage /> : <HomePage />;
+      break;
+    case '/mls-search':
+      page = site.mlsSearchEnabled ? <MlsSearchPage /> : <HomePage />;
       break;
     default:
       page = <HomePage />;

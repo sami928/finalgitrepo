@@ -7,6 +7,7 @@ import { site } from '@/config/site';
 const navItems = [
   { label: 'Home', path: '/' },
   { label: 'Listings', path: '/listings' },
+  { label: 'MLS Search', path: '/mls-search' },
   { label: 'Home Value', path: '/home-value' },
   { label: 'Testimonials', path: '/testimonials' },
   { label: 'Resources', path: '/resources' },
@@ -14,7 +15,8 @@ const navItems = [
 ].filter(
   (item) =>
     (site.testimonialsEnabled || item.path !== '/testimonials') &&
-    (site.resourcesEnabled || item.path !== '/resources')
+    (site.resourcesEnabled || item.path !== '/resources') &&
+    (site.mlsSearchEnabled || item.path !== '/mls-search')
 );
 
 export function Navbar() {

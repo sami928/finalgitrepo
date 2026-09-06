@@ -5,6 +5,10 @@ export const site = {
   // Toggle to show or hide the Resources page and its nav links.
   // Set to true to bring back the resources page and links.
   resourcesEnabled: false,
+  // Toggle to show or hide the MLS Search page and its nav links.
+  // Set to true once you've added your RMLS API key in src/config/mls.ts.
+  // While false, the page exists in the code but is hidden from visitors.
+  mlsSearchEnabled: false,
   agentName: 'Catherine Redmond',
   agentTitle: 'Real Estate Broker',
   area: 'Portland Metro',

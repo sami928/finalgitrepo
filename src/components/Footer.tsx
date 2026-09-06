@@ -6,13 +6,15 @@ import { navigate } from '@/lib/router';
 const footerNav = [
   { label: 'Home', path: '/' },
   { label: 'Listings', path: '/listings' },
+  { label: 'MLS Search', path: '/mls-search' },
   { label: 'Testimonials', path: '/testimonials' },
   { label: 'Resources', path: '/resources' },
   { label: 'Contact', path: '/contact' },
 ].filter(
   (item) =>
     (site.testimonialsEnabled || item.path !== '/testimonials') &&
-    (site.resourcesEnabled || item.path !== '/resources')
+    (site.resourcesEnabled || item.path !== '/resources') &&
+    (site.mlsSearchEnabled || item.path !== '/mls-search')
 );
 
 export function Footer() {

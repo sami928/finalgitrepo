@@ -112,6 +112,14 @@ export const routeSeo: Record<string, {
       'Find out what your Portland Metro home is worth with an instant online valuation, then get a detailed comparative market analysis from Catherine Redmond — no obligation.',
     keywords: 'Portland home value, home valuation Portland, what is my home worth Portland, CMA Portland',
   },
+  '/mls-search': {
+    path: '/mls-search',
+    title: 'Portland MLS Search | Active & Sold Listings | Catherine Redmond',
+    description:
+      'Search live Portland Metro MLS listings. Filter active and sold homes by price, beds, baths, location, and property type. Interactive map view available.',
+    keywords: 'Portland MLS search, RMLS search, active listings Portland, sold homes Portland, Portland real estate map search',
+    noindex: true,
+  },
   '/contact': {
     path: '/contact',
     title: 'Contact Catherine Redmond | Portland Metro Real Estate Broker',
