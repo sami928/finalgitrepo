@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react';
 import { Check, Loader2, AlertCircle } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from '@/lib/supabase';
 import { Button } from './Button';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
@@ -92,6 +93,32 @@ export function LeadForm({
         );
       }
       return;
+    }
+
+    // Fire-and-forget email notification — don't block the success state
+    // if the email service is down; the lead is already saved in the DB.
+    const leadData = {
+      name: form.name.trim(),
+      email: form.email.trim(),
+      phone: form.phone.trim() || null,
+      interest: form.interest || null,
+      price_range: form.price_range || null,
+      message: form.message.trim() || null,
+      source,
+    };
+
+    try {
+      await fetch(`${SUPABASE_URL}/functions/v1/send-lead-email`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+        },
+        body: JSON.stringify(leadData),
+      });
+    } catch {
+      // Email failed silently — the lead is saved in the database,
+      // Catherine can still see it there. Don't show an error to the user.
     }
 
     setStatus('success');

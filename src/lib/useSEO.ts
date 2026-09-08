@@ -8,16 +8,6 @@ import { seo, routeSeo, type RouteSeo } from '@/config/seo';
  *
  * No external library needed — it writes <meta> and <link> tags directly.
  */
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EDMG6FDXHV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-EDMG6FDXHV');
-</script>
-
 export function useSEO(route: string) {
   useEffect(() => {
     const meta = routeSeo[route] ?? routeSeo['/'];

@@ -31,8 +31,8 @@ export const seo = {
   /** TODO: Replace with your production domain — used for canonical URLs, sitemap, OG, JSON-LD. */
   siteUrl: 'https://homesbycatherine.io',
 
-  /** TODO: GA4 Measurement ID, e.g. 'G-ABCDEF1234'. Leave '' to disable analytics. */
-  googleAnalyticsId: '',
+  /** GA4 Measurement ID, e.g. 'G-ABCDEF1234'. Leave '' to disable analytics. */
+  googleAnalyticsId: 'G-EDMG6FDXHV',
 
   /** TODO: Google Search Console verification token (the content attr value). Leave '' to skip. */
   googleSiteVerification: '',
