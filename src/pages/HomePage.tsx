@@ -24,7 +24,6 @@ const familyImg = images.homeFamily;
 const stats = [
   { value: '120+', label: 'Homes sold' },
   { value: '12 yrs', label: 'In Portland metro' },
-  { value: '$480M', label: 'In closed volume' },
   { value: '4.9★', label: 'Average rating' },
 ];
 
