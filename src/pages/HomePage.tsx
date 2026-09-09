@@ -22,7 +22,7 @@ const agentPhoto = images.agentPhoto;
 const familyImg = images.homeFamily;
 
 const stats = [
-  { value: '420+', label: 'Homes sold' },
+  { value: '120+', label: 'Homes sold' },
   { value: '12 yrs', label: 'In Portland metro' },
   { value: '$480M', label: 'In closed volume' },
   { value: '4.9★', label: 'Average rating' },
@@ -158,7 +158,7 @@ export function HomePage() {
                   ))}
                 </div>
                 <p className="mt-1.5 text-sm font-semibold text-ink-900">
-                  Trusted by 400+ families
+                  Trusted by 200+ families
                 </p>
                 <p className="text-xs text-ink-500">across the Portland metro</p>
               </div>
