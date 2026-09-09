@@ -60,6 +60,7 @@ export function TestimonialsPage() {
                   <img
                     src={t.avatar}
                     alt={t.name}
+                    fetchPriority="high"
                     className="h-11 w-11 rounded-full object-cover"
                   />
                   <div>

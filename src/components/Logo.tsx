@@ -16,6 +16,7 @@ export function Logo({ compact = false }: { compact?: boolean }) {
           <img
             src={evLogo}
             alt="Engel & Völkers"
+            fetchPriority="high"
             className="mt-0.5 h-[11px] w-auto object-contain"
           />
         </div>

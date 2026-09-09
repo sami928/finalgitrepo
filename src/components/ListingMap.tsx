@@ -99,7 +99,7 @@ export function ListingMap({
           const marker: LeafletMarker = L.marker([listing.latitude!, listing.longitude!])
             .bindPopup(`
               <div style="min-width: 200px; font-family: Inter, sans-serif;">
-                <img src="${listing.photoUrl ?? ''}" style="width:100%;height:120px;object-fit:cover;border-radius:8px;margin-bottom:8px;" onerror="this.style.display='none'" />
+                <img src="${listing.photoUrl ?? ''}" fetchpriority="high" style="width:100%;height:120px;object-fit:cover;border-radius:8px;margin-bottom:8px;" onerror="this.style.display='none'" />
                 <div style="font-weight:700;font-size:14px;color:#18181b;">${formatPrice(listing.price)}</div>
                 <div style="font-size:12px;color:#71717a;margin-top:2px;">${listing.address}</div>
                 <div style="font-size:12px;color:#52525b;margin-top:4px;">

@@ -59,6 +59,7 @@ export function HomePage() {
           <img
             src={heroImg}
             alt="Portland skyline over the Willamette River"
+            fetchPriority="high"
             className="h-full w-full object-cover opacity-45"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-ink-950/60 via-ink-950/70 to-ink-950" />
@@ -147,6 +148,7 @@ export function HomePage() {
                 <img
                   src={agentPhoto}
                   alt={site.agentName}
+                  fetchPriority="high"
                   className="aspect-[4/5] w-full object-cover"
                 />
               </div>
@@ -282,6 +284,7 @@ interaction.
                   <img
                     src={t.avatar}
                     alt={t.name}
+                    fetchPriority="high"
                     className="h-10 w-10 rounded-full object-cover"
                   />
                   <div>
@@ -309,6 +312,7 @@ interaction.
                 <img
                   src={familyImg}
                   alt="A family receiving keys to their new home"
+                  fetchPriority="high"
                   className="aspect-[4/3] w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink-950/60 to-transparent" />

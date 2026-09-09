@@ -89,6 +89,7 @@ export function ListingDetailModal({
             src={currentPhoto}
             alt={listing.address}
             className="h-full w-full object-cover"
+            fetchPriority="high"
             onError={(e) => {
               (e.target as HTMLImageElement).src = 'https://images.pexels.com/photos/5502227/pexels-photo-5502227.jpeg?auto=compress&cs=tinysrgb&h=600&w=900';
             }}

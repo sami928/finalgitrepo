@@ -427,7 +427,7 @@ export function MlsSearchPage() {
                         src={listing.photoUrl ?? 'https://images.pexels.com/photos/5502227/pexels-photo-5502227.jpeg?auto=compress&cs=tinysrgb&h=200&w=200'}
                         alt=""
                         className="h-16 w-16 shrink-0 rounded-lg object-cover"
-                        loading="lazy"
+                        fetchPriority="high"
                         onError={(e) => {
                           (e.target as HTMLImageElement).src = 'https://images.pexels.com/photos/5502227/pexels-photo-5502227.jpeg?auto=compress&cs=tinysrgb&h=200&w=200';
                         }}
