@@ -82,7 +82,7 @@ export const routeSeo: Record<string, {
     title: 'Catherine Redmond | Portland Metro Real Estate Broker',
     description:
       'Search Greater Portland Metro homes with Catherine Redmond, a trusted local broker. Live MLS search, buyer guides, and a personalized, pressure-free home search.',
-    keywords: 'Portland real estate broker, homes for sale Portland Metro, buyer agent Portland',
+    keywords: 'Portland real estate broker, homes for sale Portland Metro, buyer agent Portland,sell my house portland, buy home in portland,',
   },
   '/listings': {
     path: '/listings',
@@ -95,7 +95,7 @@ export const routeSeo: Record<string, {
     path: '/testimonials',
     title: 'Client Reviews & Testimonials | Catherine Redmond, Portland Realtor',
     description:
-      'Read what buyers, sellers, and first-time homeowners say about working with Catherine Redmond across the Greater Portland Metro. 4.9 average across 180+ reviews.',
+      'Read what buyers, sellers, and first-time homeowners say about working with Catherine Redmond across the Greater Portland Metro. ',
     keywords: 'Portland realtor reviews, Catherine Redmond testimonials, real estate agent reviews Portland',
   },
   '/resources': {
@@ -103,7 +103,7 @@ export const routeSeo: Record<string, {
     title: 'Buyer Guides, Downloads & Articles | Portland Real Estate Resources',
     description:
       'Free Portland home-buying and selling guides, downloadable PDFs, and local market articles. Practical resources to help you move with confidence — no email wall.',
-    keywords: 'Portland buyer guide, home selling guide, Portland real estate resources',
+    keywords: 'Portland buyer guide, home selling guide, Portland real estate resources, Portland Relocation Guide',
   },
   '/home-value': {
     path: '/home-value',
