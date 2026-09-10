@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useRealScout } from '@/lib/useRealScout';
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
@@ -26,17 +26,10 @@ declare global {
  * and sold listings pulled live from the MLS via RealScout.
  */
 export function RealScoutListings() {
-  useEffect(() => {
-    if (document.getElementById('realscout-web-components')) return;
-    const script = document.createElement('script');
-    script.id = 'realscout-web-components';
-    script.src = 'https://em.realscout.com/widgets/realscout-web-components.umd.js';
-    script.type = 'module';
-    document.body.appendChild(script);
-  }, []);
+  const { ref } = useRealScout<HTMLDivElement>();
 
   return (
-    <div className="rounded-2xl border border-ink-200 bg-white shadow-sm">
+    <div ref={ref} className="rounded-2xl border border-ink-200 bg-white shadow-sm">
       <style>{`
         realscout-your-listings {
           --rs-listing-divider-color: #e4e4e7;

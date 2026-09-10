@@ -1,37 +1,44 @@
+import { useEffect } from 'react';
 import { seo } from '@/config/seo';
 
 /**
- * Google Analytics 4 (GA4) loader.
+ * Google Analytics 4 (GA4) loader — deferred.
  *
- * It activates only if `googleAnalyticsId` is set in src/config/seo.ts
- * (format G-XXXXXXXXXX). Until then it renders nothing.
+ * The gtag script is injected after the page becomes interactive
+ * (via requestIdleCallback) so it never blocks initial render or
+ * enters the critical request chain.
  *
- * To turn it on:
- *   1. Create a GA4 property at https://analytics.google.com.
- *   2. Copy the Measurement ID (G-XXXXXXXXXX).
- *   3. Paste it into `googleAnalyticsId` in src/config/seo.ts.
- * That's it — the script tag and pageview are injected here.
+ * Activates only if `googleAnalyticsId` is set in src/config/seo.ts.
  */
 export function Analytics() {
   const id = seo.googleAnalyticsId;
-  if (!id) return null;
 
-  return (
-    <>
-      <script
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=${id}`}
-      />
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${id}', { send_page_view: true });
-          `,
-        }}
-      />
-    </>
-  );
+  useEffect(() => {
+    if (!id) return;
+
+    const loadGtag = () => {
+      if (document.getElementById('gtag-script')) return;
+
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function gtag() {
+        window.dataLayer.push(arguments);
+      };
+      window.gtag('js', new Date());
+      window.gtag('config', id, { send_page_view: true });
+
+      const script = document.createElement('script');
+      script.id = 'gtag-script';
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
+      document.head.appendChild(script);
+    };
+
+    if ('requestIdleCallback' in window) {
+      (window as Window).requestIdleCallback(loadGtag, { timeout: 3000 });
+    } else {
+      setTimeout(loadGtag, 1500);
+    }
+  }, [id]);
+
+  return null;
 }

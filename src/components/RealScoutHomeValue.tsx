@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useRealScout } from '@/lib/useRealScout';
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
@@ -19,17 +19,10 @@ declare global {
  * get an instant estimated home value pulled from RealScout's data.
  */
 export function RealScoutHomeValue() {
-  useEffect(() => {
-    if (document.getElementById('realscout-web-components')) return;
-    const script = document.createElement('script');
-    script.id = 'realscout-web-components';
-    script.src = 'https://em.realscout.com/widgets/realscout-web-components.umd.js';
-    script.type = 'module';
-    document.body.appendChild(script);
-  }, []);
+  const { ref } = useRealScout<HTMLDivElement>();
 
   return (
-    <div className="overflow-hidden rounded-2xl border border-ink-200 bg-white shadow-sm">
+    <div ref={ref} className="overflow-hidden rounded-2xl border border-ink-200 bg-white shadow-sm">
       <style>{`
         realscout-home-value {
           --rs-hvw-background-color: #ffffff;
