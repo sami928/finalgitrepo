@@ -17,7 +17,7 @@ function mapListing(raw: Record<string, unknown>): MlsListing {
     const v = raw[key];
     return v != null ? String(v) : undefined;
   };
-  constgetNum = (key: string): number | undefined => {
+  const getNum = (key: string): number | undefined => {
     const v = raw[key];
     if (v == null) return undefined;
     const n = Number(v);

@@ -13,13 +13,18 @@ import type { MlsListing } from '@/lib/mlsTypes';
  * bundle — it's only fetched when the user switches to map view.
  */
 
-// Inline types for the dynamically loaded Leaflet
+// Inline types for the dynamically loaded Leaflet.
+// Leaflet's API is fluent — setView/bindPopup/addTo each return the instance
+// so calls can be chained. Typing them as void broke every chained call site.
 type LeafletMap = {
-  setView: (latlng: [number, number], zoom: number) => void;
+  setView: (latlng: [number, number], zoom: number) => LeafletMap;
   remove: () => void;
   fitBounds: (bounds: [[number, number], [number, number]], opts?: unknown) => void;
 };
-type LeafletMarker = { bindPopup: (html: string) => void; addTo: (map: LeafletMap) => void };
+type LeafletMarker = {
+  bindPopup: (html: string) => LeafletMarker;
+  addTo: (map: LeafletMap) => LeafletMarker;
+};
 
 const LEAFLET_CSS = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
 const LEAFLET_JS = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';

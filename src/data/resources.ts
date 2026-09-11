@@ -1,14 +1,30 @@
-export type Resource = {
+type ResourceBase = {
   id: string;
   title: string;
-  type: 'PDF Guide' | 'Buyer Guide' | 'Article';
   description: string;
-  format: string;
-  pages?: number;
-  readTime?: string;
   category: 'Buying' | 'Selling' | 'Portland Metro' | 'Financing';
   url: string;
 };
+
+/**
+ * Downloadable guides and articles carry different metadata: a guide has a
+ * file format and page count, an article has a reading time. Modelling that as
+ * a union keeps the two from being mixed up — the UI already branches on
+ * `type`, so this just makes the types agree with the data.
+ */
+export type Resource =
+  | (ResourceBase & {
+      type: 'PDF Guide' | 'Buyer Guide';
+      format: string;
+      pages?: number;
+      readTime?: never;
+    })
+  | (ResourceBase & {
+      type: 'Article';
+      readTime: string;
+      format?: never;
+      pages?: never;
+    });
 
 // Placeholder download links — replace href URLs with your actual PDFs.
 // Articles link to the article detail view (template shows inline).
