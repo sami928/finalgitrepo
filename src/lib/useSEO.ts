@@ -44,9 +44,9 @@ function applyMeta(meta: RouteSeo) {
   // Title
   document.title = meta.title;
 
-  // Description + keywords
+  // Description. No keywords tag: Google has ignored it since 2009, and it
+  // published the target keyword list to anyone viewing source.
   setMeta('name', 'description', meta.description);
-  setMeta('name', 'keywords', meta.keywords ? `${meta.keywords}, ${seo.keywords}` : seo.keywords);
 
   // Robots (noindex for marked pages)
   setMeta('name', 'robots', meta.noindex ? 'noindex, nofollow' : 'index, follow');
@@ -79,12 +79,18 @@ function applyMeta(meta: RouteSeo) {
     image: ogImageUrl,
     telephone: seo.business.telephone,
     email: seo.business.email,
+    parentOrganization: {
+      '@type': 'Organization',
+      name: seo.business.brokerage,
+      url: seo.business.brokerageUrl,
+    },
     address: {
       '@type': 'PostalAddress',
+      streetAddress: seo.business.streetAddress,
       addressLocality: seo.business.addressLocality,
       addressRegion: seo.business.addressRegion,
       postalCode: seo.business.postalCode,
-      streetAddress: seo.business.streetAddress,
+      addressCountry: seo.business.addressCountry,
     },
     areaServed: 'Greater Portland Metro, OR',
     sameAs: seo.business.sameAs,

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type MouseEvent } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 import { Logo } from './Logo';
 import { navigate, useRoute } from '@/lib/router';
@@ -35,7 +35,11 @@ export function Navbar() {
     setOpen(false);
   }, [route]);
 
-  const go = (path: string) => {
+  // Real <a href> links so crawlers follow them and cmd/middle-click still
+  // opens a new tab; the click handler keeps navigation client-side.
+  const go = (e: MouseEvent<HTMLAnchorElement>, path: string) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    e.preventDefault();
     navigate(path);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -49,15 +53,17 @@ export function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 lg:px-8">
-        <button onClick={() => go('/')} className="shrink-0">
+        <a href="/" onClick={(e) => go(e, '/')} className="shrink-0" aria-label="Home">
           <Logo />
-        </button>
+        </a>
 
         <div className="hidden items-center gap-1 md:flex">
           {navItems.map((item) => (
-            <button
+            <a
               key={item.path}
-              onClick={() => go(item.path)}
+              href={item.path}
+              onClick={(e) => go(e, item.path)}
+              aria-current={route === item.path ? 'page' : undefined}
               className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
                 route === item.path
                   ? 'bg-ink-100 text-ink-900'
@@ -65,7 +71,7 @@ export function Navbar() {
               }`}
             >
               {item.label}
-            </button>
+            </a>
           ))}
         </div>
 
@@ -92,17 +98,19 @@ export function Navbar() {
         <div className="border-t border-ink-100 bg-white md:hidden">
           <div className="mx-auto flex max-w-7xl flex-col px-5 py-3">
             {navItems.map((item) => (
-              <button
+              <a
                 key={item.path}
-                onClick={() => go(item.path)}
-                className={`rounded-lg px-3 py-3 text-left text-base font-medium ${
+                href={item.path}
+                onClick={(e) => go(e, item.path)}
+                aria-current={route === item.path ? 'page' : undefined}
+                className={`block rounded-lg px-3 py-3 text-left text-base font-medium ${
                   route === item.path
                     ? 'bg-ink-100 text-ink-900'
                     : 'text-ink-700 hover:bg-ink-50'
                 }`}
               >
                 {item.label}
-              </button>
+              </a>
             ))}
             <a
               href={site.phoneHref}
