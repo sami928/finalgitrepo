@@ -14,7 +14,7 @@ export const site = {
   area: 'Portland Metro',
   brokerage: 'Engel & Volkers',
   phone: '(503) 887-5879',
-  phoneHref: 'tel:+(503) 887-5879',
+  phoneHref: 'tel:+15038875879',
   email: 'catherine@homesbycatherine.io',
   emailHref: 'mailto:catherine@homesbycatherine.io',
   licenseNo: 'OREL #201401234',
