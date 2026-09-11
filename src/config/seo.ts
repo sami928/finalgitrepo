@@ -57,7 +57,7 @@ export const seo = {
     email: 'catherine@homesbycatherine.io',
     // TODO: Add your Google Business Profile review URL to surface star ratings in search.
     sameAs: [
-      'https://instagram.com/homesbykaty',
+      'https://instagram.com/_homesbycatherine_',
       'https://facebook.com',
       'https://linkedin.com',
     ],
