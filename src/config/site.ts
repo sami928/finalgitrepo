@@ -11,21 +11,21 @@ export const site = {
   mlsSearchEnabled: false,
   agentName: 'Catherine Redmond',
   agentTitle: 'Real Estate Broker',
-  area: 'Portland Metro',
+  area: 'Portland,Oregon',
   brokerage: 'Engel & Volkers',
   phone: '(503) 887-5879',
-  phoneHref: 'tel:+15035550142',
+  phoneHref: 'tel:+15038875879',
   email: 'catherine@homesbycatherine.io',
   emailHref: 'mailto:catherine@homesbycatherine.io',
-  licenseNo: 'OREL #201401234',
+  licenseNo: 'OREL #201217068',
   // Replace with your RealScout embed snippet. Paste the <script> block RealScout
   // gives you (or the widget <div>) into the RealScoutWidget component.
   realscoutNote:
     'Paste your RealScout embed code in src/components/RealScoutWidget.tsx to activate live MLS search here.',
   social: {
-    instagram: 'https://instagram.com/_homesbykaty_',
+    instagram: 'https://instagram.com/_homesbycatherine_',
     facebook: 'https://facebook.com',
-    linkedin: 'https://linkedin.com',
+    linkedin: 'https://www.linkedin.com/in/catherine-redmond-40321036',
   },
 };
 
