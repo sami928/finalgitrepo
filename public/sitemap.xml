@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: Replace the domain below with your live production URL.
-     Add/remove <url> entries as your pages change, and update <lastmod>
-     whenever a page's content significantly changes. -->
+<!-- Only routes that are live and indexable belong here.
+     Excluded: /mls-search (noindex), /testimonials and /resources
+     (disabled by feature flags in src/config/site.ts — re-add them here
+     when those flags are turned on). -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://homesbycatherine.io/</loc>
@@ -9,27 +10,17 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://homesbycatherine.io/#/listings</loc>
+    <loc>https://homesbycatherine.io/listings</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://homesbycatherine.io/#/home-value</loc>
+    <loc>https://homesbycatherine.io/home-value</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://homesbycatherine.io/#/testimonials</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://homesbycatherine.io/#/resources</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://homesbycatherine.io/#/contact</loc>
+    <loc>https://homesbycatherine.io/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

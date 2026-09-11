@@ -106,7 +106,7 @@ export function ListingMap({
                   ${(listing.bedrooms ?? '—')} bd | ${(listing.bathrooms ?? '—')} ba | ${(listing.squareFeet ?? '—').toLocaleString?.() ?? '—'} sqft
                 </div>
                 <div style="margin-top:8px;">
-                  <a href="#/mls-search" data-listing-id="${listing.id}" style="color:#dc2626;font-size:12px;font-weight:600;text-decoration:none;">View details →</a>
+                  <a href="/mls-search" data-listing-id="${listing.id}" style="color:#dc2626;font-size:12px;font-weight:600;text-decoration:none;">View details →</a>
                 </div>
               </div>
             `)

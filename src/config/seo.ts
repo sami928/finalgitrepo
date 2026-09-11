@@ -49,17 +49,26 @@ export const seo = {
   /** NAP / local business data used in JSON-LD structured data. */
   business: {
     name: 'Catherine Redmond - Engel & Völkers',
-    streetAddress: '',
+    /** The brokerage shop this agent works out of. */
+    brokerage: 'Engel & Völkers Portland Rose City',
+    brokerageUrl: 'https://www.evrealestate.com/en/shops/portlandrosecity',
+    streetAddress: '511 SW 10th Avenue, Suite 104',
     addressLocality: 'Portland',
     addressRegion: 'OR',
-    postalCode: '',
+    postalCode: '97205',
+    addressCountry: 'US',
     telephone: '+15038875879',
     email: 'catherine@homesbycatherine.io',
-    // TODO: Add your Google Business Profile review URL to surface star ratings in search.
+    /**
+     * Only real, specific profile URLs belong here — `sameAs` is how Google
+     * confirms this is one business across the web, so a bare domain points it
+     * at that site's homepage and weakens the match instead of helping.
+     * TODO: add the Facebook page, LinkedIn profile, and Google Business
+     * Profile URLs once confirmed, then submit the GBP listing.
+     */
     sameAs: [
       'https://instagram.com/_homesbycatherine_',
-      'https://facebook.com',
-      'https://linkedin.com',
+      'https://www.evrealestate.com/en/shops/portlandrosecity',
     ],
   },
 };

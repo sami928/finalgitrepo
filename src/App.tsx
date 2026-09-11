@@ -61,7 +61,7 @@ export default function App() {
         <Suspense fallback={<PageFallback />}>{page}</Suspense>
       </main>
       <Footer />
-      <Analytics />
+      <Analytics route={route} />
     </div>
   );
 }

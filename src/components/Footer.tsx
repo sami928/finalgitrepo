@@ -1,3 +1,4 @@
+import { type MouseEvent } from 'react';
 import { Instagram, Facebook, Linkedin, Phone, Mail, MapPin } from 'lucide-react';
 import { Logo } from './Logo';
 import { site } from '@/config/site';
@@ -18,7 +19,11 @@ const footerNav = [
 );
 
 export function Footer() {
-  const go = (path: string) => {
+  // Real <a href> links: crawlers follow them, and cmd/middle-click still
+  // opens a new tab. The handler keeps ordinary clicks client-side.
+  const go = (e: MouseEvent<HTMLAnchorElement>, path: string) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    e.preventDefault();
     navigate(path);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -62,12 +67,13 @@ export function Footer() {
             <ul className="mt-4 space-y-2.5">
               {footerNav.map((item) => (
                 <li key={item.path}>
-                  <button
-                    onClick={() => go(item.path)}
+                  <a
+                    href={item.path}
+                    onClick={(e) => go(e, item.path)}
                     className="text-sm text-black transition-colors hover:text-gold-600"
                   >
                     {item.label}
-                  </button>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -111,12 +117,13 @@ export function Footer() {
               Book a free, no-obligation consultation. Tell me what you're
               looking for and I'll build a plan.
             </p>
-            <button
-              onClick={() => go('/contact')}
+            <a
+              href="/contact"
+              onClick={(e) => go(e, '/contact')}
               className="mt-4 inline-flex items-center rounded-full bg-gold-500 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-gold-600"
             >
               Get in touch
-            </button>
+            </a>
           </div>
         </div>
 

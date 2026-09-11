@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { seo } from '@/config/seo';
 
 /**
@@ -10,8 +10,9 @@ import { seo } from '@/config/seo';
  *
  * Activates only if `googleAnalyticsId` is set in src/config/seo.ts.
  */
-export function Analytics() {
+export function Analytics({ route }: { route: string }) {
   const id = seo.googleAnalyticsId;
+  const firstRoute = useRef(true);
 
   useEffect(() => {
     if (!id) return;
@@ -39,6 +40,21 @@ export function Analytics() {
       setTimeout(loadGtag, 1500);
     }
   }, [id]);
+
+  // gtag's `config` call sends one page_view on load. With History API
+  // navigation there is no further page load, so every subsequent route would
+  // go uncounted unless we send it explicitly.
+  useEffect(() => {
+    if (!id) return;
+    if (firstRoute.current) {
+      firstRoute.current = false; // already covered by config's send_page_view
+      return;
+    }
+    window.gtag?.('event', 'page_view', {
+      page_path: route,
+      page_location: window.location.href,
+    });
+  }, [id, route]);
 
   return null;
 }

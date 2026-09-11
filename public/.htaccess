@@ -1,0 +1,31 @@
+# SPA fallback for Apache (Hostinger).
+#
+# The app uses History API routing, so /listings and /home-value are real URLs
+# with no matching file on disk. Without this rewrite the server returns 404 for
+# every deep link, direct visit, and search result click.
+#
+# Vite copies everything in public/ into dist/, so this ships with the build.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Serve real files and directories untouched (assets, og-image, sitemap, fonts).
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Everything else is a client-side route: hand it to the app.
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# Hashed asset filenames change on every build, so they can be cached hard.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  # index.html must never be cached, or visitors keep booting the old build.
+  <FilesMatch "^index\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
