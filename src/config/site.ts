@@ -25,7 +25,7 @@ export const site = {
   social: {
     instagram: 'https://instagram.com/_homesbycatherine_',
     facebook: 'https://facebook.com',
-    linkedin: 'https://linkedin.com',
+    linkedin: 'https://www.linkedin.com/in/catherine-redmond-40321036',
   },
 };
 
