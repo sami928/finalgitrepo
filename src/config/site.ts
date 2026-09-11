@@ -17,7 +17,7 @@ export const site = {
   phoneHref: 'tel:+15038875879',
   email: 'catherine@homesbycatherine.io',
   emailHref: 'mailto:catherine@homesbycatherine.io',
-  licenseNo: 'OREL #201401234',
+  licenseNo: 'OREL #201217068',
   // Replace with your RealScout embed snippet. Paste the <script> block RealScout
   // gives you (or the widget <div>) into the RealScoutWidget component.
   realscoutNote:
