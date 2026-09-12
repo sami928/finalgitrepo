@@ -27,6 +27,8 @@
  * ------------------------------------------------------------------
  */
 
+import { site } from './site';
+
 export const seo = {
   /** TODO: Replace with your production domain — used for canonical URLs, sitemap, OG, JSON-LD. */
   siteUrl: 'https://homesbycatherine.io',
@@ -39,9 +41,6 @@ export const seo = {
 
   /** TODO: Path or URL to 1200x630 social-share image. Place the file in public/. */
   ogImage: '/og-image.jpg',
-
-  /** Default site-wide keywords (Google mostly ignores these, but harmless). */
-  keywords: 'Portland real estate, Portland Metro realtor, homes for sale Portland, Catherine Redmond, Engel & Völkers Portland',
 
   /** Twitter handle (e.g. '@homesbykaty'). Leave '' if none. */
   twitterHandle: '',
@@ -69,6 +68,7 @@ export const seo = {
     sameAs: [
       'https://instagram.com/_homesbycatherine_',
       'https://www.evrealestate.com/en/shops/portlandrosecity',
+      site.social.linkedin,
     ],
   },
 };
@@ -81,8 +81,6 @@ export const routeSeo: Record<string, {
   description: string;
   /** Path appended to siteUrl for the canonical link + OG url. */
   path: string;
-  /** Extra keywords for this page. */
-  keywords?: string;
   /** Set true to mark this page "noindex" (e.g. staging or thin pages). */
   noindex?: boolean;
 }> = {
@@ -91,42 +89,36 @@ export const routeSeo: Record<string, {
     title: 'Catherine Redmond | Portland Metro Real Estate Broker',
     description:
       'Search Greater Portland Metro homes with Catherine Redmond, a trusted local broker. Live MLS search, buyer guides, and a personalized, pressure-free home search.',
-    keywords: 'Portland real estate broker, homes for sale Portland Metro, buyer agent Portland,sell my house portland, buy home in portland,',
   },
   '/listings': {
     path: '/listings',
     title: 'Portland Metro Home Listings | Catherine Redmond',
     description:
       'Browse available homes across the Greater Portland Metro. Filter by city, price, beds, and type — or ask Catherine for a custom live MLS search with instant alerts.',
-    keywords: 'Portland homes for sale, Portland listings, MLS search Portland',
   },
   '/testimonials': {
     path: '/testimonials',
     title: 'Client Reviews & Testimonials | Catherine Redmond, Portland Realtor',
     description:
       'Read what buyers, sellers, and first-time homeowners say about working with Catherine Redmond across the Greater Portland Metro. ',
-    keywords: 'Portland realtor reviews, Catherine Redmond testimonials, real estate agent reviews Portland',
   },
   '/resources': {
     path: '/resources',
     title: 'Buyer Guides, Downloads & Articles | Portland Real Estate Resources',
     description:
       'Free Portland home-buying and selling guides, downloadable PDFs, and local market articles. Practical resources to help you move with confidence — no email wall.',
-    keywords: 'Portland buyer guide, home selling guide, Portland real estate resources, Portland Relocation Guide',
   },
   '/home-value': {
     path: '/home-value',
     title: 'Portland Home Value Estimator | Catherine Redmond',
     description:
       'Find out what your Portland Metro home is worth with an instant online valuation, then get a detailed comparative market analysis from Catherine Redmond — no obligation.',
-    keywords: 'Portland home value, home valuation Portland, what is my home worth Portland, CMA Portland',
   },
   '/mls-search': {
     path: '/mls-search',
     title: 'Portland MLS Search | Active & Sold Listings | Catherine Redmond',
     description:
       'Search live Portland Metro MLS listings. Filter active and sold homes by price, beds, baths, location, and property type. Interactive map view available.',
-    keywords: 'Portland MLS search, RMLS search, active listings Portland, sold homes Portland, Portland real estate map search',
     noindex: true,
   },
   '/contact': {
@@ -134,7 +126,6 @@ export const routeSeo: Record<string, {
     title: 'Contact Catherine Redmond | Portland Metro Real Estate Broker',
     description:
       'Get in touch with Catherine Redmond, Portland Metro real estate broker. Call, text, email, or send a message — personal replies within 24 hours.',
-    keywords: 'contact Portland realtor, real estate agent Portland, Catherine Redmond contact',
   },
 };
 

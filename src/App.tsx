@@ -24,7 +24,15 @@ function PageFallback() {
 
 export default function App() {
   const route = useRoute();
-  useSEO(route);
+
+  // A feature-flagged route falls back to the homepage below, so its
+  // metadata must too — otherwise a disabled route keeps its own title,
+  // description, and self-referencing canonical while showing home content.
+  let effectiveRoute = route;
+  if (route === '/testimonials' && !site.testimonialsEnabled) effectiveRoute = '/';
+  if (route === '/resources' && !site.resourcesEnabled) effectiveRoute = '/';
+  if (route === '/mls-search' && !site.mlsSearchEnabled) effectiveRoute = '/';
+  useSEO(effectiveRoute);
 
   useEffect(() => {
     window.scrollTo({ top: 0 });
