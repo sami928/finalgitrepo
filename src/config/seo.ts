@@ -109,9 +109,9 @@ export const routeSeo: Record<string, {
   },
   '/resources': {
     path: '/resources',
-    title: 'Buyer Guides, Downloads & Articles | Portland Real Estate Resources',
+    title: 'Portland Relocation & Neighborhood Guides | Catherine Redmond',
     description:
-      'Free Portland home-buying and selling guides, downloadable PDFs, and local market articles. Practical resources to help you move with confidence — no email wall.',
+      'Free Portland, westside and Oregon relocation and neighborhood guides — history, housing, schools and what to check before you buy. Read online or download the PDF.',
     keywords: 'Portland buyer guide, home selling guide, Portland real estate resources, Portland Relocation Guide',
   },
   '/home-value': {

@@ -19,8 +19,13 @@ const navItems = [
     (site.mlsSearchEnabled || item.path !== '/mls-search')
 );
 
+/** Section pages (e.g. /resources/<category>/<guide>) keep their tab highlighted. */
+const isActiveFor = (route: string, path: string) =>
+  route === path || (path !== '/' && route.startsWith(`${path}/`));
+
 export function Navbar() {
   const route = useRoute();
+  const isActive = (path: string) => isActiveFor(route, path);
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -63,9 +68,9 @@ export function Navbar() {
               key={item.path}
               href={item.path}
               onClick={(e) => go(e, item.path)}
-              aria-current={route === item.path ? 'page' : undefined}
+              aria-current={isActive(item.path) ? 'page' : undefined}
               className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                route === item.path
+                isActive(item.path)
                   ? 'bg-ink-100 text-ink-900'
                   : 'text-ink-600 hover:bg-ink-50 hover:text-ink-900'
               }`}
@@ -102,9 +107,9 @@ export function Navbar() {
                 key={item.path}
                 href={item.path}
                 onClick={(e) => go(e, item.path)}
-                aria-current={route === item.path ? 'page' : undefined}
+                aria-current={isActive(item.path) ? 'page' : undefined}
                 className={`block rounded-lg px-3 py-3 text-left text-base font-medium ${
-                  route === item.path
+                  isActive(item.path)
                     ? 'bg-ink-100 text-ink-900'
                     : 'text-ink-700 hover:bg-ink-50'
                 }`}

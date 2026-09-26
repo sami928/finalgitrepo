@@ -6,11 +6,13 @@ import { useSEO } from '@/lib/useSEO';
 import { Analytics } from '@/components/Analytics';
 import { site } from '@/config/site';
 import { HomePage } from '@/pages/HomePage';
+import { matchResourceRoute } from '@/data/guides/catalog';
 
 const ListingsPage = lazy(() => import('@/pages/ListingsPage').then((m) => ({ default: m.ListingsPage })));
 const TestimonialsPage = lazy(() => import('@/pages/TestimonialsPage').then((m) => ({ default: m.TestimonialsPage })));
 const ContactPage = lazy(() => import('@/pages/ContactPage').then((m) => ({ default: m.ContactPage })));
 const ResourcesPage = lazy(() => import('@/pages/ResourcesPage').then((m) => ({ default: m.ResourcesPage })));
+const GuidePage = lazy(() => import('@/pages/GuidePage').then((m) => ({ default: m.GuidePage })));
 const HomeValuePage = lazy(() => import('@/pages/HomeValuePage').then((m) => ({ default: m.HomeValuePage })));
 const MlsSearchPage = lazy(() => import('@/pages/MlsSearchPage').then((m) => ({ default: m.MlsSearchPage })));
 
@@ -44,14 +46,17 @@ export default function App() {
     case '/contact':
       page = <ContactPage />;
       break;
-    case '/resources':
-      page = site.resourcesEnabled ? <ResourcesPage /> : <HomePage />;
-      break;
     case '/mls-search':
       page = site.mlsSearchEnabled ? <MlsSearchPage /> : <HomePage />;
       break;
-    default:
-      page = <HomePage />;
+    default: {
+      // /resources, /resources/<category>, /resources/<category>/<guide>
+      const resource = site.resourcesEnabled ? matchResourceRoute(route) : null;
+      if (resource?.kind === 'guide') page = <GuidePage slug={resource.guide.slug} />;
+      else if (resource?.kind === 'category') page = <ResourcesPage category={resource.category} />;
+      else if (resource || (site.resourcesEnabled && route.startsWith('/resources/'))) page = <ResourcesPage />;
+      else page = <HomePage />;
+    }
   }
 
   return (

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { seo, routeSeo, type RouteSeo } from '@/config/seo';
+import { resourceRouteSeo } from '@/data/guides/catalog';
 
 /**
  * Syncs document <head> meta tags with the active route so each page has its
@@ -10,7 +11,12 @@ import { seo, routeSeo, type RouteSeo } from '@/config/seo';
  */
 export function useSEO(route: string) {
   useEffect(() => {
-    const meta = routeSeo[route] ?? routeSeo['/'];
+    // Guide and category pages under /resources build their metadata from the guide data.
+    // Unknown /resources/... paths render the Resources index, so they get its metadata.
+    const meta =
+      routeSeo[route] ??
+      resourceRouteSeo(route) ??
+      (route.startsWith('/resources/') ? routeSeo['/resources'] : routeSeo['/']);
     applyMeta(meta);
   }, [route]);
 }
