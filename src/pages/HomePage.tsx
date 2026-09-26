@@ -18,7 +18,7 @@ import { testimonials } from '@/data/testimonials';
 import { images } from '@/config/images';
 
 const heroImg = images.homeHero;
-const agentPhoto = images.agentPhoto;
+const agentPhoto = images.homePortrait;
 const familyImg = images.homeFamily;
 
 const stats = [

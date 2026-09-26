@@ -44,6 +44,9 @@ export const images = {
     'https://images.pexels.com/photos/38661701/pexels-photo-38661701.jpeg?auto=compress&cs=tinysrgb&h=1000&w=1600'),
   agentPhoto: hero('agent-photo',
     'https://images.pexels.com/photos/8292786/pexels-photo-8292786.jpeg?auto=compress&cs=tinysrgb&h=900&w=700'),
+  // Home page "Meet your agent" portrait only; falls back to agent-photo if the file is removed.
+  homePortrait: hero('home-portrait', hero('agent-photo',
+    'https://images.pexels.com/photos/8292786/pexels-photo-8292786.jpeg?auto=compress&cs=tinysrgb&h=900&w=700')),
   homeFamily: hero('home-family',
     'https://images.pexels.com/photos/7415055/pexels-photo-7415055.jpeg?auto=compress&cs=tinysrgb&h=800&w=1200'),
   listingsHero: hero('listings-hero',

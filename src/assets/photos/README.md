@@ -13,7 +13,8 @@ of the default stock photo.
 | File name                        | Used on            | What it shows                |
 |----------------------------------|--------------------|------------------------------|
 | `home-hero.jpg`                  | Home page hero     | Portland skyline / cityscape |
-| `agent-photo.jpg`                | Home about section | Portrait of Catherine        |
+| `agent-photo.jpg`                | Guide contact cards | Portrait of Catherine       |
+| `home-portrait.jpg`              | Home about section | Portrait of Catherine (falls back to `agent-photo.jpg`) |
 | `home-family.jpg`                | Home CTA section   | Family receiving keys        |
 | `listings-hero.jpg`              | Listings page hero | Portland home / neighborhood |
 | `testimonials-hero.jpg`          | Testimonials hero  | Happy client / handshake     |
