@@ -169,7 +169,7 @@ export function LeadForm({
       {!compact && (
         <div className="mb-5">
           <h3 className="text-xl font-semibold text-ink-900">{title}</h3>
-          <p className="mt-1.5 text-sm leading-relaxed text-ink-600">{subtitle}</p>
+          {subtitle && <p className="mt-1.5 text-sm leading-relaxed text-ink-600">{subtitle}</p>}
         </div>
       )}
 

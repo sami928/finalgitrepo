@@ -24,7 +24,6 @@ const familyImg = images.homeFamily;
 const stats = [
   { value: '120+', label: 'Homes sold' },
   { value: '12 yrs', label: 'In Portland metro' },
-  { value: '4.9★', label: 'Average rating' },
 ];
 
 const services = [
@@ -219,9 +218,6 @@ interaction.
             <h2 className="mt-3 text-3xl font-semibold text-ink-900 sm:text-4xl">
               Full-service, deeply local
             </h2>
-            <p className="mt-4 text-lg leading-relaxed text-ink-600">
-              Every client gets a customized plan. Here's what that looks like.
-            </p>
           </Reveal>
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -338,7 +334,7 @@ interaction.
           </div>
 
           <Reveal delay={150} className="mt-10">
-            <LeadForm source="home" />
+            <LeadForm source="home" subtitle="" />
           </Reveal>
         </div>
       </section>
