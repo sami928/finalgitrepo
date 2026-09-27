@@ -19,6 +19,8 @@ import {
 import { getGuide } from '@/data/guides';
 import { navigate } from '@/lib/router';
 import { images } from '@/config/images';
+import { guideLinks } from '@/data/guides/links';
+import { UsefulLinks } from '@/components/guides/UsefulLinks';
 import { site } from '@/config/site';
 import { seo } from '@/config/seo';
 
@@ -33,6 +35,12 @@ export function GuidePage({ slug }: { slug: string }) {
   // The hero photo becomes the page banner; an unfilled hero slot shows as a
   // placeholder in the body instead so it's obvious a photo is still wanted.
   const heroSrc = g.hero ? slotFor(g.slug, g.hero.slot)?.src : null;
+
+  // Useful links close every guide; list them in the tree and table of contents too.
+  const links = guideLinks[g.slug] ?? [];
+  const navSections = links.length
+    ? [...g.sections, { id: 'useful-links', heading: 'Useful links', blocks: [] }]
+    : g.sections;
 
   // Deep links like /resources/.../multnomah-village#housing: App scrolls to
   // the top on every route change, so jump to the section once it's rendered.
@@ -85,7 +93,7 @@ export function GuidePage({ slug }: { slug: string }) {
         <div className="mt-8 grid gap-12 lg:grid-cols-[240px_1fr]">
           <aside className="hidden lg:block">
             <div className="sticky top-28 max-h-[calc(100vh-8rem)] overflow-y-auto pb-6 pr-2">
-              <ResourceTree activeCategory={g.category} activeGuide={g} />
+              <ResourceTree activeCategory={g.category} activeGuide={{ ...g, sections: navSections }} />
             </div>
           </aside>
 
@@ -95,11 +103,11 @@ export function GuidePage({ slug }: { slug: string }) {
 
             {g.hero && !heroSrc && <GuideImage guide={g.slug} slot={g.hero.slot} caption={g.hero.caption} />}
 
-            {g.sections.length > 2 && (
+            {navSections.length > 2 && (
               <nav aria-label="In this guide" className="rounded-2xl bg-ink-50 p-6 lg:hidden">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-600">In this guide</p>
                 <ol className="mt-3 space-y-1.5 text-sm">
-                  {g.sections.map((s) => (
+                  {navSections.map((s) => (
                     <li key={s.id}>
                       <a href={`#${s.id}`} className="text-ink-700 hover:text-gold-600">
                         {s.heading}
@@ -123,6 +131,20 @@ export function GuidePage({ slug }: { slug: string }) {
                 </div>
               </section>
             ))}
+
+            {links.length > 0 && (
+              <section id="useful-links" className="scroll-mt-28">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-600">Moving here?</p>
+                <h2 className="mt-3 text-2xl font-semibold leading-tight text-ink-900 sm:text-3xl">Useful links</h2>
+                <p className="mt-3 leading-relaxed text-ink-600">
+                  Ratings, walkability and the local services you'll need to set up — schools, utilities,
+                  transit and more. Links open in a new tab.
+                </p>
+                <div className="mt-6">
+                  <UsefulLinks groups={links} />
+                </div>
+              </section>
+            )}
 
             <Reveal>
               <ContactCard />

@@ -1,4 +1,4 @@
-import { ArrowRight, FileText, MapPin } from 'lucide-react';
+import { ArrowRight, MapPin } from 'lucide-react';
 import { PageHero } from '@/components/PageHero';
 import { Reveal } from '@/components/Reveal';
 import { Button } from '@/components/Button';
@@ -140,16 +140,7 @@ function GuideCard({ guide: g }: { guide: GuideMeta }) {
         )}
       </div>
       <div className="flex flex-1 flex-col p-6">
-        <div className="flex items-center justify-between">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-600">
-            Guide {g.number}
-          </span>
-          <span className="flex items-center gap-1 text-xs text-ink-500">
-            <FileText className="h-3.5 w-3.5" />
-            PDF
-          </span>
-        </div>
-        <h3 className="mt-2 text-lg font-semibold leading-snug text-ink-900 group-hover:text-gold-700">
+        <h3 className="text-lg font-semibold leading-snug text-ink-900 group-hover:text-gold-700">
           {g.title}
         </h3>
         <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-600">{g.summary}</p>

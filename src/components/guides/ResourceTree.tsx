@@ -72,17 +72,16 @@ export function ResourceTree({
                         <AppLink
                           to={guideUrl(g)}
                           aria-current={current ? 'page' : undefined}
-                          className={`-ml-px flex gap-2 border-l-2 py-1.5 pl-3 leading-snug transition-colors ${
+                          className={`-ml-px block border-l-2 py-1.5 pl-3 leading-snug transition-colors ${
                             current
                               ? 'border-gold-500 font-medium text-ink-900'
                               : 'border-transparent text-ink-600 hover:border-ink-300 hover:text-ink-900'
                           }`}
                         >
-                          <span className="tabular-nums text-ink-400">{g.number}</span>
                           {g.title}
                         </AppLink>
                         {current && activeGuide && (
-                          <ul className="mb-2 ml-9 mt-1 space-y-1">
+                          <ul className="mb-2 ml-6 mt-1 space-y-1">
                             {activeGuide.sections.map((s) => (
                               <li key={s.id}>
                                 <a href={`#${s.id}`} className="block text-xs leading-snug text-ink-500 hover:text-gold-600">
