@@ -75,8 +75,8 @@ export function HomePage() {
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-ink-200">
               I'm {site.agentName}, a local broker who helps buyers and sellers
-              move with confidence. Search live listings, get a tailored home
-              plan, and never feel pressured.
+              move with confidence. Search live listings and get a tailored
+              home plan.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Button
