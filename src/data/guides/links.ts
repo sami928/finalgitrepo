@@ -41,11 +41,27 @@ const L = {
   westLinn: { label: 'City of West Linn', href: 'https://westlinnoregon.gov/' },
   beaverton: { label: 'City of Beaverton', href: 'https://www.beavertonoregon.gov/' },
 
-  pge: { label: 'Portland General Electric', href: 'https://portlandgeneral.com/', note: 'Electricity: start or transfer service' },
-  nwNatural: { label: 'NW Natural', href: 'https://www.nwnatural.com/', note: 'Natural gas' },
-  pdxWater: { label: 'Portland Water Bureau', href: 'https://www.portland.gov/water' },
-  pdxGarbage: { label: 'Portland garbage & recycling', href: 'https://www.portland.gov/bps/garbage-recycling' },
-  cleanWater: { label: 'Clean Water Services', href: 'https://cleanwaterservices.org/', note: 'Sewer and stormwater' },
+  // Electricity & gas — links go straight to each company's start/stop/move page.
+  pge: { label: 'Portland General Electric (PGE)', href: 'https://portlandgeneral.com/start-stop-move', note: 'Electricity: start, stop or move service' },
+  pacificPower: { label: 'Pacific Power', href: 'https://www.pacificpower.net/my-account/start-stop-move.html', note: 'Electricity for parts of downtown and east Portland — PGE serves most other addresses' },
+  nwNatural: { label: 'NW Natural', href: 'https://www.nwnatural.com/account/start-stop-transfer', note: 'Natural gas: start, stop or transfer service' },
+
+  // Water (and sewer/stormwater where the same provider bills it).
+  pdxWater: { label: 'Portland Water Bureau', href: 'https://www.portland.gov/water/customer-service/pay-your-utility-bill/start-stop-or-transfer-service', note: 'Water, sewer and stormwater inside Portland city limits' },
+  westSlopeWater: { label: 'West Slope Water District', href: 'https://www.wswd.org/', note: 'Water for most of West Slope' },
+  raleighWater: { label: 'Raleigh Water District', href: 'https://www.raleigh-h2o.com/', note: 'Water for much of Raleigh Hills (Bull Run supply)' },
+  tvwd: { label: 'Tualatin Valley Water District', href: 'https://www.tvwd.org/', note: 'Water for parts of unincorporated Washington County and Beaverton' },
+  loWater: { label: 'Lake Oswego utility billing', href: 'https://www.ci.oswego.or.us/utility-billing', note: 'City water, sewer and stormwater' },
+  wlWater: { label: 'West Linn utility services', href: 'https://westlinnoregon.gov/finance/utility-services', note: 'City water, sewer and stormwater' },
+  beavertonWater: { label: 'Beaverton utilities', href: 'https://www.beavertonoregon.gov/utilities', note: 'City water, sewer and stormwater (some addresses are on TVWD)' },
+  cleanWater: { label: 'Clean Water Services', href: 'https://cleanwaterservices.org/', note: 'Sewer and stormwater in Washington County' },
+
+  // Trash & recycling — franchised haulers are assigned by address.
+  pdxGarbage: { label: 'Portland: who picks up my garbage?', href: 'https://www.portland.gov/bps/garbage-recycling/home-recycling/find-my-hauler', note: 'Look up your assigned garbage and recycling company' },
+  washcoGarbage: { label: 'Washington County garbage & recycling', href: 'https://www.washingtoncountyor.gov/swr/garbage-and-recycling-collection-service', note: 'Find the hauler for unincorporated addresses' },
+  beavertonGarbage: { label: "Beaverton: who's my hauler?", href: 'https://www.beavertonoregon.gov/758/Whos-My-Hauler', note: 'Five franchised haulers, assigned by area' },
+  loGarbage: { label: 'Lake Oswego garbage & recycling', href: 'https://www.ci.oswego.or.us/recycle/garbage', note: 'Republic Services, under the city franchise' },
+  wlGarbage: { label: 'West Linn garbage & recycling', href: 'https://westlinnoregon.gov/publicworks/garbage-and-recycling-west-linn', note: 'West Linn Refuse & Recycling, under the city franchise' },
   tvfr: { label: 'Tualatin Valley Fire & Rescue', href: 'https://www.tvfr.com/' },
   lakeCorp: { label: 'Lake Oswego Corporation', href: 'https://lakecorp.com/', note: 'Lake access, easements and fees' },
 
@@ -80,13 +96,27 @@ const L = {
 } satisfies Record<string, UsefulLink>;
 
 // --- Groups reused across neighborhoods ----------------------------------
+
+/** Electricity & gas, water, and trash & recycling for one area. */
+const utilities = ({
+  power = [L.pge],
+  water,
+  trash,
+}: {
+  power?: UsefulLink[];
+  water: UsefulLink[];
+  trash: UsefulLink[];
+}): LinkGroup[] => [
+  { title: 'Electricity & gas', links: [...power, L.nwNatural] },
+  { title: 'Water', links: water },
+  { title: 'Trash & recycling', links: trash },
+];
+
+const gettingAround: LinkGroup = { title: 'Getting around', links: [L.trimet, L.tripcheck] };
+
 const portlandServices: LinkGroup = {
   title: 'Local government & services',
   links: [L.portlandMaps, L.portland, L.multco, L.metro],
-};
-const portlandUtilities: LinkGroup = {
-  title: 'Utilities & getting around',
-  links: [L.pge, L.nwNatural, L.pdxWater, L.pdxGarbage, L.trimet],
 };
 const portlandLeisure: LinkGroup = {
   title: 'Parks & libraries',
@@ -96,20 +126,25 @@ const washcoServices: LinkGroup = {
   title: 'Local government & services',
   links: [L.washco, L.metro, L.tvfr],
 };
-const washcoUtilities: LinkGroup = {
-  title: 'Utilities & getting around',
-  links: [L.pge, L.nwNatural, L.cleanWater, L.trimet],
-};
 const washcoLeisure: LinkGroup = {
   title: 'Parks & libraries',
   links: [L.thprd, L.wccls],
 };
 
-const portlandNeighborhood = (ratings: UsefulLink[], schools: UsefulLink[] = [L.pps]): LinkGroup[] => [
+/** A neighborhood inside the City of Portland. */
+const portlandNeighborhood = (
+  ratings: UsefulLink[],
+  {
+    schools = [L.pps],
+    power = [L.pge],
+    trash = [L.pdxGarbage],
+  }: { schools?: UsefulLink[]; power?: UsefulLink[]; trash?: UsefulLink[] } = {},
+): LinkGroup[] => [
   { title: 'Ratings & walkability', links: ratings },
   { title: 'Schools', links: [...schools, L.odeReportCards] },
+  ...utilities({ power, water: [L.pdxWater], trash }),
+  gettingAround,
   portlandServices,
-  portlandUtilities,
   portlandLeisure,
 ];
 
@@ -124,9 +159,9 @@ export const guideLinks: Record<string, LinkGroup[]> = {
       ],
     },
     { title: 'Schools', links: [L.pps, L.nicheDistrictsMetro, L.odeReportCards] },
-    { title: 'Setting up your home', links: [L.portlandMaps, L.pge, L.nwNatural, L.pdxWater, L.pdxGarbage] },
+    ...utilities({ power: [L.pge, L.pacificPower], water: [L.pdxWater], trash: [L.pdxGarbage] }),
     { title: 'Getting around', links: [L.trimet, L.biketown, L.pdx, L.tripcheck] },
-    { title: 'Taxes & government', links: [L.portland, L.multco, L.multcoTax, L.artsTax] },
+    { title: 'Taxes & government', links: [L.portlandMaps, L.portland, L.multco, L.multcoTax, L.artsTax] },
     { title: 'Everyday life', links: [L.pdxParks, L.forestPark, L.multcoLibrary, L.travelPortland, L.publicAlerts] },
   ],
 
@@ -151,7 +186,7 @@ export const guideLinks: Record<string, LinkGroup[]> = {
       niche('places-to-live/n/southwest-hills-portland-or', 'Southwest Hills'),
       walk('OR/Portland', 'Portland', 'Walk, transit and bike scores by neighborhood'),
     ],
-    [L.pps, L.bsd, L.nicheDistrictsMetro],
+    { schools: [L.pps, L.bsd, L.nicheDistrictsMetro] },
   ),
 
   'goose-hollow-maplewood-garden-home-west-slope': [
@@ -168,8 +203,21 @@ export const guideLinks: Record<string, LinkGroup[]> = {
       ],
     },
     { title: 'Schools', links: [L.pps, L.bsd, L.odeReportCards] },
+    ...utilities({
+      power: [L.pge, L.pacificPower],
+      water: [
+        { ...L.pdxWater, note: 'Goose Hollow and Maplewood (inside Portland)' },
+        { ...L.tvwd, note: 'Garden Home and other unincorporated Washington County addresses' },
+        { ...L.westSlopeWater, note: 'West Slope' },
+        L.cleanWater,
+      ],
+      trash: [
+        { ...L.pdxGarbage, note: 'Goose Hollow and Maplewood' },
+        { ...L.washcoGarbage, note: 'Garden Home and West Slope' },
+      ],
+    }),
+    gettingAround,
     { title: 'Local government & services', links: [L.portlandMaps, L.portland, L.multco, L.washco] },
-    { title: 'Utilities & getting around', links: [L.pge, L.nwNatural, L.pdxWater, L.cleanWater, L.trimet] },
     { title: 'Parks & libraries', links: [L.pdxParks, L.thprd, L.multcoLibrary, L.wccls] },
   ],
 
@@ -186,8 +234,12 @@ export const guideLinks: Record<string, LinkGroup[]> = {
       ],
     },
     { title: 'Schools', links: [L.losd, L.bsd, L.odeReportCards] },
+    ...utilities({
+      water: [L.loWater, { ...L.beavertonWater, note: 'Beaverton and Highland: city water, sewer and stormwater' }, L.tvwd],
+      trash: [L.loGarbage, L.beavertonGarbage],
+    }),
+    gettingAround,
     { title: 'Local government & services', links: [L.lakeOswego, L.beaverton, L.clackamas, L.washco, L.lakeCorp] },
-    { title: 'Utilities & getting around', links: [L.pge, L.nwNatural, L.trimet] },
     { title: 'Parks & libraries', links: [L.loParks, L.thprd, L.loLibrary, L.beavertonLibrary] },
   ],
 
@@ -196,22 +248,27 @@ export const guideLinks: Record<string, LinkGroup[]> = {
     walk('score/7688-sw-capitol-hwy-portland-or-97219', 'Multnomah Village', 'Scores for the village centre (Multnomah Arts Center)'),
   ]),
 
-  'goose-hollow': portlandNeighborhood([
-    niche('places-to-live/n/goose-hollow-portland-or', 'Goose Hollow'),
-    walk('OR/Portland/Goose_Hollow', 'Goose Hollow'),
-  ]),
+  // Goose Hollow borders the downtown core, where Pacific Power serves some addresses.
+  'goose-hollow': portlandNeighborhood(
+    [niche('places-to-live/n/goose-hollow-portland-or', 'Goose Hollow'), walk('OR/Portland/Goose_Hollow', 'Goose Hollow')],
+    { power: [L.pge, L.pacificPower] },
+  ),
 
   'council-crest': portlandNeighborhood([
     niche('places-to-live/n/southwest-hills-portland-or', 'Southwest Hills', 'Council Crest sits within Southwest Hills'),
     walk('OR/Portland/Southwest_Hills', 'Southwest Hills', 'Council Crest sits within Southwest Hills'),
   ]),
 
+  // Split across the city line and two counties, so both hauler lookups apply.
   bridlemile: portlandNeighborhood(
-    [
-      niche('places-to-live/n/bridlemile-portland-or', 'Bridlemile'),
-      walk('OR/Portland/Bridlemile', 'Bridlemile'),
-    ],
-    [L.pps, L.bsd],
+    [niche('places-to-live/n/bridlemile-portland-or', 'Bridlemile'), walk('OR/Portland/Bridlemile', 'Bridlemile')],
+    {
+      schools: [L.pps, L.bsd],
+      trash: [
+        { ...L.pdxGarbage, note: 'Addresses inside Portland city limits' },
+        { ...L.washcoGarbage, note: 'The pockets in Washington County' },
+      ],
+    },
   ),
 
   'sylvan-highlands': portlandNeighborhood([
@@ -231,19 +288,30 @@ export const guideLinks: Record<string, LinkGroup[]> = {
       links: [niche('places-to-live/west-slope-washington-or', 'West Slope'), walk('OR/West_Slope', 'West Slope')],
     },
     { title: 'Schools', links: [L.bsd, L.odeReportCards] },
+    ...utilities({ water: [L.westSlopeWater, L.cleanWater], trash: [L.washcoGarbage] }),
+    gettingAround,
     washcoServices,
-    washcoUtilities,
     washcoLeisure,
   ],
 
+  // The guide names four water districts here; Metzger has no website of its own.
   'raleigh-hills': [
     {
       title: 'Ratings & walkability',
       links: [niche('places-to-live/raleigh-hills-washington-or', 'Raleigh Hills'), walk('OR/Raleigh_Hills', 'Raleigh Hills')],
     },
     { title: 'Schools', links: [L.bsd, L.odeReportCards] },
+    ...utilities({
+      water: [
+        L.raleighWater,
+        { ...L.westSlopeWater, note: 'Northern edge of the plan area' },
+        { ...L.tvwd, note: 'Parts of the plan area; Metzger Water District serves others' },
+        L.cleanWater,
+      ],
+      trash: [L.washcoGarbage],
+    }),
+    gettingAround,
     washcoServices,
-    washcoUtilities,
     washcoLeisure,
   ],
 
@@ -253,8 +321,9 @@ export const guideLinks: Record<string, LinkGroup[]> = {
       links: [niche('places-to-live/lake-oswego-clackamas-or', 'Lake Oswego'), walk('OR/Lake_Oswego', 'Lake Oswego')],
     },
     { title: 'Schools', links: [L.losd, L.odeReportCards] },
+    ...utilities({ water: [L.loWater], trash: [L.loGarbage] }),
+    gettingAround,
     { title: 'Local government & services', links: [L.lakeOswego, L.lakeCorp, L.clackamas, L.metro] },
-    { title: 'Utilities & getting around', links: [L.pge, L.nwNatural, L.trimet] },
     { title: 'Parks & libraries', links: [L.loParks, L.loLibrary, L.lincc] },
   ],
 
@@ -264,8 +333,9 @@ export const guideLinks: Record<string, LinkGroup[]> = {
       links: [niche('places-to-live/west-linn-clackamas-or', 'West Linn'), walk('OR/West_Linn', 'West Linn')],
     },
     { title: 'Schools', links: [L.wlwv, L.odeReportCards] },
+    ...utilities({ water: [L.wlWater], trash: [L.wlGarbage] }),
+    gettingAround,
     { title: 'Local government & services', links: [L.westLinn, L.clackamas, L.metro] },
-    { title: 'Utilities & getting around', links: [L.pge, L.nwNatural, L.trimet] },
     { title: 'Parks & libraries', links: [L.wlParks, L.wlLibrary, L.lincc] },
   ],
 };
