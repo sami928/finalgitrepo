@@ -143,8 +143,7 @@ function GuideCard({ guide: g }: { guide: GuideMeta }) {
         <h3 className="text-lg font-semibold leading-snug text-ink-900 group-hover:text-gold-700">
           {g.title}
         </h3>
-        <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-600">{g.summary}</p>
-        <span className="mt-4 flex items-center gap-1.5 text-sm font-semibold text-gold-600">
+        <span className="mt-auto flex pt-4 items-center gap-1.5 text-sm font-semibold text-gold-600">
           Read the guide
           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
         </span>

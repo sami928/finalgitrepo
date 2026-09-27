@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock, Instagram, Facebook, Linkedin } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin } from 'lucide-react';
 import { PageHero } from '@/components/PageHero';
 import { Reveal } from '@/components/Reveal';
 import { LeadForm } from '@/components/LeadForm';
@@ -25,11 +25,6 @@ export function ContactPage() {
       icon: MapPin,
       label: 'Service area',
       value: site.area,
-    },
-    {
-      icon: Clock,
-      label: 'Response time',
-      value: 'Within 24 hours',
     },
   ];
 
