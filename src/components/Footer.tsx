@@ -38,8 +38,8 @@ export function Footer() {
               <Logo />
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-600">
-              Helping buyers and sellers move confidently across the{' '}
-              {site.area}. Personalized, pressure-free, and deeply local.
+              Helping buyers and sellers move confidently across the Portland,
+              Oregon area.
             </p>
             <div className="mt-5 flex gap-3">
               {[

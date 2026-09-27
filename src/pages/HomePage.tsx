@@ -172,7 +172,7 @@ export function HomePage() {
                 Meet your agent
               </p>
               <h2 className="mt-3 text-3xl font-semibold leading-tight text-ink-900 sm:text-4xl">
-                Hi, I'm {site.agentName}
+                Hi, I'm Catherine
               </h2>
               <p className="mt-5 text-lg leading-relaxed text-ink-600">
                 For over a decade in real estate, I have

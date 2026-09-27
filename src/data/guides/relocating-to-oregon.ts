@@ -9,7 +9,7 @@ const guide: Guide = {
   summary:
     'One state, several very different regions — what the taxes actually cost you, where the rain really falls, and the thirty-day clock that starts the day you arrive.',
   lede:
-    'One state, several very different regions. What the taxes actually cost you, where the rain really falls, and the thirty-day clock that starts the day you arrive.',
+    'One state, several very different regions. Tax rules, local attractions, and weather systems.',
   hero: { slot: 'cover-oregon' },
   stats: [
     { value: '98,379', label: 'Square miles — 9th largest state' },
@@ -169,7 +169,7 @@ const guide: Guide = {
       blocks: [
         {
           type: 'p',
-          text: '"No sales tax" is the fact everyone arrives knowing, and on its own it is misleading. Oregon funds itself through income tax instead. Whether that helps or hurts you depends almost entirely on your income and how much you spend.',
+          text: 'No sales tax here! Oregon funds itself through income and property tax instead. Make sure to balance affordability against the tax obligations your new home has.',
         },
         {
           type: 'p',
@@ -318,7 +318,7 @@ const guide: Guide = {
           items: [
             'Oregon taxes an assessed value that usually sits well below market value and, by law, rises no more than 3 percent a year.',
             'It does not reset when a home sells, unlike California. Two near-identical neighbors can owe very different amounts.',
-            'So never estimate a tax bill from the purchase price. Get the actual assessed value from the county before writing an offer.',
+            'Never estimate a tax bill from the purchase price. Get the actual assessed value from the county before writing an offer.',
           ],
         },
         {
@@ -399,8 +399,8 @@ const guide: Guide = {
         {
           type: 'list',
           items: [
-            { title: 'Emissions Testing.', text: 'Required in the Portland metro and Medford–Ashland areas, and it has to pass before a vehicle can be registered — then every two years after that. Outside those boundaries, no test is needed at all.' },
-            { title: 'Someone Else Pumps It.', text: 'Oregon banned self-service fuel for decades. The rules have loosened, but across much of the state an attendant still fills the tank. It catches every newcomer exactly once.' },
+            { title: 'Emissions Testing.', text: 'Required in the Portland metro and Medford–Ashland areas, and it has to pass before a vehicle can be registered — then every two years after that.' },
+            { title: 'Someone Else Pumps It.', text: 'Oregon banned self-service fuel for decades. The rules have loosened, but across much of the state an attendant still fills the tank. Now you have the option to pump your own, or an attendant may serve you.' },
             { title: 'Vote by Mail.', text: 'Oregon has run elections entirely by mail since 2000 and registers voters automatically through the DMV. Ballots arrive at home; registration closes 21 days before an election.' },
             { title: 'The Price Is the Price.', text: 'With no sales tax, the number on the tag is the number you pay. Buyers relocating from high-tax states notice it most on vehicles, appliances and furnishing a new home.' },
             { title: 'Mountain Passes.', text: 'If your commute or family visits cross the Cascades, traction devices and occasional winter closures become a real planning factor from November through March.' },

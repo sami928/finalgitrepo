@@ -33,7 +33,7 @@ export function ContactPage() {
       <PageHero
         eyebrow="Get in touch"
         title={<>Let's talk about your move</>}
-        subtitle="Buying, selling, or just have questions about the Portland market? Send a note and Catherine will personally reply within 24 hours."
+        subtitle="Buying, selling, or just have questions about the Portland market? Send a note and Catherine will reply promptly."
         image={heroImg}
       />
 
