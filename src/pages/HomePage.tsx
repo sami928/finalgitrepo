@@ -193,12 +193,6 @@ or preparing to sell, I bring a calm,
 confident presence to every
 interaction.
               </p>
-              <p className="mt-4 leading-relaxed text-ink-600">
-                My approach is simple: listen first, educate often, and never
-                push. Whether you're buying your first condo or selling a
-                forever home, you'll get straight answers and a plan built
-                around your life.
-              </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <Button onClick={() => navigate('/contact')}>
                   Work with me
