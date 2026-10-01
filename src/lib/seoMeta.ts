@@ -49,6 +49,14 @@ const defaultImage = {
   imageHeight: 630,
 };
 
+/** Home page share image: Catherine at her desk. Other pages use defaultImage or a guide cover. */
+const homeImage = {
+  image: absUrl('/og-home.jpg'),
+  imageAlt: `${site.agentName} at her desk`,
+  imageWidth: 1200,
+  imageHeight: 630,
+};
+
 /** Routes that exist in the app, with their on/off switches from site.ts. */
 const staticRoutes: { path: string; enabled: boolean }[] = [
   { path: '/', enabled: true },
@@ -103,7 +111,8 @@ export function pageMeta(route: string): PageMeta {
   if (s) {
     if (!s.enabled) return notFoundMeta(route);
     const m = routeSeo[route];
-    return { path: m.path, title: m.title, description: m.description, ...defaultImage, type: 'website', noindex: m.noindex, jsonLd: [] };
+    const image = route === '/' ? homeImage : defaultImage;
+    return { path: m.path, title: m.title, description: m.description, ...image, type: 'website', noindex: m.noindex, jsonLd: [] };
   }
 
   const r = site.resourcesEnabled ? matchResourceRoute(route) : null;
