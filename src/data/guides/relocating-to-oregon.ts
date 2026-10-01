@@ -7,9 +7,9 @@ const guide: Guide = {
   title: 'Relocating to Oregon',
   eyebrow: 'A Guide for Out-of-State Buyers',
   summary:
-    'One state, several very different regions — what the taxes actually cost you, where the rain really falls, and the thirty-day clock that starts the day you arrive.',
+    "An overview of Oregon's regions, taxes, climate and housing costs, and the thirty-day deadlines that apply to new residents after arrival.",
   lede:
-    'One state, several very different regions. Tax rules, local attractions, and weather systems.',
+    "Oregon has several distinct regions. This guide covers the state's tax rules, regional attractions and weather.",
   hero: { slot: 'cover-oregon' },
   stats: [
     { value: '98,379', label: 'Square miles — 9th largest state' },
@@ -21,27 +21,27 @@ const guide: Guide = {
     {
       id: 'why-oregon',
       kicker: '01 · Overview',
-      heading: 'Why Oregon',
+      heading: 'Overview',
       blocks: [
         {
           type: 'p',
-          text: "People move to Oregon for a specific trade: less sprawl, more access. A state the size of the United Kingdom holds fewer than four and a half million people, and almost all of the good parts — alpine, high desert, vineyard, rainforest, 363 miles of coastline — sit within a half-day's drive of one another.",
+          text: "Oregon is about the size of the United Kingdom and has fewer than four and a half million residents. Alpine terrain, high desert, vineyards, rainforest and 363 miles of coastline are all within a half-day's drive of one another.",
         },
         {
           type: 'p',
-          text: 'What surprises newcomers is how little of Oregon resembles the picture they arrived with. The rainy, evergreen version is real, but it stops at the Cascade crest. East of that ridge the state is high desert, and Bend gets less annual rain than Phoenix gets in a wet year.',
+          text: 'The rainy, evergreen climate commonly associated with Oregon ends at the Cascade crest. East of it the state is high desert; Bend gets less annual rain than Phoenix gets in a wet year.',
         },
         {
           type: 'p',
-          text: 'This guide is built for people deciding from a distance. It covers the regions, what the tax picture really looks like once you account for all three taxes, and what has to happen in your first thirty days.',
+          text: "This guide is for buyers deciding from out of state. It covers the regions, the combined effect of Oregon's three main taxes, and the requirements for the first thirty days.",
         },
         {
           type: 'cards',
           columns: 3,
           items: [
-            { title: 'No Sales Tax', text: 'One of only five states without one. It changes how you budget for everything from a car to a sofa.' },
-            { title: 'Every Beach is Public', text: 'The 1967 Beach Bill made the entire coastline public to the high-tide line. No private beaches, anywhere.' },
-            { title: 'Two Climates', text: 'The Cascades split the state into wet west and dry east. Choosing a side is the first real decision.' },
+            { title: 'No sales tax', text: 'Oregon is one of only five states without a sales tax, which affects the cost of everything from a car to a sofa.' },
+            { title: 'Public beaches', text: 'The 1967 Beach Bill made the entire coastline public up to the high-tide line. There are no private beaches.' },
+            { title: 'Two climates', text: 'The Cascades divide the state into a wet west and a dry east.' },
           ],
         },
         {
@@ -54,37 +54,37 @@ const guide: Guide = {
     {
       id: 'the-regions',
       kicker: '02 · Orientation',
-      heading: 'The Regions',
+      heading: 'Regions',
       blocks: [
         {
           type: 'p',
-          text: 'Oregon is usually described in a handful of regions, and they differ from one another more than most states differ from their neighbors. The Cascade Range runs north to south down the middle and divides the wet, green, densely populated third from the dry, open two-thirds east of it.',
+          text: 'Oregon is usually divided into a handful of regions that differ considerably from one another. The Cascade Range runs north to south and separates the wet, densely populated western third from the dry, open two-thirds to the east.',
         },
         {
           type: 'p',
-          text: 'County boundaries from the Bureau of Land Management, drawn on an Albers equal-area projection, so the area each region covers is shown true. Regional definitions vary between sources; county lines do not.',
+          text: "County boundaries are from the Bureau of Land Management, drawn on an Albers equal-area projection so each region's area is shown accurately. Regional definitions vary between sources; county lines do not.",
         },
         {
           type: 'list',
           items: [
-            { title: 'Portland Metro.', text: 'The economic center. Walkable neighborhoods, the largest job market, an international airport.' },
-            { title: 'Northwest Oregon & the Willamette Valley.', text: 'Salem, Eugene, Corvallis. Farmland, wine country, the major universities — and the northern coast.' },
+            { title: 'Portland Metro.', text: 'The economic center, with walkable neighborhoods, the largest job market and an international airport.' },
+            { title: 'Northwest Oregon & the Willamette Valley.', text: 'Salem, Eugene and Corvallis. Farmland, wine country, the major universities and the northern coast.' },
             { title: 'Columbia River Gorge.', text: 'Hood River and the waterfall corridor. A national scenic area an hour from Portland.' },
-            { title: 'Central Oregon.', text: 'Bend and Redmond. High desert, dry and sunny, with skiing and rivers close by.' },
-            { title: 'Southern Oregon.', text: 'Medford, Ashland, Grants Pass. Warmer summers, the Rogue Valley, and the southern coast.' },
-            { title: 'Eastern Oregon.', text: 'Ranch country and wide horizons. The most land for the money anywhere in the state.' },
+            { title: 'Central Oregon.', text: 'Bend and Redmond. Dry, sunny high desert, with skiing and rivers nearby.' },
+            { title: 'Southern Oregon.', text: 'Medford, Ashland and Grants Pass. Warmer summers, the Rogue Valley and the southern coast.' },
+            { title: 'Eastern Oregon.', text: 'Ranch country, with the lowest land prices in the state.' },
           ],
         },
         {
           type: 'p',
-          text: 'The Oregon Coast — 363 miles, publicly owned end to end — is a landform rather than one of these regions: it runs the length of the state through both the Northwest and Southern groupings.',
+          text: 'The Oregon Coast (363 miles, publicly owned along its full length) is a landform rather than a region; it runs the length of the state through both the Northwest and Southern groupings.',
         },
         {
           type: 'steps',
           items: [
-            { title: 'Start With Climate', text: 'Wet and green or dry and sunny is the decision everything else follows from, and it is the one people most often get wrong from a distance.' },
-            { title: 'Then Access', text: 'How close you need to be to a major airport and a full-service hospital narrows the map faster than any other single question.' },
-            { title: 'Then Budget', text: 'The same money buys very different homes across these regions. Sequence it last, once the first two have shortened the list.' },
+            { title: 'Climate first', text: 'The choice between wet and green or dry and sunny determines most other decisions, and it is the one most often misjudged from a distance.' },
+            { title: 'Then access', text: 'Required proximity to a major airport and a full-service hospital narrows the options faster than any other single factor.' },
+            { title: 'Then budget', text: 'The same budget buys very different homes across these regions. It is best considered last, once climate and access have shortened the list.' },
           ],
         },
       ],
@@ -102,32 +102,32 @@ const guide: Guide = {
               title: 'Portland Metro',
               tag: 'Northwest',
               image: 'portland-metro',
-              text: "Roughly half the state's population and the bulk of its jobs. A city of distinct neighborhoods rather than one core, with light rail, a dense restaurant scene, and Forest Park inside the city limits.",
+              text: "Roughly half the state's population and most of its jobs. A city of distinct neighborhoods rather than a single core, with light rail, a dense restaurant scene, and Forest Park inside the city limits.",
             },
             {
               title: 'Willamette Valley',
               tag: 'West Central',
               image: 'willamette-valley',
-              text: 'The agricultural heart, and the reason the Oregon Trail ended here. Salem, Eugene and Corvallis anchor it; Pinot Noir country runs along the western edge. Lower prices than Portland, slower pace.',
+              text: "The state's main agricultural region and the end point of the Oregon Trail. Salem, Eugene and Corvallis are its main cities; Pinot Noir country runs along the western edge. Prices are lower than in Portland.",
             },
             {
               title: 'Oregon Coast',
               tag: 'West',
               image: 'oregon-coast',
-              text: 'Every foot of it public, by law, since 1967. Astoria at the mouth of the Columbia down to Brookings near California. Cooler and far wetter than inland — Astoria averages over 70 inches of rain a year.',
+              text: 'Public along its entire length by law since 1967, from Astoria at the mouth of the Columbia to Brookings near California. Cooler and much wetter than inland; Astoria averages over 70 inches of rain a year.',
             },
             {
               title: 'Columbia River Gorge',
               tag: 'North',
               image: 'columbia-gorge',
-              text: 'A national scenic area where the Columbia cuts through the Cascades, producing waterfalls on the west end and windsurfing at Hood River. Close enough to Portland to commute, distinct enough to feel rural.',
+              text: 'A national scenic area where the Columbia cuts through the Cascades, with waterfalls at the west end and windsurfing at Hood River. Within commuting distance of Portland but rural in character.',
             },
           ],
         },
         {
           type: 'callout',
-          title: 'A Note on Commuting',
-          text: "Oregon's mountain passes are genuine winter weather. If a shorter commute matters to you, the Cascade crest is a harder line than the mileage suggests — a 90-minute summer drive can double in January.",
+          title: 'Commuting',
+          text: "Oregon's mountain passes have serious winter weather. The Cascade crest is a bigger barrier to commuting than the mileage suggests: a 90-minute summer drive can take twice as long in January.",
         },
       ],
     },
@@ -144,19 +144,19 @@ const guide: Guide = {
               title: 'Central Oregon',
               tag: 'Bend & Redmond',
               image: 'central-oregon',
-              text: "High desert at 3,600 feet, with skiing at Mount Bachelor, a river running through town, and roughly a quarter of Portland's annual rainfall. The fastest-growing part of the state, and the most expensive — Bend's median sale price runs well above Portland's.",
+              text: "High desert at 3,600 feet, with skiing at Mount Bachelor, a river running through town, and roughly a quarter of Portland's annual rainfall. The fastest-growing and most expensive part of the state; Bend's median sale price is well above Portland's.",
             },
             {
               title: 'Southern Oregon',
               tag: 'Rogue Valley & Ashland',
               image: 'southern-oregon',
-              text: "Warmer and drier than the Willamette Valley, with a long growing season and a real theatre town in Ashland. Medford is the commercial hub. Crater Lake sits at the region's northern edge.",
+              text: "Warmer and drier than the Willamette Valley, with a long growing season and an established theater scene in Ashland. Medford is the commercial hub. Crater Lake is at the region's northern edge.",
             },
             {
               title: 'Eastern Oregon',
               tag: 'Ranch Country',
               image: 'eastern-oregon',
-              text: "Two-thirds of the state's land and a small fraction of its people. Pendleton, Baker City and the Wallowa Mountains. Land goes furthest here by a wide margin, with the trade-off being distance from major medical centers and airports.",
+              text: "Two-thirds of the state's land and a small fraction of its people, including Pendleton, Baker City and the Wallowa Mountains. Land is far cheaper here than elsewhere in the state, but major medical centers and airports are distant.",
             },
           ],
         },
@@ -165,15 +165,15 @@ const guide: Guide = {
     {
       id: 'tax-picture',
       kicker: '05 · Money',
-      heading: 'The Tax Picture',
+      heading: 'Taxes',
       blocks: [
         {
           type: 'p',
-          text: 'No sales tax here! Oregon funds itself through income and property tax instead. Make sure to balance affordability against the tax obligations your new home has.',
+          text: "Oregon has no sales tax; it relies on income and property taxes instead. Buyers should weigh a home's affordability against the tax obligations that come with it.",
         },
         {
           type: 'p',
-          text: 'Oregon vs. where buyers commonly move from: three separate measures, each on its own scale — they are not comparable to one another, only across states.',
+          text: 'The table compares Oregon with states buyers commonly move from. Each of the three measures is on its own scale; they are comparable across states, not with one another.',
         },
         {
           type: 'table',
@@ -186,51 +186,51 @@ const guide: Guide = {
             ['Arizona', '8.52%', '2.50% flat', '0.43%'],
           ],
           note:
-            'Combined sales tax is state plus average local rate; top income tax rate is the highest marginal bracket; property tax is the effective rate on home value. Sales and income tax rates: Tax Foundation, 2026. Effective property tax rate: Construction Coverage analysis of U.S. Census Bureau 2024 American Community Survey data. Washington levies no tax on wage income but does tax certain capital gains. Rates change; confirm your own position with a tax professional before you move.',
+            'Combined sales tax is state plus average local rate; top income tax rate is the highest marginal bracket; property tax is the effective rate on home value. Sales and income tax rates: Tax Foundation, 2026. Effective property tax rate: Construction Coverage analysis of U.S. Census Bureau 2024 American Community Survey data. Washington levies no tax on wage income but does tax certain capital gains. Rates change; confirm individual tax positions with a tax professional before moving.',
         },
         {
           type: 'callout',
-          title: 'What This Means in Practice',
-          text: 'If you are moving from Washington or Texas, you are trading no income tax for a top rate near 10 percent — usually the larger number. If you are coming from California, Oregon is likely a reduction on income and a wash on property. Retirees drawing down savings rather than earning wages tend to do well here, because the tax that bites is the one on income.',
+          title: 'In practice',
+          text: 'Buyers moving from Washington or Texas trade no income tax for a top rate near 10 percent, usually the larger cost. For buyers from California, Oregon is likely lower on income tax and about equal on property tax.',
         },
         {
           type: 'p',
-          text: 'Three things the chart omits:',
+          text: 'Not shown in the table:',
         },
         {
           type: 'list',
           items: [
-            { title: 'Estate tax.', text: 'Oregon taxes estates above $1 million — among the lowest thresholds in the country and far below the federal exemption. It does not pass automatically between spouses.' },
-            { title: 'Local option levies.', text: 'Property tax varies by district, so two addresses a mile apart can carry different rates.' },
-            { title: 'Vehicle fees.', text: 'Registration is priced partly on fuel economy, so an efficient car is cheaper to keep on the road.' },
+            { title: 'Estate tax.', text: 'Oregon taxes estates above $1 million, one of the lowest thresholds in the country and far below the federal exemption. It does not pass automatically between spouses.' },
+            { title: 'Local option levies.', text: 'Property tax varies by district, so two addresses a mile apart can have different rates.' },
+            { title: 'Vehicle fees.', text: 'Registration fees are based partly on fuel economy, so efficient vehicles cost less to register.' },
           ],
         },
         {
           type: 'p',
-          text: 'Who tends to come out ahead:',
+          text: 'Groups that tend to pay less overall:',
         },
         {
           type: 'list',
           items: [
-            'Retirees and anyone living on savings rather than wages — the tax that bites here is the one on earned income.',
-            'Households arriving from California, who usually see income tax fall and property tax stay roughly flat.',
-            'Anyone making a large purchase after arriving, where the absence of sales tax shows up immediately.',
+            "Retirees and others living on savings rather than wages, since Oregon's main tax is on earned income.",
+            'Households moving from California, which usually see income tax fall and property tax stay roughly flat.',
+            'Buyers making large purchases after arriving, because there is no sales tax.',
           ],
         },
         {
           type: 'p',
-          text: 'Estate tax is a planning matter rather than a real estate one — if it may apply to you, speak with an estate attorney before establishing Oregon residency, not after.',
+          text: 'Estate tax is a planning matter rather than a real estate one. Anyone it may affect should consult an estate attorney before establishing Oregon residency.',
         },
       ],
     },
     {
       id: 'climate',
       kicker: '06 · Climate',
-      heading: 'Where the Rain Actually Falls',
+      heading: 'Climate',
       blocks: [
         {
           type: 'p',
-          text: 'The reputation is earned on one side of the Cascades and largely wrong on the other. Astoria, on the coast, gets close to six feet of rain a year. Bend, inland and east of the crest, gets under eleven inches.',
+          text: "Oregon's rainy reputation applies west of the Cascades. Astoria, on the coast, gets close to six feet of rain a year; Bend, inland and east of the crest, gets under eleven inches.",
         },
         {
           type: 'table',
@@ -245,30 +245,30 @@ const guide: Guide = {
             ['Bend', 'Central', '10.6'],
           ],
           note:
-            '1991–2020 normals, sorted wettest to driest; Portland shown as the metro baseline. Source: NOAA National Centers for Environmental Information 1991–2020 normals, via Current Results. Medford sits west of the Cascade crest but in the Siskiyou rain shadow — which is why it reads dry despite being on the "wet" side of the state.',
+            '1991–2020 normals, sorted wettest to driest; Portland shown as the metro baseline. Source: NOAA National Centers for Environmental Information 1991–2020 normals, via Current Results. Medford is west of the Cascade crest but in the Siskiyou rain shadow, which is why it is dry despite being on the "wet" side of the state.',
         },
         {
           type: 'p',
-          text: 'Days with sun, annually:',
+          text: 'Sunny days per year:',
         },
         {
           type: 'list',
           items: [
-            { title: 'Portland.', text: '68 clear days, 142 with some sun. The grey is real, and it is more persistent than heavy.' },
-            { title: 'Medford.', text: '117 clear days, with hot dry summers and a genuine four-season feel.' },
-            { title: 'Burns and Pendleton.', text: '120 and 101 clear days. Eastern Oregon is the sunniest part of the state.' },
+            { title: 'Portland.', text: '68 clear days and 142 with some sun. Overcast weather is persistent rather than heavy.' },
+            { title: 'Medford.', text: '117 clear days, with hot, dry summers and four distinct seasons.' },
+            { title: 'Burns and Pendleton.', text: '120 and 101 clear days respectively. Eastern Oregon is the sunniest part of the state.' },
           ],
         },
         {
           type: 'p',
-          text: 'What newcomers get wrong:',
+          text: 'Common misconceptions:',
         },
         {
           type: 'list',
           items: [
-            "Portland's rain arrives as drizzle spread across many days rather than downpours. By volume it rains less here than in Miami or Houston.",
-            'Summers west of the Cascades are reliably dry and mild — July and August are close to rainless.',
-            'Winter in Bend means snow and sun, not grey. It is a different climate, not a milder version of the same one.',
+            "Portland's rain falls mostly as drizzle spread over many days rather than as downpours. By volume, Portland gets less rain than Miami or Houston.",
+            'Summers west of the Cascades are reliably dry and mild; July and August are nearly rainless.',
+            'Winter in Bend brings snow and sun rather than overcast skies. It is a different climate, not a milder version of the western one.',
           ],
         },
         {
@@ -281,11 +281,11 @@ const guide: Guide = {
     {
       id: 'what-homes-cost',
       kicker: '07 · Housing',
-      heading: 'What Homes Cost',
+      heading: 'Housing costs',
       blocks: [
         {
           type: 'p',
-          text: 'Oregon is not one housing market. The statewide median sits near half a million dollars, but Bend trades at a clear premium to Portland, and Eastern Oregon at a deep discount to both.',
+          text: 'Oregon has several distinct housing markets. The statewide median is near half a million dollars; Bend is clearly more expensive than Portland, and Eastern Oregon is much cheaper than both.',
         },
         {
           type: 'stats',
@@ -295,36 +295,36 @@ const guide: Guide = {
             { value: '$698,538', label: 'Bend median' },
           ],
           note:
-            'Statewide median via Houzeo; Portland and Bend medians via Redfin, three months ending August 2026. Housing figures move quickly — ask for a current, neighborhood-level analysis rather than relying on a printed number.',
+            'Statewide median via Houzeo; Portland and Bend medians via Redfin, three months ending August 2026. Housing figures change quickly; use a current, neighborhood-level analysis rather than a published number.',
         },
         {
           type: 'p',
-          text: 'What moves the number:',
+          text: 'Factors affecting prices:',
         },
         {
           type: 'list',
           items: [
-            { title: 'Land supply.', text: "Oregon's urban growth boundaries limit outward sprawl, which supports values inside the line and constrains building outside it." },
+            { title: 'Land supply.', text: "Oregon's urban growth boundaries limit sprawl, which supports values inside the boundary and restricts building outside it." },
             { title: 'In-migration.', text: 'Central Oregon has drawn buyers from higher-cost markets for a decade, and prices reflect it.' },
-            { title: 'Distance to a major airport and a full-service hospital.', text: "The two amenities that most reliably separate Oregon's price tiers." },
+            { title: 'Distance to a major airport and a full-service hospital.', text: "The two amenities that most consistently separate Oregon's price tiers." },
           ],
         },
         {
           type: 'p',
-          text: 'A property tax quirk worth knowing:',
+          text: 'Property tax assessment:',
         },
         {
           type: 'list',
           items: [
-            'Oregon taxes an assessed value that usually sits well below market value and, by law, rises no more than 3 percent a year.',
-            'It does not reset when a home sells, unlike California. Two near-identical neighbors can owe very different amounts.',
-            'Never estimate a tax bill from the purchase price. Get the actual assessed value from the county before writing an offer.',
+            'Oregon taxes an assessed value that is usually well below market value and, by law, rises no more than 3 percent a year.',
+            'Unlike in California, assessed value does not reset when a home sells, so two near-identical neighboring homes can owe very different amounts.',
+            'Do not estimate a tax bill from the purchase price. Obtain the actual assessed value from the county before making an offer.',
           ],
         },
         {
           type: 'callout',
-          title: 'Before You Compare to Home',
-          text: 'A like-for-like comparison has to carry all three taxes, insurance and commuting cost together. Buyers arriving from no-income-tax states are usually surprised on the income side and relieved on the property side. I can run those numbers against a specific address before you travel.',
+          title: 'Comparing costs with another state',
+          text: 'A like-for-like comparison should include all three taxes, insurance and commuting costs. Buyers from states without an income tax usually pay more on income and less on property.',
         },
         {
           type: 'image',
@@ -336,75 +336,75 @@ const guide: Guide = {
     {
       id: 'the-clock-starts-on-arrival',
       kicker: '08 · Logistics',
-      heading: 'The Clock Starts on Arrival',
+      heading: 'Deadlines after arrival',
       blocks: [
         {
           type: 'p',
-          text: "Two of Oregon's requirements are legal deadlines rather than suggestions, and both land at thirty days. The sequence matters: in two parts of the state an emissions test has to happen before you can register a vehicle.",
+          text: "Two of Oregon's requirements for new residents are legal deadlines, both at thirty days. The order matters: in two parts of the state, a vehicle must pass an emissions test before it can be registered.",
         },
         {
           type: 'steps',
           items: [
-            { title: 'Before You Move', text: 'Check whether your new address falls inside a DEQ testing boundary. It changes your registration sequence.' },
-            { title: 'Day 0 — You Arrive', text: 'Residency is established, and the thirty-day clock on both DMV items begins now — not when you get to it.' },
-            { title: 'Day 30 — Two Legal Deadlines', text: '1. Oregon driver license. 2. Title and register every vehicle you brought. DEQ test first if you are in the Portland metro or Medford area.' },
-            { title: 'Day 90 — Settling In', text: 'Voter registration, doctors, schools and establishing domicile for tax purposes.' },
+            { title: 'Before moving', text: 'Check whether the new address is inside a DEQ testing boundary. This changes the registration sequence.' },
+            { title: 'Day 0 — arrival', text: 'Residency is established, and the thirty-day clock on both DMV requirements starts.' },
+            { title: 'Day 30 — two legal deadlines', text: '1. Oregon driver license. 2. Title and register every vehicle brought into the state. In the Portland metro and Medford areas, the DEQ test comes first.' },
+            { title: 'Day 90 — settling in', text: 'Voter registration, doctors, schools and establishing domicile for tax purposes.' },
           ],
         },
         {
           type: 'callout',
-          text: 'Voter registration closes 21 days before any election — a separate deadline from the two above.',
+          text: 'Voter registration closes 21 days before any election, a separate deadline from the two above.',
         },
         {
           type: 'p',
-          text: "Deadlines per the State of Oregon and Oregon DEQ. Emissions testing applies in the Portland metropolitan and Medford–Ashland areas only; use DEQ's boundary lookup to confirm a specific address. Requirements change — verify with DMV and DEQ before relying on this.",
+          text: "Deadlines per the State of Oregon and Oregon DEQ. Emissions testing applies only in the Portland metropolitan and Medford–Ashland areas; DEQ's boundary lookup confirms whether a specific address is included. Requirements change; verify with DMV and DEQ.",
         },
         {
           type: 'p',
-          text: 'To register a vehicle you drove in:',
+          text: 'Registering a vehicle brought from another state requires:',
         },
         {
           type: 'list',
           items: [
             'The original out-of-state title, plus any lien releases or bills of sale from previous owners.',
-            'A VIN inspection — required for out-of-state titles, and done at your DMV appointment.',
-            'An odometer disclosure, where the vehicle requires one.',
-            'A passing DEQ test first, if the address sits inside a testing boundary.',
+            'A VIN inspection, required for out-of-state titles and done at the DMV appointment.',
+            'An odometer disclosure, if the vehicle requires one.',
+            'A passing DEQ test beforehand, if the address is inside a testing boundary.',
           ],
         },
         {
           type: 'p',
-          text: 'To prove you live here:',
+          text: 'Residency and fees:',
         },
         {
           type: 'list',
           items: [
-            'You must be a resident of, or domiciled in, Oregon to register a vehicle — proof can include tax returns or military documents.',
-            'Title, registration and plate fees are due at the same visit; DMV publishes a fee calculator for passenger vehicles.',
-            'Appointments fill up around Portland. Book before you arrive rather than after, or the thirty days disappear quickly.',
+            'Registering a vehicle requires Oregon residency or domicile; proof can include tax returns or military documents.',
+            'Title, registration and plate fees are paid at the same visit; DMV publishes a fee calculator for passenger vehicles.',
+            'DMV appointments around Portland fill up quickly. Booking before arrival helps meet the thirty-day deadline.',
           ],
         },
         {
           type: 'callout',
-          title: 'The One That Catches People',
-          text: 'If you are moving into the Portland metro or the Medford–Ashland area, the emissions test is a prerequisite for registration, not a follow-up to it. Booking the DMV appointment first and discovering the test second is the most common way the thirty-day window gets missed.',
+          title: 'Emissions test timing',
+          text: 'In the Portland metro and Medford–Ashland areas, the emissions test must be completed before registration. Booking the DMV appointment before the test is the most common reason the thirty-day deadline is missed.',
         },
       ],
     },
     {
       id: 'getting-set-up',
       kicker: '09 · Practicalities',
-      heading: 'Getting Set Up',
+      heading: 'Getting set up',
       blocks: [
         {
           type: 'list',
           items: [
-            { title: 'Emissions Testing.', text: 'Required in the Portland metro and Medford–Ashland areas, and it has to pass before a vehicle can be registered — then every two years after that.' },
-            { title: 'Someone Else Pumps It.', text: 'Oregon banned self-service fuel for decades. The rules have loosened, but across much of the state an attendant still fills the tank. Now you have the option to pump your own, or an attendant may serve you.' },
-            { title: 'Vote by Mail.', text: 'Oregon has run elections entirely by mail since 2000 and registers voters automatically through the DMV. Ballots arrive at home; registration closes 21 days before an election.' },
-            { title: 'The Price Is the Price.', text: 'With no sales tax, the number on the tag is the number you pay. Buyers relocating from high-tax states notice it most on vehicles, appliances and furnishing a new home.' },
-            { title: 'Mountain Passes.', text: 'If your commute or family visits cross the Cascades, traction devices and occasional winter closures become a real planning factor from November through March.' },
-            { title: 'Establishing Domicile.', text: 'If you keep property in another state, the date you become an Oregon resident matters for that year\'s filing. Worth a conversation with an accountant before the move rather than after.' },
+            { title: 'Emissions testing.', text: 'Required in the Portland metro and Medford–Ashland areas. A vehicle must pass before it can be registered, and every two years after that.' },
+            { title: 'Fuel service.', text: 'Oregon banned self-service fuel for decades. The rules have since loosened: drivers may pump their own fuel or be served by an attendant, and attendant service remains common across much of the state.' },
+            { title: 'Vote by mail.', text: 'Oregon has run elections entirely by mail since 2000 and registers voters automatically through the DMV. Ballots are mailed to voters at home; registration closes 21 days before an election.' },
+            { title: 'No sales tax.', text: 'The price on the tag is the price paid. Buyers relocating from high-tax states notice it most on vehicles, appliances and home furnishings.' },
+            { title: 'Mountain passes.', text: 'For commutes or family visits across the Cascades, traction devices and occasional winter closures are a planning factor from November through March.' },
+            { title: 'Establishing domicile.', text: "For people who keep property in another state, the date Oregon residency begins matters for that year's tax filing. Consult an accountant before the move." },
           ],
         },
         {
@@ -414,31 +414,9 @@ const guide: Guide = {
         },
       ],
     },
-    {
-      id: 'next-steps',
-      kicker: 'Next Steps',
-      heading: 'Moving from out of state is a different kind of search.',
-      blocks: [
-        {
-          type: 'p',
-          text: 'You are choosing a region before you choose a house, often without having stood in either one. That changes the order of the work — and it is the part I do most. Tell me what your week needs to look like and we will narrow the map before you book a flight.',
-        },
-        {
-          type: 'list',
-          items: [
-            'Region and climate shortlist',
-            'All-in cost comparison against your current state',
-            'Remote touring and video walkthroughs',
-            'Lender, inspector and mover referrals',
-            'A relocation trip planned around real listings',
-            'Assessed-value check before every offer',
-          ],
-        },
-      ],
-    },
   ],
   disclaimer:
-    'Tax, legal and regulatory details in this guide are general and current as of publication; verify with the relevant agency or a qualified professional before acting on them. Information deemed reliable but not guaranteed and subject to change.',
+    'Tax, legal and regulatory details in this guide are general and current as of publication; verify with the relevant agency or a qualified professional before acting on them. Information is deemed reliable but not guaranteed, and is subject to change.',
 };
 
 export default guide;

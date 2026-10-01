@@ -7,9 +7,9 @@ const guide: Guide = {
   title: 'Raleigh Hills',
   eyebrow: 'Unincorporated Washington County · Neighborhood Guide',
   summary:
-    'The commercial junction of Beaverton-Hillsdale Highway and Scholls Ferry Road, unincorporated like West Slope and now the subject of a county town-centre boundary in progress.',
+    'An unincorporated commercial area of Washington County at the junction of Beaverton-Hillsdale Highway and Scholls Ferry Road, where the county is drawing a town center boundary.',
   lede:
-    'A post office, an interurban stop, and then a junction. Raleigh Hills sits where Beaverton-Hillsdale Highway meets Scholls Ferry Road, and it is the commercial centre for a large piece of unincorporated Washington County — the first New Seasons opened here. Like West Slope, it has no city government, and the county is currently drawing a town centre boundary around it.',
+    'Raleigh Hills is an unincorporated area of Washington County centered on the junction of Beaverton-Hillsdale Highway and Scholls Ferry Road, and the commercial center for a large part of the unincorporated county; the first New Seasons Market opened here. Like West Slope, it has no city government, and the county is drawing a town center boundary around it.',
   hero: { slot: 'raleigh-hills-junction', caption: 'The junction · Beaverton-Hillsdale Highway at Scholls Ferry Road' },
   stats: [
     { value: '1892', label: 'A post office named Raleigh opened, for resident Raleigh Robinson' },
@@ -18,19 +18,19 @@ const guide: Guide = {
     { value: '$922,220', label: 'Zillow Home Value Index, 31 July 2026' },
   ],
   statsNote:
-    'The figure is Zillow\'s modelled index for the Raleigh Hills area, not a median of closed sales — the two are different measures and should never be compared directly. Redfin\'s local median rests on eight sales in a month. For a closed-sale benchmark with volume, ZIP 97225 ran $719,689 in August 2026 across 93 sales.',
+    'The figure is Zillow\'s modeled index for the Raleigh Hills area, not a median of closed sales; the two measures should not be compared directly. Redfin\'s local median rests on eight sales in a month. For a closed-sale benchmark with volume, ZIP 97225 had a median of $719,689 in August 2026 across 93 sales.',
   sections: [
     {
       id: 'history',
-      heading: 'How it came to be here',
+      heading: 'History',
       blocks: [
         {
           type: 'p',
-          text: 'A post office called Raleigh opened in April 1892, named for a resident, Raleigh Robinson, and closed twelve years later. In 1914 Southern Pacific\'s Red Electric interurban established a stop here, which is what first made the junction worth building around; the line ran until 1929.',
+          text: 'A post office called Raleigh opened in April 1892, named for a resident, Raleigh Robinson, and closed twelve years later. In 1914 Southern Pacific\'s Red Electric interurban established a stop here, which first made the junction a focus of development; the line ran until 1929.',
         },
         {
           type: 'p',
-          text: 'Water came the way most things did here — by the neighbours. In 1921 they formed Raleigh Water Users, funded by property-owner shares rather than taxes, and in 1947 it became a state-law water district with an elected board. Washington County adopted the community plan that still governs the area on 12 September 1978.',
+          text: 'In 1921 residents formed Raleigh Water Users, funded by property-owner shares rather than taxes; in 1947 it became a state-law water district with an elected board. Washington County adopted the community plan that still governs the area on 12 September 1978.',
         },
         {
           type: 'timeline',
@@ -45,31 +45,30 @@ const guide: Guide = {
     },
     {
       id: 'before-you-buy',
-      heading: 'What to check before you buy here',
+      heading: 'Before buying',
       blocks: [
         {
           type: 'list',
           items: [
-            { title: 'Confirm the lot is still unincorporated.', text: 'Two subareas of the plan have already been annexed to Beaverton and one parcel to Portland. Jurisdiction sets the permit counter, the police provider and the tax stack.' },
-            { title: 'Identify the water district by name.', text: 'Four separately elected districts serve this one plan area — Metzger, Raleigh, West Slope and Tualatin Valley — with different rates. Raleigh buys Bull Run water wholesale from Portland.' },
-            { title: 'Septic or sewer.', text: 'Order a county Existing System Evaluation for anything on septic. A failure, or redevelopment within 300 feet of a sewer line, forces connection.' },
-            { title: 'The town centre designation in progress.', text: 'The county\'s 2025–27 work programme includes adopting a Raleigh Hills town centre boundary. Those designations typically change allowed density and parking rules. Ask where the draft line falls.' },
+            { title: 'Jurisdiction.', text: 'Confirm the lot is still unincorporated. Two subareas of the plan have been annexed to Beaverton and one parcel to Portland. Jurisdiction determines the permit office, the police provider and the tax stack.' },
+            { title: 'Water district.', text: 'Four separately elected districts serve the plan area (Metzger, Raleigh, West Slope and Tualatin Valley), with different rates. Raleigh buys Bull Run water wholesale from Portland.' },
+            { title: 'Septic or sewer.', text: 'A county Existing System Evaluation should be ordered for any property on septic. A failure, or redevelopment within 300 feet of a sewer line, requires connection.' },
+            { title: 'Town center designation.', text: 'The county\'s 2025–27 work program includes adopting a Raleigh Hills town center boundary. Such designations typically change allowed density and parking rules. Check where the draft boundary falls.' },
           ],
         },
       ],
     },
     {
       id: 'housing',
-      kicker: 'Living Here · Housing, getting around, and daily life',
-      heading: 'The housing',
+      heading: 'Housing',
       blocks: [
         {
           type: 'p',
-          text: 'Predominantly low-density detached houses — R-5 covers just under 69 percent of plan-area acreage, at four to five units an acre on a 5,500 square foot minimum lot. Smaller shares carry R-9, R-15 and R-24 designations, and roughly 75 acres are community business district around the junction itself.',
+          text: 'Housing is predominantly low-density detached houses. R-5 covers just under 69 percent of plan-area acreage, at four to five units an acre on a 5,500 square foot minimum lot. Smaller shares carry R-9, R-15 and R-24 designations, and roughly 75 acres around the junction are community business district.',
         },
         {
           type: 'p',
-          text: 'The county describes the area as largely developed with relatively few vacant parcels remaining. Census five-year estimates for 2020–2024 put owner occupancy at 52.8 percent and the median value of owner-occupied units at $913,700 — again a self-reported value averaged over five years, not a closing price.',
+          text: 'The county describes the area as largely developed with relatively few vacant parcels remaining. Census 2020–2024 five-year estimates put owner occupancy at 52.8 percent and the median value of owner-occupied units at $913,700, a self-reported value over five years rather than a closing price.',
         },
         { type: 'image', slot: 'raleigh-hills-street', caption: 'A detached single-family street' },
       ],
@@ -80,26 +79,26 @@ const guide: Guide = {
       blocks: [
         {
           type: 'p',
-          text: 'The junction is the point: Oregon 10 and Oregon 210 meet here, and Oregon 10 runs continuously through Hillsdale to Capitol Highway, Barbur and downtown. Highway 217 is west and US 26 north. The county counts almost a dozen bus lines through the plan area.',
+          text: 'Oregon 10 and Oregon 210 meet at the junction, and Oregon 10 continues through Hillsdale to Capitol Highway, Barbur and downtown. Highway 217 is to the west and US 26 to the north. The county counts almost a dozen bus lines through the plan area.',
         },
         { type: 'image', slot: 'scholls-ferry', caption: 'Scholls Ferry Road or Beaverton-Hillsdale Highway' },
         {
           type: 'p',
-          text: 'Beaverton-Hillsdale is a designated frequent bus route; Canyon, Garden Home and Oleson are regional routes. Line 54\'s published weekday schedule runs about 24 to 25 minutes from Beaverton-Hillsdale and Oleson to downtown. Bikeways are sparse — essentially Scholls Ferry south of Raleigh Scholls Park and part of Garden Home Road.',
+          text: 'Beaverton-Hillsdale is a designated frequent bus route; Canyon, Garden Home and Oleson are regional routes. Line 54\'s published weekday schedule gives about 24 to 25 minutes from Beaverton-Hillsdale and Oleson to downtown. Bikeways are limited, mainly Scholls Ferry south of Raleigh Scholls Park and part of Garden Home Road.',
         },
       ],
     },
     {
       id: 'parks-daily-life',
-      heading: 'Parks and daily life',
+      heading: 'Parks and amenities',
       blocks: [
         {
           type: 'p',
-          text: 'The retail node is the draw. New Seasons Market at 7300 SW Beaverton Hillsdale is the chain\'s original store, with Fred Meyer a few hundred yards east at 7700. The park district runs Raleigh Scholls Park, Vista Brook Park, and Raleigh Park with its seasonal swim centre.',
+          text: 'New Seasons Market at 7300 SW Beaverton Hillsdale is the chain\'s original store, and Fred Meyer is a few hundred yards east at 7700. The park district runs Raleigh Scholls Park, Vista Brook Park, and Raleigh Park with its seasonal swim center.',
         },
         {
           type: 'p',
-          text: 'Fanno Creek and its floodplain cross the plan area, and the abandoned Red Electric right-of-way between SW 92nd and Oleson survives as a bridle path. Two libraries serve the area — West Slope on SW 78th and Garden Home, which joined the county co-operative in July 1996 and expanded in spring 2019.',
+          text: 'Fanno Creek and its floodplain cross the plan area, and the abandoned Red Electric right-of-way between SW 92nd and Oleson is now a bridle path. Two libraries serve the area: West Slope on SW 78th, and Garden Home, which joined the county co-operative in July 1996 and expanded in spring 2019.',
         },
         { type: 'image', slot: 'fanno-creek-path', caption: 'Fanno Creek, the old Red Electric bridle path, or Vista Brook Park' },
       ],

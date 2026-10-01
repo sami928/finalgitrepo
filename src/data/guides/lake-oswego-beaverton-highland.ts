@@ -7,15 +7,15 @@ const guide: Guide = {
   title: 'Lake Oswego, Beaverton & Highland',
   eyebrow: 'Two Cities and a Pocket Inside One of Them',
   summary:
-    'Lake Oswego and Beaverton are separate cities with their own school districts and character, while Highland — also sold as Hyland Hills — is a wooded residential neighborhood inside Beaverton.',
+    'Lake Oswego and Beaverton are separate cities with their own school districts; Highland, also marketed as Hyland Hills, is a wooded residential neighborhood inside Beaverton.',
   lede:
-    'These three are not the same kind of choice. Lake Oswego and Beaverton are separate cities with their own school districts, budgets and character. Highland — also sold as Hyland Hills — is a wooded residential neighborhood inside Beaverton. Most buyers settle the city question first and the street question second, so the guide is ordered that way.',
+    'Lake Oswego and Beaverton are separate cities with their own school districts, budgets and character. Highland, also marketed as Hyland Hills, is a wooded residential neighborhood inside Beaverton.',
   hero: null,
   stats: [],
   sections: [
     {
       id: 'comparison',
-      heading: 'City & Neighborhood',
+      heading: 'Comparison',
       blocks: [
         {
           type: 'table',
@@ -56,7 +56,7 @@ const guide: Guide = {
             ],
             [
               'Known for',
-              'Oswego Lake, and a 19th-century iron industry past',
+              'Oswego Lake, and a 19th-century iron industry',
               "Nike's global headquarters and the Silicon Forest",
               'Fir Grove and Channing Heights parks; Hyland Forest Park nearby',
             ],
@@ -68,19 +68,18 @@ const guide: Guide = {
             { value: '$884,631', label: 'Lake Oswego · typical home value' },
             { value: '$630,000', label: 'Beaverton · median sale price' },
           ],
-          note: 'Lake Oswego figure is the Zillow home value index, up 1.4% year on year, 31 August 2026. Beaverton figure is the Redfin median sale price, up 14.5% year on year, 37 days on market, August 2026. Read those two figures separately, not against each other — they come from different providers and measure different things, a modelled value index against an actual median of closed sales. The gap between the cities is real, but these numbers do not size it. Ask for a like-for-like analysis before drawing a conclusion from either.',
+          note: 'Lake Oswego: Zillow home value index, up 1.4% year on year, 31 August 2026. Beaverton: Redfin median sale price, up 14.5% year on year, 37 days on market, August 2026. The two figures are not comparable: they come from different providers and measure different things (a modeled value index versus a median of closed sales). The price gap between the cities is real, but these numbers do not measure it. A like-for-like analysis is needed before drawing conclusions from either.',
         },
         {
           type: 'callout',
-          title: 'Before You Assume Lake Access',
-          text: 'A Lake Oswego address does not by itself come with the right to use Oswego Lake. Access runs with specific easements attached to particular properties and neighborhood associations, and the question of public access has been through the Oregon courts more than once in recent years.\n\nIt is one of the most common misunderstandings among buyers new to the city, and it materially affects value. Confirm what a specific property actually conveys before making an offer on the strength of the lake.',
+          title: 'Lake access',
+          text: 'A Lake Oswego address does not by itself include the right to use Oswego Lake. Access depends on easements attached to particular properties and neighborhood associations, and public access has been litigated in the Oregon courts more than once in recent years.\n\nThis is a common misunderstanding among buyers new to the city, and it materially affects value. Confirm what a specific property conveys before making an offer based on lake access.',
         },
       ],
     },
     {
       id: 'closer-look',
-      kicker: 'A Closer Look',
-      heading: 'What Each One Is Actually Like',
+      heading: 'Cities and neighborhood',
       blocks: [
         {
           type: 'cards',
@@ -90,19 +89,19 @@ const guide: Guide = {
               title: 'Lake Oswego',
               tag: 'Clackamas County · City',
               image: 'lake-oswego',
-              text: "Seven miles south of Portland, built around a 405-acre lake the Clackamas people called Waluga. The city was the hub of Oregon's iron industry in the late 1800s before becoming residential. Its own school district runs two high schools, Lake Oswego and Lakeridge, and the downtown along A Avenue carries an unusually complete set of shops and restaurants for a city of 40,000.\n\nConsider it if you want a self-contained small city with its own district, and you are buying at the upper end of the metro.",
+              text: "Seven miles south of Portland, built around a 405-acre lake the Clackamas people called Waluga. The city was the center of Oregon's iron industry in the late 1800s before becoming residential. Its school district runs two high schools, Lake Oswego and Lakeridge. Downtown, along A Avenue, has an unusually full range of shops and restaurants for a city of 40,000.\n\nIt is a self-contained small city with its own school district, and its housing is at the upper end of the metro market.",
             },
             {
               title: 'Beaverton',
               tag: 'Washington County · City',
               image: 'beaverton',
-              text: "The seventh largest city in Oregon and the economic center of Washington County alongside Hillsboro. Nike's global headquarters sits here, employing around 6,000 people, with the school district itself the next largest employer. Seven MAX stations across two lines and the busiest transit center in the TriMet system make it the most connected of the three by a wide margin.\n\nConsider it if the commute matters, or you want the widest range of housing types and prices on the westside.",
+              text: "The seventh largest city in Oregon and, with Hillsboro, the economic center of Washington County. Nike's global headquarters is here, employing around 6,000 people; the school district is the next largest employer. With seven MAX stations on two lines and the busiest transit center in the TriMet system, it is the best connected of the three.\n\nIt has the widest range of housing types and prices on the westside.",
             },
             {
               title: 'Highland · Hyland Hills',
               tag: 'Beaverton · Neighborhood',
               image: 'highland-hyland-hills',
-              text: "A wooded pocket about ten miles west of downtown Portland, under tall Douglas firs that give it a quieter, more secluded feel than the arterials nearby would suggest. Housing is almost entirely single-family and mid-century — ranch and split-level, often single-story, with the large windows and courtyards of the period. Fir Grove and Channing Heights parks sit inside it, Hyland Forest Park just beyond.\n\nConsider it if you want Beaverton's access and schools but trees and quiet on the street itself.",
+              text: "A wooded area about ten miles west of downtown Portland, under tall Douglas firs that make it quieter than the nearby arterials. Housing is almost entirely single-family and mid-century: ranch and split-level, often single-story, with the large windows and courtyards of the period. Fir Grove and Channing Heights parks are inside it, and Hyland Forest Park is just beyond.\n\nIt combines Beaverton's access and schools with quiet, wooded streets.",
             },
           ],
         },
@@ -110,7 +109,7 @@ const guide: Guide = {
     },
   ],
   disclaimer:
-    'City, county and school district boundaries vary by address and change over time; school assignment and any lake or water rights must be verified for a specific property. Market figures are as dated and move quickly.',
+    'City, county and school district boundaries vary by address and change over time; verify school assignment and any lake or water rights for a specific property. Market figures are as of the dates given and change quickly.',
 };
 
 export default guide;

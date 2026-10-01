@@ -7,49 +7,44 @@ const guide: Guide = {
   title: 'Relocating to Portland',
   eyebrow: 'Portland, Oregon · Relocation Guide',
   summary:
-    'Neighborhoods, market insight, and everyday life in the City of Roses — prepared for buyers considering a move to the Pacific Northwest.',
+    'An overview of Portland, Oregon, for buyers relocating to the city: its neighborhoods, housing market, cost of living and daily life.',
   lede:
-    'Neighborhoods, market insight, and everyday life in the City of Roses — prepared for buyers considering a move to the Pacific Northwest.',
+    'Portland, known as the City of Roses, lies between the Willamette and Columbia Rivers, with Mount Hood visible on clear days. It is organized around distinct neighborhoods rather than a single downtown core.',
   hero: { slot: 'cover-portland', caption: 'Portland, Oregon' },
   stats: [
     { value: '652K+', label: 'City population' },
-    { value: '95', label: 'Distinct neighborhoods' },
+    { value: '95', label: 'Neighborhoods' },
     { value: 'Temperate', label: 'Wet winters, dry summers' },
     { value: 'PDX', label: "Direct int'l airport" },
   ],
   sections: [
     {
       id: 'welcome',
-      kicker: 'City of Roses',
-      heading: 'Welcome to Portland',
+      heading: 'Overview',
       blocks: [
         {
           type: 'p',
-          text: 'Tucked between the Willamette and Columbia Rivers and framed by Mount Hood on clear days, Portland has long drawn newcomers with a simple promise: a walkable, design-forward city where nature is never more than a bridge crossing away.',
+          text: 'Each Portland neighborhood has its own main street and character, so location within the city is a major part of a relocation decision.',
         },
         {
           type: 'p',
-          text: 'It is a city of neighborhoods rather than one downtown core — each with its own character, main street, and pace of life — which is why choosing where to live matters just as much as choosing whether to move here at all.',
-        },
-        {
-          type: 'p',
-          text: 'This guide is a starting point: a quick orientation to the neighborhoods, the market, and the everyday rhythms of life in Portland, so our first conversation can begin where the guidebooks leave off.',
+          text: 'This guide summarizes the neighborhoods, the housing market and everyday life in Portland.',
         },
         {
           type: 'cards',
           columns: 3,
           items: [
             {
-              title: 'Walkable by Design',
-              text: 'Compact blocks and a light-rail and streetcar network make car-free days realistic in most close-in neighborhoods.',
+              title: 'Walkability',
+              text: 'Compact blocks and a light-rail and streetcar network make car-free travel practical in most close-in neighborhoods.',
             },
             {
-              title: 'No Sales Tax',
-              text: 'Oregon has no statewide sales tax, a detail that shapes both everyday spending and relocation budgeting.',
+              title: 'No sales tax',
+              text: 'Oregon has no statewide sales tax, which affects everyday spending and relocation budgets.',
             },
             {
-              title: 'Nature at the Edge',
-              text: 'Forest Park, the Gorge, the Coast, and Mount Hood are each under two hours from most front doors.',
+              title: 'Nearby nature',
+              text: 'Forest Park, the Columbia River Gorge, the Oregon Coast and Mount Hood are each under two hours from most of the city.',
             },
           ],
         },
@@ -62,8 +57,7 @@ const guide: Guide = {
     },
     {
       id: 'southwest-west-hills',
-      kicker: 'Where I Focus',
-      heading: 'Southwest & the West Hills',
+      heading: 'Southwest and the West Hills',
       blocks: [
         {
           type: 'cards',
@@ -73,37 +67,37 @@ const guide: Guide = {
               title: 'Multnomah Village',
               tag: 'Southwest',
               image: 'multnomah-village',
-              text: "A walkable village center of independent bookshops, cafes, and pubs, wrapped in character homes on quiet streets. Small-town texture inside the city, and one of Southwest Portland's most sought-after addresses.",
+              text: 'A walkable village center with independent bookshops, cafes and pubs, surrounded by older homes on quiet streets.',
             },
             {
               title: 'Council Crest',
               tag: 'West Hills',
               image: 'council-crest',
-              text: "Portland's highest point, with Cascade views from the park at its summit. Winding hillside streets, architect-designed homes, and downtown only minutes down the hill.",
+              text: "Portland's highest point, with views of the Cascades from the summit park. Winding hillside streets and architect-designed homes, a few minutes from downtown.",
             },
             {
               title: 'Bridlemile',
               tag: 'Southwest',
               image: 'bridlemile',
-              text: 'Wooded and quiet, with generous lots, mature trees, and a well-regarded neighborhood elementary school. A favorite for buyers who want space and greenery without leaving the city.',
+              text: 'A wooded, quiet area with large lots, mature trees and a well-regarded neighborhood elementary school.',
             },
             {
               title: 'Sylvan Highlands',
               tag: 'West Hills',
               image: 'sylvan-highlands',
-              text: 'A forested hillside enclave just off Highway 26, offering fast downtown access and a secluded, tucked-away feel that belies how central it actually is.',
+              text: 'A forested hillside neighborhood just off Highway 26, with quick access to downtown.',
             },
             {
               title: 'Forest Heights',
               tag: 'West Hills',
               image: 'forest-heights',
-              text: 'A master-planned hillside community with newer construction, its own village center, and trails threading the surrounding woods. Appeals to buyers who want turnkey homes and amenities together.',
+              text: 'A master-planned hillside community with newer construction, its own village center and trails through the surrounding woods.',
             },
             {
               title: 'Raleigh Hills',
               tag: 'Washington County',
               image: 'raleigh-hills',
-              text: 'An established, convenient pocket along the Beaverton-Hillsdale corridor. Mature landscaping, mid-century and updated homes, and easy reach of both Portland and the westside.',
+              text: 'An established area along the Beaverton-Hillsdale corridor, with mature landscaping, mid-century and updated homes, and access to both Portland and the westside.',
             },
           ],
         },
@@ -111,8 +105,7 @@ const guide: Guide = {
     },
     {
       id: 'westside-south-metro',
-      kicker: 'Just Beyond the City',
-      heading: 'Westside & South Metro',
+      heading: 'Westside and south metro',
       blocks: [
         {
           type: 'cards',
@@ -121,19 +114,19 @@ const guide: Guide = {
               title: 'West Slope',
               tag: 'Washington County',
               image: 'west-slope',
-              text: 'A leafy unincorporated pocket sitting between Portland and Beaverton, known for mid-century homes on generous lots and mature tree cover. Quiet and established, with quick access in both directions — a practical choice for buyers who want westside convenience without a hillside price.',
+              text: 'An unincorporated area between Portland and Beaverton, known for mid-century homes on large lots and mature tree cover. It has quick access to both cities and is generally less expensive than the hillside neighborhoods.',
             },
             {
               title: 'Lake Oswego',
               tag: 'Clackamas County',
               image: 'lake-oswego',
-              text: 'An affluent lakeside city roughly eight miles south of downtown, with a polished village center along A Avenue, highly regarded schools, and a Willamette River frontage. Housing runs from lakefront estates to wooded contemporary homes on quiet cul-de-sacs.',
+              text: 'An affluent lakeside city about eight miles south of downtown, with a village center along A Avenue, highly regarded schools and Willamette River frontage. Housing ranges from lakefront estates to wooded contemporary homes on cul-de-sacs.',
             },
             {
               title: 'West Linn',
               tag: 'Clackamas County',
               image: 'west-linn',
-              text: 'Set on the bluffs above the Willamette near the falls, West Linn pairs strong schools with wooded residential streets, generous parks, and a genuine small-city feel. Popular with buyers trading a slightly longer commute for square footage and quiet.',
+              text: 'A small city on the bluffs above the Willamette near the falls, with strong schools, wooded residential streets and large parks. Buyers often choose it for larger homes in exchange for a slightly longer commute.',
             },
           ],
         },
@@ -142,11 +135,11 @@ const guide: Guide = {
     {
       id: 'close-in-portland',
       kicker: 'East Side & Northwest',
-      heading: 'Close-In Portland',
+      heading: 'Close-in Portland',
       blocks: [
         {
           type: 'p',
-          text: "Portland's east side and inner Northwest keep a different rhythm — denser, highly walkable, and rich in early-20th-century housing stock. If your search leads across the river, these are the districts worth knowing.",
+          text: "Portland's east side and inner Northwest are dense and highly walkable, with much early-20th-century housing.",
         },
         {
           type: 'cards',
@@ -155,32 +148,32 @@ const guide: Guide = {
             {
               title: 'The Pearl District',
               tag: 'Northwest',
-              text: "Portland's most polished urban address: converted warehouses, galleries, and farm-to-table dining. Condo living in the middle of it all, on a compact and level street grid.",
+              text: 'Converted warehouses, galleries and farm-to-table restaurants. Housing is mostly condominiums, on a compact, level street grid.',
             },
             {
               title: 'Nob Hill / NW District',
               tag: 'Northwest',
-              text: "Restored Queen Anne and Victorian homes on leafy streets, steps from NW 23rd's boutiques and cafes. Charm with genuine walkability.",
+              text: "Restored Queen Anne and Victorian homes on tree-lined streets, near NW 23rd's boutiques and cafes. Highly walkable.",
             },
             {
               title: 'Irvington',
               tag: 'Northeast',
-              text: 'One of the largest concentrations of early-20th-century architecture in the Pacific Northwest. A prestige historic address close to downtown.',
+              text: 'One of the largest concentrations of early-20th-century architecture in the Pacific Northwest. A historic district close to downtown.',
             },
             {
               title: 'Alberta Arts District',
               tag: 'Northeast',
-              text: 'Galleries, murals, and globally-inspired restaurants along a creative, independent-minded strip. Bungalow character homes and a neighborhood-first culture.',
+              text: 'A commercial strip of galleries, murals and international restaurants, surrounded by bungalows.',
             },
             {
               title: 'Sellwood-Moreland',
               tag: 'Southeast',
-              text: 'A quieter riverside pocket of Victorian homes and antique shops, with easy access to the Springwater Corridor trail. A mix of cottages, bungalows, and condominiums on walkable blocks.',
+              text: 'A quieter riverside area of Victorian homes and antique shops, with access to the Springwater Corridor trail. Housing includes cottages, bungalows and condominiums on walkable blocks.',
             },
             {
               title: 'Hawthorne District',
               tag: 'Southeast',
-              text: "Portland's bohemian core — vintage shops, indie bookstores, and an easygoing, eclectic pace. Personality over polish.",
+              text: 'A commercial district known for vintage shops and independent bookstores.',
             },
           ],
         },
@@ -194,7 +187,7 @@ const guide: Guide = {
     {
       id: 'market-character',
       kicker: 'Portland Metro',
-      heading: 'The Market, In Brief',
+      heading: 'Housing market',
       blocks: [
         {
           type: 'stats',
@@ -203,28 +196,28 @@ const guide: Guide = {
             { value: '14 Days', label: 'Median time on market' },
             { value: '43%', label: 'Homes selling above list' },
           ],
-          note: "Market figures reflect recent Redfin data for the Portland, OR metro area and are illustrative as of this guide's printing. Ask Catherine for a current, neighborhood-level analysis prepared for your search.",
+          note: "Recent Redfin data for the Portland, OR metro area; illustrative as of this guide's printing. Neighborhood-level figures vary.",
         },
         {
           type: 'list',
           items: [
-            'Portland’s market remains competitive: the typical home receives roughly two offers and moves off market in about two weeks.',
-            'Homes are selling at roughly 101% of list price on average, with well-priced, move-in-ready listings drawing the most competition.',
-            'Price per square foot has held near $315, a helpful benchmark when comparing neighborhoods.',
+            'The market is competitive: the typical home receives about two offers and goes off the market in about two weeks.',
+            'Homes sell for about 101% of list price on average; well-priced, move-in-ready listings draw the most competition.',
+            'Price per square foot has held near $315, a benchmark for comparing neighborhoods.',
           ],
         },
       ],
     },
     {
       id: 'cost-of-living',
-      heading: 'Cost of Living Notes',
+      heading: 'Cost of living',
       blocks: [
         {
           type: 'list',
           items: [
-            'Oregon levies no state sales tax, which offsets a moderate state income tax for many households.',
-            "Property tax is calculated under Oregon's assessed-value system, which can keep bills more predictable than in market-value states.",
-            'Utilities and groceries trend close to national averages; housing is the primary cost variable, and it varies widely by neighborhood.',
+            'Oregon has no state sales tax, which for many households offsets a moderate state income tax.',
+            "Property tax is based on Oregon's assessed-value system, which can make bills more predictable than in market-value states.",
+            'Utilities and groceries are close to national averages. Housing is the main cost variable and differs widely by neighborhood.',
           ],
         },
         {
@@ -236,42 +229,41 @@ const guide: Guide = {
     },
     {
       id: 'lifestyle-logistics',
-      kicker: 'Day to Day',
-      heading: 'Life in the City of Roses',
+      heading: 'Daily life',
       blocks: [
         {
           type: 'cards',
           columns: 3,
           items: [
             {
-              title: 'Four Real Seasons',
+              title: 'Climate',
               tag: 'Climate',
-              text: 'Mild, wet winters and warm, dry summers define the year. Rain is frequent but rarely heavy, and summer months are consistently sunny — ideal for the outdoor culture Portland is known for.',
+              text: 'Winters are mild and wet; summers are warm, dry and consistently sunny. Rain is frequent but rarely heavy.',
             },
             {
-              title: 'Transit & Bikeability',
+              title: 'Transit and cycling',
               tag: 'Getting Around',
-              text: "MAX light rail, the streetcar, and an extensive bike network connect most close-in neighborhoods. Many residents in the Pearl, Northwest, and inner Southeast go car-light or car-free entirely.",
+              text: 'MAX light rail, the streetcar and an extensive bike network connect most close-in neighborhoods. Many residents of the Pearl, Northwest and inner Southeast drive little or not at all.',
             },
             {
-              title: 'Nature Close at Hand',
+              title: 'Outdoors',
               tag: 'Outdoors',
-              text: "Forest Park's 80+ miles of trails sit inside city limits, while the Columbia River Gorge, Mount Hood, and the Oregon Coast are all within roughly 90 minutes' drive.",
+              text: "Forest Park's 80+ miles of trails are inside city limits. The Columbia River Gorge, Mount Hood and the Oregon Coast are all within about 90 minutes' drive.",
             },
             {
-              title: 'A Genuine Food City',
+              title: 'Food and drink',
               tag: 'Food & Culture',
-              text: "From food carts to James Beard-recognized kitchens, Portland's dining scene rivals cities many times its size — alongside a deep-rooted coffee, craft beer, and wine culture.",
+              text: 'Dining ranges from food carts to James Beard-recognized restaurants, and the city has an established coffee, craft beer and wine culture.',
             },
             {
-              title: 'Education Options',
+              title: 'Schools',
               tag: 'Schools',
-              text: 'Public districts vary meaningfully by neighborhood, and the metro area includes a strong roster of private schools. We map your home search to school priorities from day one.',
+              text: 'Public school districts vary by neighborhood, and the metro area has many private schools.',
             },
             {
-              title: 'Easy In, Easy Out',
+              title: 'Airport',
               tag: 'Airport',
-              text: 'Portland International Airport (PDX) offers direct flights across the U.S. and internationally, and sits a quick MAX ride from downtown.',
+              text: 'Portland International Airport (PDX) has direct domestic and international flights and is reachable from downtown by MAX.',
             },
           ],
         },
@@ -279,26 +271,6 @@ const guide: Guide = {
           type: 'image',
           slot: 'portland-lifestyle',
           caption: 'The Columbia River Gorge from the historic highway — thirty minutes east',
-        },
-      ],
-    },
-    {
-      id: 'next-steps',
-      kicker: 'Next Steps',
-      heading: "Let's find your place in Portland.",
-      blocks: [
-        {
-          type: 'p',
-          text: 'Every neighborhood in this guide tells a different story — the right one for you depends on commute, budget, school priorities, and the kind of daily life you want to build. That conversation is where we start.',
-        },
-        {
-          type: 'list',
-          items: [
-            'Personalized neighborhood shortlist',
-            'Current market & pricing guidance',
-            'School & commute mapping',
-            'Remote & relocation buyer support',
-          ],
         },
       ],
     },

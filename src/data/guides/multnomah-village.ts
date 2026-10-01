@@ -7,53 +7,53 @@ const guide: Guide = {
   title: 'Multnomah Village',
   eyebrow: 'Southwest Portland · Neighborhood Guide',
   summary:
-    'Four walkable blocks of century-old storefronts on SW Capitol Highway, wrapped in quiet residential streets and Gabriel Park.',
+    "The commercial center of Southwest Portland's Multnomah neighborhood: four blocks of early-1900s storefronts on SW Capitol Highway, surrounded by residential streets and next to Gabriel Park.",
   lede:
-    'A railway stop that became a small town, and then found itself inside a city. Multnomah Village is the commercial heart of the Multnomah neighborhood — four walkable blocks of century-old storefronts on SW Capitol Highway, wrapped in quiet residential streets and one of the largest parks in Southwest Portland. People buy here for the village and stay for the trees.',
+    'Multnomah Village is the commercial center of the Multnomah neighborhood in Southwest Portland: four blocks of early-1900s storefronts on SW Capitol Highway, surrounded by residential streets and next to Gabriel Park. It began as a railway stop and became part of the city in 1950.',
   hero: { slot: 'village-center', caption: 'SW Capitol Highway · the village blocks' },
   stats: [
-    { value: '1907', label: 'Oregon Electric Railway opened the station' },
+    { value: '1907', label: 'Oregon Electric Railway station opened' },
     { value: '1950', label: 'Annexed by the City of Portland' },
-    { value: '89.7 acres', label: 'Gabriel Park, thirty of them left natural' },
+    { value: '89.7 acres', label: 'Gabriel Park, about thirty of them natural area' },
     { value: '$574,964', label: 'Typical home value, down 2.4% year on year' },
   ],
   statsNote:
-    'Home value is the Zillow Home Value Index for the Multnomah neighborhood as of 31 July 2026 — a modelled figure covering the whole neighborhood, not a median of closed sales in the village blocks. Ask for a like-for-like analysis before pricing against it.',
+    'Home value is the Zillow Home Value Index for the Multnomah neighborhood as of 31 July 2026. It is a modeled figure for the whole neighborhood, not a median of closed sales in the village blocks; use like-for-like comparable sales for pricing.',
   sections: [
     {
       id: 'history',
-      heading: 'How it came to be here',
+      heading: 'History',
       blocks: [
         {
           type: 'p',
-          text: 'The Oregon Electric Railway put a station here in 1907 and named it Multnomah. A commercial strip grew up around the depot, thrived through the 1920s, and struggled through the Depression. Passenger service ended in 1933 and freight in 1945; the rail corridor became Multnomah Boulevard, which is why that road runs at such a confident diagonal through an otherwise irregular street grid.',
+          text: 'The Oregon Electric Railway opened a station here in 1907 and named it Multnomah. A commercial strip grew around the depot, did well through the 1920s and declined during the Depression. Passenger service ended in 1933 and freight in 1945. The rail corridor became Multnomah Boulevard, which is why that road runs diagonally through an otherwise irregular street grid.',
         },
         {
           type: 'p',
-          text: 'Portland annexed the neighborhood on 7 November 1950. What saved the village from being flattened into another arterial was neglect — the old buildings simply stayed up. From the 1970s, antique dealers and independent shops moved into them, and the district has been trading on that continuity ever since. It marked a hundred years as a business district in 2009.',
+          text: 'Portland annexed the neighborhood on 7 November 1950. The original commercial buildings were not redeveloped, and from the 1970s antique dealers and independent shops occupied them. The district marked a hundred years as a business district in 2009.',
         },
         {
           type: 'timeline',
           items: [
-            { year: '1913', text: "Multnomah School and the Nelson Thomas building go up — both still standing, now the Arts Center and Marco's Cafe." },
-            { year: '1978', text: "Annie Bloom's Books opens. Thinker Toys follows in 1994; both are still trading on Capitol Highway." },
-            { year: '1982', text: 'The Multnomah Arts Center opens in the former elementary school after the district closed it in 1979.' },
-            { year: '2023', text: 'A $30 million rebuild of SW Capitol Highway finishes, adding a mile of sidewalks where there were none.' },
+            { year: '1913', text: "Multnomah School and the Nelson Thomas building are built. Both still stand, now the Arts Center and Marco's Cafe." },
+            { year: '1978', text: "Annie Bloom's Books opens. Thinker Toys follows in 1994; both remain on Capitol Highway." },
+            { year: '1982', text: 'The Multnomah Arts Center opens in the former elementary school, which the district closed in 1979.' },
+            { year: '2023', text: 'A $30 million rebuild of SW Capitol Highway is completed, adding a mile of sidewalks where there were none.' },
           ],
         },
       ],
     },
     {
       id: 'before-you-buy',
-      heading: 'What to check before you buy here',
+      heading: 'Before buying',
       blocks: [
         {
           type: 'list',
           items: [
             { title: 'School assignment.', text: 'Boundaries in this part of Southwest do not follow the neighborhood line, and they change. Verify for the specific address.' },
-            { title: 'Sidewalks and stormwater.', text: 'The Capitol Highway work did not extend to every side street; many still have none, and drainage varies lot to lot.' },
-            { title: 'Slope and trees.', text: 'Grading, retaining walls and mature-tree roots drive real costs here. Worth a look before the inspection contingency runs.' },
-            { title: 'Freeway proximity.', text: 'I-5 is the southern boundary. Sound carries further than the map suggests.' },
+            { title: 'Sidewalks and stormwater.', text: 'The Capitol Highway work did not extend to every side street; many still have no sidewalks, and drainage varies by lot.' },
+            { title: 'Slope and trees.', text: 'Grading, retaining walls and mature-tree roots can add significant cost. Assess them before the inspection contingency expires.' },
+            { title: 'Freeway proximity.', text: 'I-5 is the southern boundary, and traffic noise carries further than the map suggests.' },
           ],
         },
       ],
@@ -61,15 +61,15 @@ const guide: Guide = {
     {
       id: 'housing',
       kicker: 'Living Here · Housing, getting around, and daily life',
-      heading: 'The housing',
+      heading: 'Housing',
       blocks: [
         {
           type: 'p',
-          text: 'Mostly detached houses on modest lots, and the stock runs older than the westside average — 1920s and 1930s bungalows and cottages near the village, then a band of post-war ranches and split-levels as you move out toward SW 45th and Capitol Hill Road. Lots are irregular because the terrain is, and several streets end without warning.',
+          text: 'Housing is mostly detached houses on modest lots, older than the westside average: 1920s and 1930s bungalows and cottages near the village, then post-war ranches and split-levels toward SW 45th and Capitol Hill Road. Lots are irregular because of the terrain, and several streets are dead ends.',
         },
         {
           type: 'p',
-          text: 'Newer infill appears where a large lot has been divided, and a handful of condominium and townhouse projects sit within walking distance of Capitol Highway. Two houses on the same block can differ by forty years and a full renovation, so comparables here need to be chosen carefully rather than pulled by radius.',
+          text: 'Newer infill appears where large lots have been divided, and a few condominium and townhouse projects are within walking distance of Capitol Highway. Houses on the same block can differ by forty years and in renovation status, so comparables should be selected individually rather than by radius.',
         },
         { type: 'image', slot: 'housing-street', caption: 'A residential street near the village, mature trees' },
       ],
@@ -80,33 +80,33 @@ const guide: Guide = {
       blocks: [
         {
           type: 'p',
-          text: "This is a car neighborhood that has been working hard at not being one. The 2023 rebuild of SW Capitol Highway added continuous sidewalks, a protected bike lane and a multi-use path along a mile that previously had none, plus four rain gardens to deal with stormwater. TriMet's line 44 runs the corridor.",
+          text: "The 2023 rebuild of SW Capitol Highway added continuous sidewalks, a protected bike lane and a multi-use path along a mile that previously had none, plus four rain gardens for stormwater. TriMet's line 44 runs along the corridor.",
         },
         {
           type: 'p',
-          text: "Downtown is a short drive north on Barbur or I-5, and the freeway forms the neighborhood's southern edge — convenient, and worth listening for on the streets closest to it. There is no light rail. OHSU and the westside employment centers are both reachable, in different directions, which is part of the appeal.",
+          text: "Downtown is a short drive north on Barbur or I-5. The freeway forms the neighborhood's southern edge, and noise is noticeable on the closest streets. There is no light rail. OHSU and the westside employment centers are both reachable by road.",
         },
         { type: 'image', slot: 'capitol-highway', caption: 'The rebuilt Capitol Highway corridor, sidewalk and bike lane' },
       ],
     },
     {
       id: 'parks-daily-life',
-      heading: 'Parks and daily life',
+      heading: 'Parks and amenities',
       blocks: [
         {
           type: 'p',
-          text: 'Gabriel Park covers 89.7 acres immediately west of the village, about thirty of them left as natural area with a free-flowing stretch of Vermont Creek and a pollinator meadow. The rest holds sports fields, tennis and pickleball courts, a fenced off-leash dog area, a 10,000-square-foot skatepark, a community center, and a community garden and orchard. Spring Garden Park and A Park fill in nearby.',
+          text: 'Gabriel Park covers 89.7 acres immediately west of the village. About thirty acres are natural area, with a free-flowing stretch of Vermont Creek and a pollinator meadow. The rest holds sports fields, tennis and pickleball courts, a fenced off-leash dog area, a 10,000-square-foot skatepark, a community center, and a community garden and orchard. Spring Garden Park and A Park are nearby.',
         },
         { type: 'image', slot: 'gabriel-park', caption: 'Gabriel Park — open field, trail, or the natural area' },
         {
           type: 'p',
-          text: "The Multnomah Arts Center, at 7688 SW Capitol Highway, runs ceramics, woodshop, metal arts, textiles, dance, theatre and music out of the old elementary school. The village itself carries Annie Bloom's Books, Thinker Toys, Fat City Cafe, Marco's, Tastebud and a short row of taprooms and bottle shops, and closes for Multnomah Days each summer.",
+          text: "The Multnomah Arts Center, at 7688 SW Capitol Highway, offers ceramics, woodshop, metal arts, textiles, dance, theater and music classes in the former elementary school. Businesses in the village include Annie Bloom's Books, Thinker Toys, Fat City Cafe, Marco's, Tastebud and several taprooms and bottle shops. The street closes for Multnomah Days each summer.",
         },
       ],
     },
   ],
   disclaimer:
-    'Neighborhood boundaries and school assignments vary by address and change over time; verify for a specific property. Market figures are as dated and move quickly.',
+    'Neighborhood boundaries and school assignments vary by address and change over time; verify for a specific property. Market figures are as of the dates given and change quickly.',
 };
 
 export default guide;

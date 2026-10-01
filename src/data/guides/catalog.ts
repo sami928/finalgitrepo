@@ -57,7 +57,7 @@ export const catalog: GuideMeta[] = [
     category: 'relocation',
     title: 'Relocating to Portland',
     summary:
-      'Neighborhoods, market insight, and everyday life in the City of Roses — prepared for buyers considering a move to the Pacific Northwest.',
+      'An overview of Portland, Oregon, for buyers relocating to the city: its neighborhoods, housing market, cost of living and daily life.',
   },
   {
     slug: 'relocating-to-oregon',
@@ -65,7 +65,7 @@ export const catalog: GuideMeta[] = [
     category: 'relocation',
     title: 'Relocating to Oregon',
     summary:
-      'One state, several very different regions — what the taxes actually cost you, where the rain really falls, and the thirty-day clock that starts the day you arrive.',
+      "An overview of Oregon's regions, taxes, climate and housing costs, and the thirty-day deadlines that apply to new residents after arrival.",
   },
   {
     slug: 'southwest-portland-at-a-glance',
@@ -73,7 +73,7 @@ export const catalog: GuideMeta[] = [
     category: 'area-overviews',
     title: 'Southwest Portland at a Glance',
     summary:
-      'Twenty-five Southwest Portland neighborhoods grouped by character rather than alphabetically, because that is how buyers actually choose.',
+      'An overview of twenty-five Southwest Portland neighborhoods, grouped by character: hilltop and view, village and walkable, wooded residential, and close-in urban.',
   },
   {
     slug: 'goose-hollow-maplewood-garden-home-west-slope',
@@ -81,7 +81,7 @@ export const catalog: GuideMeta[] = [
     category: 'area-overviews',
     title: 'Four Neighborhoods, Two Jurisdictions',
     summary:
-      'Goose Hollow, Maplewood, Garden Home and West Slope sit within about six miles of one another, but the Multnomah–Washington county line splits them into two different jurisdictions.',
+      'Goose Hollow, Maplewood, Garden Home and West Slope lie within about six miles of one another, split by the Multnomah–Washington county line into two jurisdictions.',
   },
   {
     slug: 'lake-oswego-beaverton-highland',
@@ -89,7 +89,7 @@ export const catalog: GuideMeta[] = [
     category: 'area-overviews',
     title: 'Lake Oswego, Beaverton & Highland',
     summary:
-      'Lake Oswego and Beaverton are separate cities with their own school districts and character, while Highland — also sold as Hyland Hills — is a wooded residential neighborhood inside Beaverton.',
+      'Lake Oswego and Beaverton are separate cities with their own school districts; Highland, also marketed as Hyland Hills, is a wooded residential neighborhood inside Beaverton.',
   },
   {
     slug: 'multnomah-village',
@@ -97,7 +97,7 @@ export const catalog: GuideMeta[] = [
     category: 'portland-neighborhoods',
     title: 'Multnomah Village',
     summary:
-      'Four walkable blocks of century-old storefronts on SW Capitol Highway, wrapped in quiet residential streets and Gabriel Park.',
+      "The commercial center of Southwest Portland's Multnomah neighborhood: four blocks of early-1900s storefronts on SW Capitol Highway, surrounded by residential streets and next to Gabriel Park.",
   },
   {
     slug: 'goose-hollow',
@@ -105,7 +105,7 @@ export const catalog: GuideMeta[] = [
     category: 'portland-neighborhoods',
     title: 'Goose Hollow',
     summary:
-      'The most urban address in Southwest Portland — a filled-in creek gulch below a stadium that has stood on the same block since 1893, with housing running from 1890s King’s Hill mansions to towers built last decade.',
+      'Southwest Portland neighborhood between downtown and the West Hills, on a filled-in creek gulch, with Providence Park and housing from 1890s King’s Hill mansions to recent towers.',
   },
   {
     slug: 'council-crest',
@@ -113,7 +113,7 @@ export const catalog: GuideMeta[] = [
     category: 'portland-neighborhoods',
     title: 'Council Crest',
     summary:
-      "Portland's high ground and, for twenty-two years, its amusement park — a summit, a park, and a stretch of hillside streets in the Southwest Hills selling elevation and five Cascade peaks on a clear day.",
+      "A summit, park and hillside residential area in Portland's Southwest Hills, site of an amusement park for twenty-two years, with views of five Cascade peaks on a clear day.",
   },
   {
     slug: 'bridlemile',
@@ -121,7 +121,7 @@ export const catalog: GuideMeta[] = [
     category: 'portland-neighborhoods',
     title: 'Bridlemile',
     summary:
-      'A bridle path that became a subdivision on the west slope above Fanno Creek — quiet, green and almost entirely residential, and split across three jurisdictions.',
+      'Bridlemile is a mostly residential postwar neighborhood on the west slope above Fanno Creek in Southwest Portland, with two city parks and land in three jurisdictions.',
   },
   {
     slug: 'sylvan-highlands',
@@ -129,7 +129,7 @@ export const catalog: GuideMeta[] = [
     category: 'portland-neighborhoods',
     title: 'Sylvan Highlands',
     summary:
-      'A post office named for a Roman woodland god, a highway through the middle, and forty-seven percent tree cover on the west face of the hills around the Sylvan interchange.',
+      'Sylvan-Highlands is a steep, wooded neighborhood on the west face of the hills around the Sylvan interchange, with forty-seven percent tree cover and US 26 through the middle.',
   },
   {
     slug: 'forest-heights',
@@ -137,7 +137,7 @@ export const catalog: GuideMeta[] = [
     category: 'portland-neighborhoods',
     title: 'Forest Heights',
     summary:
-      'A 601-acre master-planned hillside development inside the Northwest Heights neighborhood, with its own homeowners association, private shuttle, and a layer of governance to understand before anything else.',
+      'Forest Heights is a 601-acre master-planned hillside development inside Portland’s Northwest Heights neighborhood, with its own homeowners association, trails and private shuttle.',
   },
   {
     slug: 'west-slope',
@@ -145,7 +145,7 @@ export const catalog: GuideMeta[] = [
     category: 'washington-county',
     title: 'West Slope',
     summary:
-      'A square mile and a half of unincorporated Washington County between the Sunset Highway and Beaverton-Hillsdale, governed by a stack of independent special districts rather than a city.',
+      'An unincorporated area of Washington County, about a square mile and a half between the Sunset Highway and Beaverton-Hillsdale Highway, served by special districts rather than a city.',
   },
   {
     slug: 'raleigh-hills',
@@ -153,7 +153,7 @@ export const catalog: GuideMeta[] = [
     category: 'washington-county',
     title: 'Raleigh Hills',
     summary:
-      'The commercial junction of Beaverton-Hillsdale Highway and Scholls Ferry Road, unincorporated like West Slope and now the subject of a county town-centre boundary in progress.',
+      'An unincorporated commercial area of Washington County at the junction of Beaverton-Hillsdale Highway and Scholls Ferry Road, where the county is drawing a town center boundary.',
   },
   {
     slug: 'lake-oswego',
@@ -161,7 +161,7 @@ export const catalog: GuideMeta[] = [
     category: 'clackamas-county',
     title: 'Lake Oswego',
     summary:
-      'A lake town built around 415 acres of privately controlled water, with a walkable State Street downtown and housing ranging from 1930s revival styles to Northwest Regional modernism.',
+      'A city about seven miles south of Portland, built around a privately controlled lake of roughly 415 acres, with a State Street downtown and revival and modernist housing.',
   },
   {
     slug: 'west-linn',
@@ -169,7 +169,7 @@ export const catalog: GuideMeta[] = [
     category: 'clackamas-county',
     title: 'West Linn',
     summary:
-      'A city of separate old neighbourhoods stitched together by annexation and the freeway, on bluffs above the Willamette where river and landslide rules shape a lot more than zoning does.',
+      'A city on bluffs above the Willamette, formed from separate older neighborhoods by annexation, where landslide and river regulations constrain lots more than zoning does.',
   },
 ];
 
