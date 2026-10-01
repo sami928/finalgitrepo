@@ -7,7 +7,7 @@ const guide: Guide = {
   title: 'Forest Heights',
   eyebrow: 'Northwest Portland · Neighborhood Guide',
   summary:
-    'Forest Heights is a 601-acre master-planned hillside development inside Portland’s Northwest Heights neighborhood, with its own homeowners association, trails and private shuttle.',
+    "A 601-acre master-planned hillside development in Portland's Northwest Heights, with its own homeowners association, trails and private shuttle.",
   lede:
     'Forest Heights is a 601-acre master-planned development on the northwest hillside of Portland, built over about fifteen years. It is not an official Portland neighborhood but a private development inside the Northwest Heights neighborhood, with its own homeowners association, trails and shuttle bus.',
   hero: { slot: 'forest-heights-hillside', caption: 'Forest Heights · the hillside above the Sunset corridor' },

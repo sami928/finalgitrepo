@@ -7,7 +7,7 @@ const guide: Guide = {
   title: 'Lake Oswego',
   eyebrow: 'Clackamas County · Neighborhood Guide',
   summary:
-    'A city about seven miles south of Portland, built around a privately controlled lake of roughly 415 acres, with a State Street downtown and revival and modernist housing.',
+    'A city about seven miles south of Portland, built around a privately controlled lake of roughly 415 acres, with a downtown on State Street.',
   lede:
     'Lake Oswego is a city about seven miles south of Portland, originally an iron-smelting town, built around roughly 415 acres of privately controlled lake. It has a walkable downtown on State Street and housing ranging from 1930s revival styles to Northwest Regional modernism; lake access is not included with an address.',
   hero: { slot: 'oswego-lake', caption: 'Oswego Lake · the shoreline and the downtown edge' },

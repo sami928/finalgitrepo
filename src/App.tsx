@@ -14,6 +14,7 @@ const ContactPage = lazy(() => import('@/pages/ContactPage').then((m) => ({ defa
 const ResourcesPage = lazy(() => import('@/pages/ResourcesPage').then((m) => ({ default: m.ResourcesPage })));
 const GuidePage = lazy(() => import('@/pages/GuidePage').then((m) => ({ default: m.GuidePage })));
 const HomeValuePage = lazy(() => import('@/pages/HomeValuePage').then((m) => ({ default: m.HomeValuePage })));
+const NotFoundPage = lazy(() => import('@/pages/NotFoundPage').then((m) => ({ default: m.NotFoundPage })));
 const MlsSearchPage = lazy(() => import('@/pages/MlsSearchPage').then((m) => ({ default: m.MlsSearchPage })));
 
 function PageFallback() {
@@ -34,11 +35,14 @@ export default function App() {
 
   let page;
   switch (route) {
+    case '/':
+      page = <HomePage />;
+      break;
     case '/listings':
       page = <ListingsPage />;
       break;
     case '/testimonials':
-      page = site.testimonialsEnabled ? <TestimonialsPage /> : <HomePage />;
+      page = site.testimonialsEnabled ? <TestimonialsPage /> : <NotFoundPage />;
       break;
     case '/home-value':
       page = <HomeValuePage />;
@@ -47,15 +51,16 @@ export default function App() {
       page = <ContactPage />;
       break;
     case '/mls-search':
-      page = site.mlsSearchEnabled ? <MlsSearchPage /> : <HomePage />;
+      page = site.mlsSearchEnabled ? <MlsSearchPage /> : <NotFoundPage />;
       break;
     default: {
       // /resources, /resources/<category>, /resources/<category>/<guide>
       const resource = site.resourcesEnabled ? matchResourceRoute(route) : null;
       if (resource?.kind === 'guide') page = <GuidePage slug={resource.guide.slug} />;
       else if (resource?.kind === 'category') page = <ResourcesPage category={resource.category} />;
-      else if (resource || (site.resourcesEnabled && route.startsWith('/resources/'))) page = <ResourcesPage />;
-      else page = <HomePage />;
+      else if (resource) page = <ResourcesPage />;
+      // Unknown or switched-off URLs get a real "not found" page (marked noindex by useSEO).
+      else page = <NotFoundPage />;
     }
   }
 

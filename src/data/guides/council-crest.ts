@@ -7,7 +7,7 @@ const guide: Guide = {
   title: 'Council Crest',
   eyebrow: 'Southwest Portland · Neighborhood Guide',
   summary:
-    "A summit, park and hillside residential area in Portland's Southwest Hills, site of an amusement park for twenty-two years, with views of five Cascade peaks on a clear day.",
+    "A summit, park and hillside residential area in Portland's Southwest Hills, once home to an amusement park, with views of five Cascade peaks on clear days.",
   lede:
     "Council Crest is a summit, a park and a stretch of hillside streets in Portland's Southwest Hills; it is not a neighborhood on the city's official map. It is among the highest ground in Portland, held an amusement park for twenty-two years, and on a clear day has views of five Cascade peaks.",
   hero: { slot: 'council-crest-view', caption: 'Council Crest Park · the summit and the 1956 Littman Fountain' },

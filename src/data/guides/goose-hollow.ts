@@ -7,7 +7,7 @@ const guide: Guide = {
   title: 'Goose Hollow',
   eyebrow: 'Portland · Neighborhood Guide',
   summary:
-    'Southwest Portland neighborhood between downtown and the West Hills, on a filled-in creek gulch, with Providence Park and housing from 1890s King’s Hill mansions to recent towers.',
+    'A Southwest Portland neighborhood between downtown and the West Hills, home to Providence Park, with housing from 1890s mansions to recent towers.',
   lede:
     'Goose Hollow is the most urban neighborhood in Southwest Portland, located between downtown and the West Hills on a filled-in creek gulch. It contains Providence Park, on the same block since 1893, and housing ranging from 1890s mansions on King’s Hill to towers built in the last decade; two MAX stations make living without a car practical.',
   hero: { slot: 'providence-park', caption: 'Providence Park, 1844 SW Morrison · Timbers and Thorns' },

@@ -7,7 +7,7 @@ const guide: Guide = {
   title: 'Multnomah Village',
   eyebrow: 'Southwest Portland · Neighborhood Guide',
   summary:
-    "The commercial center of Southwest Portland's Multnomah neighborhood: four blocks of early-1900s storefronts on SW Capitol Highway, surrounded by residential streets and next to Gabriel Park.",
+    "The commercial center of Southwest Portland's Multnomah neighborhood: four blocks of early-1900s storefronts on SW Capitol Highway, next to Gabriel Park.",
   lede:
     'Multnomah Village is the commercial center of the Multnomah neighborhood in Southwest Portland: four blocks of early-1900s storefronts on SW Capitol Highway, surrounded by residential streets and next to Gabriel Park. It began as a railway stop and became part of the city in 1950.',
   hero: { slot: 'village-center', caption: 'SW Capitol Highway · the village blocks' },

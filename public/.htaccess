@@ -10,12 +10,27 @@
   RewriteEngine On
   RewriteBase /
 
+  # One host: send www.homesbycatherine.io to homesbycatherine.io.
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+  # The prerendered pages are an implementation detail; redirect direct hits
+  # on /_pages/<route>/index.html to the real URL.
+  RewriteCond %{THE_REQUEST} \s/_pages/(.+?)/index\.html[\s?]
+  RewriteRule ^ /%1 [R=301,L]
+
   # Serve real files and directories untouched (assets, og-image, sitemap, fonts).
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
-  # Everything else is a client-side route: hand it to the app.
+  # Known routes have prerendered HTML with their own title, description and
+  # social tags (written by the build into dist/_pages/). Serve it when it exists.
+  RewriteCond %{DOCUMENT_ROOT}/_pages/$1/index.html -f
+  RewriteRule ^(.+?)/?$ /_pages/$1/index.html [L]
+
+  # Everything else is a client-side route: hand it to the app, which shows
+  # "page not found" (marked noindex) for URLs it doesn't know.
   RewriteRule . /index.html [L]
 </IfModule>
 

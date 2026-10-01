@@ -7,7 +7,7 @@ const guide: Guide = {
   title: 'Bridlemile',
   eyebrow: 'Southwest Portland · Neighborhood Guide',
   summary:
-    'Bridlemile is a mostly residential postwar neighborhood on the west slope above Fanno Creek in Southwest Portland, with two city parks and land in three jurisdictions.',
+    'A mostly residential postwar neighborhood in Southwest Portland on the west slope above Fanno Creek, with two city parks and land in three jurisdictions.',
   lede:
     'Bridlemile is a mostly residential neighborhood on the west slope of the hills above Fanno Creek in Southwest Portland, made up largely of postwar houses on large lots, with two city parks and commercial uses along Beaverton-Hillsdale Highway. Its area is split across three jurisdictions.',
   hero: { slot: 'bridlemile-street', caption: 'A residential street off SW Hamilton · postwar houses under mature trees' },

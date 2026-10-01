@@ -7,7 +7,7 @@ const guide: Guide = {
   title: 'West Linn',
   eyebrow: 'Clackamas County · Neighborhood Guide',
   summary:
-    'A city on bluffs above the Willamette, formed from separate older neighborhoods by annexation, where landslide and river regulations constrain lots more than zoning does.',
+    'A city on bluffs above the Willamette, formed from older neighborhoods by annexation, where landslide and river rules shape lots more than zoning.',
   lede:
     'West Linn is a city on bluffs above two rivers, at the site of the first long-distance transmission of electricity in the United States. It was formed from separate older neighborhoods (Willamette, Bolton, Robinwood, Cedaroak) joined by annexation and later by the freeway, and geology and river regulations constrain lot use more than zoning does.',
   hero: { slot: 'west-linn-bluff', caption: 'West Linn · the bluffs above the Willamette' },

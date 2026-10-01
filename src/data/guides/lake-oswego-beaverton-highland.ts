@@ -7,7 +7,7 @@ const guide: Guide = {
   title: 'Lake Oswego, Beaverton & Highland',
   eyebrow: 'Two Cities and a Pocket Inside One of Them',
   summary:
-    'Lake Oswego and Beaverton are separate cities with their own school districts; Highland, also marketed as Hyland Hills, is a wooded residential neighborhood inside Beaverton.',
+    'Lake Oswego and Beaverton are separate cities with their own school districts; Highland, or Hyland Hills, is a wooded neighborhood inside Beaverton.',
   lede:
     'Lake Oswego and Beaverton are separate cities with their own school districts, budgets and character. Highland, also marketed as Hyland Hills, is a wooded residential neighborhood inside Beaverton.',
   hero: null,

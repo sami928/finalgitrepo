@@ -7,7 +7,7 @@ const guide: Guide = {
   title: 'Southwest Portland at a Glance',
   eyebrow: 'Twenty-Five Neighborhoods · One Page',
   summary:
-    'An overview of twenty-five Southwest Portland neighborhoods, grouped by character: hilltop and view, village and walkable, wooded residential, and close-in urban.',
+    'An overview of twenty-five Southwest Portland neighborhoods grouped by character: hilltop, village, wooded residential and close-in urban.',
   lede:
     'Southwest Portland contains hilltop view property, a walkable village and heavily wooded lots within a few minutes of one another. Its twenty-five neighborhoods are grouped here by character rather than alphabetically.',
   hero: null,

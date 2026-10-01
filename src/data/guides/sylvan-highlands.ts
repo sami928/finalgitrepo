@@ -7,7 +7,7 @@ const guide: Guide = {
   title: 'Sylvan Highlands',
   eyebrow: 'Southwest Portland · Neighborhood Guide',
   summary:
-    'Sylvan-Highlands is a steep, wooded neighborhood on the west face of the hills around the Sylvan interchange, with forty-seven percent tree cover and US 26 through the middle.',
+    "A steep, wooded neighborhood on the west face of Portland's hills around the Sylvan interchange, with forty-seven percent tree cover and US 26 through it.",
   lede:
     'Sylvan-Highlands is a steep, wooded neighborhood on the west face of the hills around the Sylvan interchange, about three miles from downtown Portland through the Vista Ridge Tunnels. US 26 runs through it, tree cover is forty-seven percent, and it is named after a former post office; it is sometimes incorrectly called Sylvan Hills.',
   hero: { slot: 'sylvan-hillside', caption: 'The west face of the hills · Sylvan-Highlands above the Sunset Highway' },

@@ -7,7 +7,7 @@ const guide: Guide = {
   title: 'Raleigh Hills',
   eyebrow: 'Unincorporated Washington County · Neighborhood Guide',
   summary:
-    'An unincorporated commercial area of Washington County at the junction of Beaverton-Hillsdale Highway and Scholls Ferry Road, where the county is drawing a town center boundary.',
+    'An unincorporated commercial area of Washington County at the junction of Beaverton-Hillsdale Highway and Scholls Ferry Road.',
   lede:
     'Raleigh Hills is an unincorporated area of Washington County centered on the junction of Beaverton-Hillsdale Highway and Scholls Ferry Road, and the commercial center for a large part of the unincorporated county; the first New Seasons Market opened here. Like West Slope, it has no city government, and the county is drawing a town center boundary around it.',
   hero: { slot: 'raleigh-hills-junction', caption: 'The junction · Beaverton-Hillsdale Highway at Scholls Ferry Road' },

@@ -26,27 +26,27 @@ export const guideCategories: { id: CategoryId; title: string; blurb: string }[]
   {
     id: 'relocation',
     title: 'Relocation Guides',
-    blurb: 'Moving to Portland or to Oregon from out of state — what to know before you choose where to land.',
+    blurb: 'Guides for moving to Portland or to Oregon from out of state: regions, neighborhoods, taxes, climate, housing costs and the first deadlines after arrival.',
   },
   {
     id: 'area-overviews',
     title: 'Area Overviews',
-    blurb: 'Quick-view comparisons: several neighborhoods or cities side by side.',
+    blurb: 'Side-by-side comparisons of Southwest Portland and westside neighborhoods and cities: jurisdiction, schools, housing and getting around.',
   },
   {
     id: 'portland-neighborhoods',
     title: 'Portland Neighborhoods',
-    blurb: 'Deep dives on individual neighborhoods inside the City of Portland.',
+    blurb: 'Guides to neighborhoods inside the City of Portland: Multnomah Village, Goose Hollow, Council Crest, Bridlemile, Sylvan Highlands and Forest Heights.',
   },
   {
     id: 'washington-county',
     title: 'Washington County',
-    blurb: 'Unincorporated westside communities with Portland mailing addresses and Beaverton schools.',
+    blurb: 'Guides to West Slope and Raleigh Hills, unincorporated westside communities with Portland mailing addresses, Beaverton schools and special districts.',
   },
   {
     id: 'clackamas-county',
     title: 'Clackamas County',
-    blurb: 'Lake Oswego, West Linn and the cities south of Portland along the Willamette.',
+    blurb: 'Guides to Lake Oswego and West Linn, cities south of Portland along the Willamette: history, housing, schools and the rules that shape lots.',
   },
 ];
 
@@ -73,7 +73,7 @@ export const catalog: GuideMeta[] = [
     category: 'area-overviews',
     title: 'Southwest Portland at a Glance',
     summary:
-      'An overview of twenty-five Southwest Portland neighborhoods, grouped by character: hilltop and view, village and walkable, wooded residential, and close-in urban.',
+      'An overview of twenty-five Southwest Portland neighborhoods grouped by character: hilltop, village, wooded residential and close-in urban.',
   },
   {
     slug: 'goose-hollow-maplewood-garden-home-west-slope',
@@ -81,7 +81,7 @@ export const catalog: GuideMeta[] = [
     category: 'area-overviews',
     title: 'Four Neighborhoods, Two Jurisdictions',
     summary:
-      'Goose Hollow, Maplewood, Garden Home and West Slope lie within about six miles of one another, split by the Multnomah–Washington county line into two jurisdictions.',
+      'Goose Hollow, Maplewood, Garden Home and West Slope lie within about six miles of one another, split by the Multnomah–Washington county line.',
   },
   {
     slug: 'lake-oswego-beaverton-highland',
@@ -89,7 +89,7 @@ export const catalog: GuideMeta[] = [
     category: 'area-overviews',
     title: 'Lake Oswego, Beaverton & Highland',
     summary:
-      'Lake Oswego and Beaverton are separate cities with their own school districts; Highland, also marketed as Hyland Hills, is a wooded residential neighborhood inside Beaverton.',
+      'Lake Oswego and Beaverton are separate cities with their own school districts; Highland, or Hyland Hills, is a wooded neighborhood inside Beaverton.',
   },
   {
     slug: 'multnomah-village',
@@ -97,7 +97,7 @@ export const catalog: GuideMeta[] = [
     category: 'portland-neighborhoods',
     title: 'Multnomah Village',
     summary:
-      "The commercial center of Southwest Portland's Multnomah neighborhood: four blocks of early-1900s storefronts on SW Capitol Highway, surrounded by residential streets and next to Gabriel Park.",
+      "The commercial center of Southwest Portland's Multnomah neighborhood: four blocks of early-1900s storefronts on SW Capitol Highway, next to Gabriel Park.",
   },
   {
     slug: 'goose-hollow',
@@ -105,7 +105,7 @@ export const catalog: GuideMeta[] = [
     category: 'portland-neighborhoods',
     title: 'Goose Hollow',
     summary:
-      'Southwest Portland neighborhood between downtown and the West Hills, on a filled-in creek gulch, with Providence Park and housing from 1890s King’s Hill mansions to recent towers.',
+      'A Southwest Portland neighborhood between downtown and the West Hills, home to Providence Park, with housing from 1890s mansions to recent towers.',
   },
   {
     slug: 'council-crest',
@@ -113,7 +113,7 @@ export const catalog: GuideMeta[] = [
     category: 'portland-neighborhoods',
     title: 'Council Crest',
     summary:
-      "A summit, park and hillside residential area in Portland's Southwest Hills, site of an amusement park for twenty-two years, with views of five Cascade peaks on a clear day.",
+      "A summit, park and hillside residential area in Portland's Southwest Hills, once home to an amusement park, with views of five Cascade peaks on clear days.",
   },
   {
     slug: 'bridlemile',
@@ -121,7 +121,7 @@ export const catalog: GuideMeta[] = [
     category: 'portland-neighborhoods',
     title: 'Bridlemile',
     summary:
-      'Bridlemile is a mostly residential postwar neighborhood on the west slope above Fanno Creek in Southwest Portland, with two city parks and land in three jurisdictions.',
+      'A mostly residential postwar neighborhood in Southwest Portland on the west slope above Fanno Creek, with two city parks and land in three jurisdictions.',
   },
   {
     slug: 'sylvan-highlands',
@@ -129,7 +129,7 @@ export const catalog: GuideMeta[] = [
     category: 'portland-neighborhoods',
     title: 'Sylvan Highlands',
     summary:
-      'Sylvan-Highlands is a steep, wooded neighborhood on the west face of the hills around the Sylvan interchange, with forty-seven percent tree cover and US 26 through the middle.',
+      "A steep, wooded neighborhood on the west face of Portland's hills around the Sylvan interchange, with forty-seven percent tree cover and US 26 through it.",
   },
   {
     slug: 'forest-heights',
@@ -137,7 +137,7 @@ export const catalog: GuideMeta[] = [
     category: 'portland-neighborhoods',
     title: 'Forest Heights',
     summary:
-      'Forest Heights is a 601-acre master-planned hillside development inside Portland’s Northwest Heights neighborhood, with its own homeowners association, trails and private shuttle.',
+      "A 601-acre master-planned hillside development in Portland's Northwest Heights, with its own homeowners association, trails and private shuttle.",
   },
   {
     slug: 'west-slope',
@@ -145,7 +145,7 @@ export const catalog: GuideMeta[] = [
     category: 'washington-county',
     title: 'West Slope',
     summary:
-      'An unincorporated area of Washington County, about a square mile and a half between the Sunset Highway and Beaverton-Hillsdale Highway, served by special districts rather than a city.',
+      'An unincorporated area of Washington County between the Sunset Highway and Beaverton-Hillsdale Highway, served by special districts rather than a city.',
   },
   {
     slug: 'raleigh-hills',
@@ -153,7 +153,7 @@ export const catalog: GuideMeta[] = [
     category: 'washington-county',
     title: 'Raleigh Hills',
     summary:
-      'An unincorporated commercial area of Washington County at the junction of Beaverton-Hillsdale Highway and Scholls Ferry Road, where the county is drawing a town center boundary.',
+      'An unincorporated commercial area of Washington County at the junction of Beaverton-Hillsdale Highway and Scholls Ferry Road.',
   },
   {
     slug: 'lake-oswego',
@@ -161,7 +161,7 @@ export const catalog: GuideMeta[] = [
     category: 'clackamas-county',
     title: 'Lake Oswego',
     summary:
-      'A city about seven miles south of Portland, built around a privately controlled lake of roughly 415 acres, with a State Street downtown and revival and modernist housing.',
+      'A city about seven miles south of Portland, built around a privately controlled lake of roughly 415 acres, with a downtown on State Street.',
   },
   {
     slug: 'west-linn',
@@ -169,7 +169,7 @@ export const catalog: GuideMeta[] = [
     category: 'clackamas-county',
     title: 'West Linn',
     summary:
-      'A city on bluffs above the Willamette, formed from separate older neighborhoods by annexation, where landslide and river regulations constrain lots more than zoning does.',
+      'A city on bluffs above the Willamette, formed from older neighborhoods by annexation, where landslide and river rules shape lots more than zoning.',
   },
 ];
 
@@ -213,23 +213,4 @@ export function matchResourceRoute(route: string):
   if (!slug) return { kind: 'category', category: category.id };
   const guide = getMeta(slug);
   return guide && guide.category === category.id ? { kind: 'guide', guide } : null;
-}
-
-/** Per-page metadata for guide and category routes (see useSEO). */
-export function resourceRouteSeo(route: string) {
-  const m = matchResourceRoute(route);
-  if (!m || m.kind === 'index') return undefined;
-  if (m.kind === 'category') {
-    const c = getCategory(m.category)!;
-    return {
-      path: categoryUrl(c.id),
-      title: `${c.title} | Portland Real Estate Guides | Catherine Redmond`,
-      description: c.blurb,
-    };
-  }
-  return {
-    path: guideUrl(m.guide),
-    title: `${m.guide.title} Guide | Catherine Redmond, Engel & Völkers`,
-    description: m.guide.summary,
-  };
 }

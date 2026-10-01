@@ -90,40 +90,40 @@ export const routeSeo: Record<string, {
     path: '/',
     title: 'Catherine Redmond | Portland Metro Real Estate Broker',
     description:
-      'Search Greater Portland Metro homes with Catherine Redmond, a trusted local broker. Live MLS search, buyer guides, and a personalized, pressure-free home search.',
+      'Search Greater Portland Metro homes with Catherine Redmond, a local Engel & Völkers broker. Live listings, neighborhood guides and a tailored home plan.',
     keywords: 'Portland real estate broker, homes for sale Portland Metro, buyer agent Portland,sell my house portland, buy home in portland,',
   },
   '/listings': {
     path: '/listings',
     title: 'Portland Metro Home Listings | Catherine Redmond',
     description:
-      'Browse available homes across the Greater Portland Metro. Filter by city, price, beds, and type — or ask Catherine for a custom live MLS search with instant alerts.',
+      'Browse homes for sale across the Greater Portland Metro by city, price, beds and type, or ask Catherine for a custom MLS search with instant alerts.',
     keywords: 'Portland homes for sale, Portland listings, MLS search Portland',
   },
   '/testimonials': {
     path: '/testimonials',
-    title: 'Client Reviews & Testimonials | Catherine Redmond, Portland Realtor',
+    title: 'Client Reviews | Catherine Redmond, Portland Realtor',
     description:
       'Read what buyers, sellers, and first-time homeowners say about working with Catherine Redmond across the Greater Portland Metro. ',
     keywords: 'Portland realtor reviews, Catherine Redmond testimonials, real estate agent reviews Portland',
   },
   '/resources': {
     path: '/resources',
-    title: 'Portland Relocation & Neighborhood Guides | Catherine Redmond',
+    title: 'Portland Neighborhood Guides | Catherine Redmond',
     description:
-      'Free Portland, westside and Oregon relocation and neighborhood guides — history, housing, schools and what to check before you buy. Read online or download the PDF.',
+      'Free Portland, westside and Oregon relocation and neighborhood guides: history, housing, schools and what to check before buying. Read online or as a PDF.',
     keywords: 'Portland buyer guide, home selling guide, Portland real estate resources, Portland Relocation Guide',
   },
   '/home-value': {
     path: '/home-value',
     title: 'Portland Home Value Estimator | Catherine Redmond',
     description:
-      'Find out what your Portland Metro home is worth with an instant online valuation, then get a detailed comparative market analysis from Catherine Redmond — no obligation.',
+      'See what your Portland Metro home is worth with an instant online estimate, then get a free, detailed market analysis from Catherine Redmond.',
     keywords: 'Portland home value, home valuation Portland, what is my home worth Portland, CMA Portland',
   },
   '/mls-search': {
     path: '/mls-search',
-    title: 'Portland MLS Search | Active & Sold Listings | Catherine Redmond',
+    title: 'Portland MLS Search | Catherine Redmond',
     description:
       'Search live Portland Metro MLS listings. Filter active and sold homes by price, beds, baths, location, and property type. Interactive map view available.',
     keywords: 'Portland MLS search, RMLS search, active listings Portland, sold homes Portland, Portland real estate map search',
@@ -131,9 +131,9 @@ export const routeSeo: Record<string, {
   },
   '/contact': {
     path: '/contact',
-    title: 'Contact Catherine Redmond | Portland Metro Real Estate Broker',
+    title: 'Contact Catherine Redmond | Portland Real Estate Broker',
     description:
-      'Get in touch with Catherine Redmond, Portland Metro real estate broker. Call, text, email, or send a message — personal replies within 24 hours.',
+      'Get in touch with Catherine Redmond, Portland Metro real estate broker. Call, text, email or send a message, and Catherine will reply promptly.',
     keywords: 'contact Portland realtor, real estate agent Portland, Catherine Redmond contact',
   },
 };

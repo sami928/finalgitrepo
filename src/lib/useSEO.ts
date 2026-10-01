@@ -1,28 +1,28 @@
 import { useEffect } from 'react';
-import { seo, routeSeo, type RouteSeo } from '@/config/seo';
-import { resourceRouteSeo } from '@/data/guides/catalog';
+import { seo } from '@/config/seo';
+import { pageMeta, agentJsonLd, absUrl, SITE_NAME, type PageMeta } from '@/lib/seoMeta';
 
 /**
  * Syncs document <head> meta tags with the active route so each page has its
  * own title, description, canonical URL, Open Graph, and JSON-LD structured
  * data. Call once from App with the current route path.
  *
- * No external library needed — it writes <meta> and <link> tags directly.
+ * The same metadata is written into static HTML at build time (see the
+ * prerender plugin in vite.config.ts), so this mostly keeps the head correct
+ * as visitors navigate between pages client-side.
  */
 export function useSEO(route: string) {
   useEffect(() => {
-    // Guide and category pages under /resources build their metadata from the guide data.
-    // Unknown /resources/... paths render the Resources index, so they get its metadata.
-    const meta =
-      routeSeo[route] ??
-      resourceRouteSeo(route) ??
-      (route.startsWith('/resources/') ? routeSeo['/resources'] : routeSeo['/']);
-    applyMeta(meta);
+    applyMeta(pageMeta(route));
   }, [route]);
 }
 
-function setMeta(attr: 'name' | 'property', key: string, content: string) {
+function setMeta(attr: 'name' | 'property', key: string, content: string | undefined) {
   let el = document.head.querySelector<HTMLMetaElement>(`meta[${attr}="${key}"]`);
+  if (content === undefined) {
+    el?.remove();
+    return;
+  }
   if (!el) {
     el = document.createElement('meta');
     el.setAttribute(attr, key);
@@ -31,8 +31,12 @@ function setMeta(attr: 'name' | 'property', key: string, content: string) {
   el.setAttribute('content', content);
 }
 
-function setLink(rel: string, href: string) {
+function setLink(rel: string, href: string | undefined) {
   let el = document.head.querySelector<HTMLLinkElement>(`link[rel="${rel}"]`);
+  if (href === undefined) {
+    el?.remove();
+    return;
+  }
   if (!el) {
     el = document.createElement('link');
     el.setAttribute('rel', rel);
@@ -41,71 +45,12 @@ function setLink(rel: string, href: string) {
   el.setAttribute('href', href);
 }
 
-function applyMeta(meta: RouteSeo) {
-  const url = `${seo.siteUrl}${meta.path}`;
-  const ogImageUrl = seo.ogImage.startsWith('http')
-    ? seo.ogImage
-    : `${seo.siteUrl}${seo.ogImage}`;
-
-  // Title
-  document.title = meta.title;
-
-  // Description. No keywords tag: Google has ignored it since 2009, and it
-  // published the target keyword list to anyone viewing source.
-  setMeta('name', 'description', meta.description);
-
-  // Robots (noindex for marked pages)
-  setMeta('name', 'robots', meta.noindex ? 'noindex, nofollow' : 'index, follow');
-
-  // Canonical
-  setLink('canonical', url);
-
-  // Open Graph
-  setMeta('property', 'og:title', meta.title);
-  setMeta('property', 'og:description', meta.description);
-  setMeta('property', 'og:url', url);
-  setMeta('property', 'og:image', ogImageUrl);
-  setMeta('property', 'og:type', 'website');
-
-  // Twitter
-  setMeta('name', 'twitter:card', 'summary_large_image');
-  setMeta('name', 'twitter:title', meta.title);
-  setMeta('name', 'twitter:description', meta.description);
-  setMeta('name', 'twitter:image', ogImageUrl);
-  if (seo.twitterHandle) {
-    setMeta('name', 'twitter:site', seo.twitterHandle);
-  }
-
-  // JSON-LD structured data (RealEstateAgent schema)
-  upsertJsonLd({
-    '@context': 'https://schema.org',
-    '@type': 'RealEstateAgent',
-    name: seo.business.name,
-    url: seo.siteUrl,
-    image: ogImageUrl,
-    telephone: seo.business.telephone,
-    email: seo.business.email,
-    parentOrganization: {
-      '@type': 'Organization',
-      name: seo.business.brokerage,
-      url: seo.business.brokerageUrl,
-    },
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: seo.business.streetAddress,
-      addressLocality: seo.business.addressLocality,
-      addressRegion: seo.business.addressRegion,
-      postalCode: seo.business.postalCode,
-      addressCountry: seo.business.addressCountry,
-    },
-    areaServed: 'Greater Portland Metro, OR',
-    sameAs: seo.business.sameAs,
-  });
-}
-
-function upsertJsonLd(data: Record<string, unknown>) {
-  const id = 'seo-jsonld-agent';
+function setJsonLd(id: string, data: unknown) {
   let el = document.getElementById(id) as HTMLScriptElement | null;
+  if (data === undefined) {
+    el?.remove();
+    return;
+  }
   if (!el) {
     el = document.createElement('script');
     el.id = id;
@@ -113,4 +58,36 @@ function upsertJsonLd(data: Record<string, unknown>) {
     document.head.appendChild(el);
   }
   el.textContent = JSON.stringify(data);
+}
+
+function applyMeta(meta: PageMeta) {
+  const url = absUrl(meta.path);
+  const size = (n?: number) => (n === undefined ? undefined : String(n));
+
+  document.title = meta.title;
+  // No keywords tag: Google has ignored it since 2009, and it published the
+  // target keyword list to anyone viewing source.
+  setMeta('name', 'description', meta.description);
+  setMeta('name', 'robots', meta.noindex ? 'noindex, follow' : 'index, follow');
+  setLink('canonical', meta.noCanonical ? undefined : url);
+
+  setMeta('property', 'og:site_name', SITE_NAME);
+  setMeta('property', 'og:locale', 'en_US');
+  setMeta('property', 'og:type', meta.type);
+  setMeta('property', 'og:title', meta.title);
+  setMeta('property', 'og:description', meta.description);
+  setMeta('property', 'og:url', url);
+  setMeta('property', 'og:image', meta.image);
+  setMeta('property', 'og:image:alt', meta.imageAlt);
+  setMeta('property', 'og:image:width', size(meta.imageWidth));
+  setMeta('property', 'og:image:height', size(meta.imageHeight));
+
+  setMeta('name', 'twitter:card', 'summary_large_image');
+  setMeta('name', 'twitter:title', meta.title);
+  setMeta('name', 'twitter:description', meta.description);
+  setMeta('name', 'twitter:image', meta.image);
+  setMeta('name', 'twitter:site', seo.twitterHandle || undefined);
+
+  setJsonLd('seo-jsonld-agent', agentJsonLd());
+  setJsonLd('seo-jsonld-page', meta.jsonLd.length ? meta.jsonLd : undefined);
 }

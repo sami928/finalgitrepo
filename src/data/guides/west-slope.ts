@@ -7,7 +7,7 @@ const guide: Guide = {
   title: 'West Slope',
   eyebrow: 'Unincorporated Washington County · Neighborhood Guide',
   summary:
-    'An unincorporated area of Washington County, about a square mile and a half between the Sunset Highway and Beaverton-Hillsdale Highway, served by special districts rather than a city.',
+    'An unincorporated area of Washington County between the Sunset Highway and Beaverton-Hillsdale Highway, served by special districts rather than a city.',
   lede:
     'West Slope is an unincorporated area of Washington County covering about a square mile and a half between the Sunset Highway and Beaverton-Hillsdale Highway. It has Portland mailing addresses and Beaverton schools, and is governed by the county board and several independent districts, each with its own elected officers and levy; there is no city government.',
   hero: { slot: 'west-slope-aerial', caption: 'West Slope · between the Sunset Highway and Beaverton-Hillsdale' },

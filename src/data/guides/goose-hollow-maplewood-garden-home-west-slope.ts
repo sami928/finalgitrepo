@@ -7,7 +7,7 @@ const guide: Guide = {
   title: 'Four Neighborhoods, Two Jurisdictions',
   eyebrow: 'Goose Hollow · Maplewood · Garden Home · West Slope',
   summary:
-    'Goose Hollow, Maplewood, Garden Home and West Slope lie within about six miles of one another, split by the Multnomah–Washington county line into two jurisdictions.',
+    'Goose Hollow, Maplewood, Garden Home and West Slope lie within about six miles of one another, split by the Multnomah–Washington county line.',
   lede:
     'Goose Hollow, Maplewood, Garden Home and West Slope lie within about six miles of one another; Garden Home and West Slope are outside the City of Portland. Maplewood and Garden Home are neighbors across the Multnomah–Washington county line, where similar houses have different school assignments and taxing districts.',
   hero: null,
