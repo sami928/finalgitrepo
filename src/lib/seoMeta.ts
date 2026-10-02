@@ -140,8 +140,9 @@ export function pageMeta(route: string): PageMeta {
 
   const g = r.guide;
   const c = getCategory(g.category)!;
-  const withGuide = `${g.title} Guide | ${BRAND}`;
-  const title = withGuide.length <= 60 ? withGuide : `${g.title} | ${BRAND}`;
+  const base = g.seoTitle ?? `${g.title} Guide`;
+  const branded = `${base} | ${BRAND}`;
+  const title = branded.length <= 60 ? branded : base;
   const cover = coverFor(g.slug);
   const image = cover ? { image: absUrl(cover), imageAlt: g.title } : defaultImage;
   return {

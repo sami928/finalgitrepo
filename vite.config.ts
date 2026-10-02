@@ -43,6 +43,7 @@ function inlineCssPlugin(): PluginOption {
  */
 function prerenderSeoPlugin(): PluginOption {
   let outDir = 'dist';
+  let isSsr = false;
   const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   const ld = (data: unknown) => JSON.stringify(data).replace(/</g, '\\u003c');
 
@@ -78,8 +79,11 @@ function prerenderSeoPlugin(): PluginOption {
     apply: 'build',
     configResolved(config) {
       outDir = path.resolve(config.root, config.build.outDir);
+      isSsr = Boolean(config.build.ssr);
     },
     closeBundle() {
+      // The SSR build (scripts/prerender-body.mjs input) has no index.html.
+      if (isSsr) return;
       const template = fs.readFileSync(path.join(outDir, 'index.html'), 'utf8');
       const marker = /<!-- seo:start[\s\S]*?<!-- seo:end -->/;
       if (!marker.test(template)) throw new Error('prerender-seo: seo markers missing from index.html');

@@ -16,6 +16,14 @@ export type GuideMeta = {
   number: string;
   category: CategoryId;
   title: string;
+  /**
+   * Search-result title (the <title> tag), worded the way people search:
+   * place name, "Portland OR" / "Oregon", and "neighborhood guide" or similar.
+   * The visible heading still uses `title`. Keep it under 40 characters so
+   * " | Catherine Redmond" still fits in Google's ~60-character limit; longer
+   * ones are shown without the name.
+   */
+  seoTitle?: string;
   summary: string;
 };
 
@@ -56,6 +64,7 @@ export const catalog: GuideMeta[] = [
     number: '01',
     category: 'relocation',
     title: 'Relocating to Portland',
+    seoTitle: 'Moving to Portland, Oregon: Relocation Guide',
     summary:
       'An overview of Portland, Oregon, for buyers relocating to the city: its neighborhoods, housing market, cost of living and daily life.',
   },
@@ -64,6 +73,7 @@ export const catalog: GuideMeta[] = [
     number: '02',
     category: 'relocation',
     title: 'Relocating to Oregon',
+    seoTitle: 'Moving to Oregon: Relocation Guide',
     summary:
       "An overview of Oregon's regions, taxes, climate and housing costs, and the thirty-day deadlines that apply to new residents after arrival.",
   },
@@ -72,6 +82,7 @@ export const catalog: GuideMeta[] = [
     number: '03',
     category: 'area-overviews',
     title: 'Southwest Portland at a Glance',
+    seoTitle: 'Southwest Portland Neighborhoods Guide',
     summary:
       'An overview of twenty-five Southwest Portland neighborhoods grouped by character: hilltop, village, wooded residential and close-in urban.',
   },
@@ -80,6 +91,7 @@ export const catalog: GuideMeta[] = [
     number: '04',
     category: 'area-overviews',
     title: 'Four Neighborhoods, Two Jurisdictions',
+    seoTitle: 'Goose Hollow, Maplewood, Garden Home & West Slope',
     summary:
       'Goose Hollow, Maplewood, Garden Home and West Slope lie within about six miles of one another, split by the Multnomah–Washington county line.',
   },
@@ -88,6 +100,7 @@ export const catalog: GuideMeta[] = [
     number: '05',
     category: 'area-overviews',
     title: 'Lake Oswego, Beaverton & Highland',
+    seoTitle: 'Lake Oswego vs Beaverton: Area Guide',
     summary:
       'Lake Oswego and Beaverton are separate cities with their own school districts; Highland, or Hyland Hills, is a wooded neighborhood inside Beaverton.',
   },
@@ -96,6 +109,7 @@ export const catalog: GuideMeta[] = [
     number: '06',
     category: 'portland-neighborhoods',
     title: 'Multnomah Village',
+    seoTitle: 'Multnomah Village, Portland OR: Neighborhood Guide',
     summary:
       "The commercial center of Southwest Portland's Multnomah neighborhood: four blocks of early-1900s storefronts on SW Capitol Highway, next to Gabriel Park.",
   },
@@ -104,6 +118,7 @@ export const catalog: GuideMeta[] = [
     number: '07',
     category: 'portland-neighborhoods',
     title: 'Goose Hollow',
+    seoTitle: 'Goose Hollow, Portland OR: Neighborhood Guide',
     summary:
       'A Southwest Portland neighborhood between downtown and the West Hills, home to Providence Park, with housing from 1890s mansions to recent towers.',
   },
@@ -112,6 +127,7 @@ export const catalog: GuideMeta[] = [
     number: '08',
     category: 'portland-neighborhoods',
     title: 'Council Crest',
+    seoTitle: 'Council Crest, Portland OR: Neighborhood Guide',
     summary:
       "A summit, park and hillside residential area in Portland's Southwest Hills, once home to an amusement park, with views of five Cascade peaks on clear days.",
   },
@@ -120,6 +136,7 @@ export const catalog: GuideMeta[] = [
     number: '09',
     category: 'portland-neighborhoods',
     title: 'Bridlemile',
+    seoTitle: 'Bridlemile, Portland OR: Neighborhood Guide',
     summary:
       'A mostly residential postwar neighborhood in Southwest Portland on the west slope above Fanno Creek, with two city parks and land in three jurisdictions.',
   },
@@ -128,6 +145,7 @@ export const catalog: GuideMeta[] = [
     number: '10',
     category: 'portland-neighborhoods',
     title: 'Sylvan Highlands',
+    seoTitle: 'Sylvan Highlands, Portland OR: Neighborhood Guide',
     summary:
       "A steep, wooded neighborhood on the west face of Portland's hills around the Sylvan interchange, with forty-seven percent tree cover and US 26 through it.",
   },
@@ -136,6 +154,7 @@ export const catalog: GuideMeta[] = [
     number: '11',
     category: 'portland-neighborhoods',
     title: 'Forest Heights',
+    seoTitle: 'Forest Heights, Portland OR: Neighborhood Guide',
     summary:
       "A 601-acre master-planned hillside development in Portland's Northwest Heights, with its own homeowners association, trails and private shuttle.",
   },
@@ -144,6 +163,7 @@ export const catalog: GuideMeta[] = [
     number: '12',
     category: 'washington-county',
     title: 'West Slope',
+    seoTitle: 'West Slope, Oregon: Neighborhood Guide',
     summary:
       'An unincorporated area of Washington County between the Sunset Highway and Beaverton-Hillsdale Highway, served by special districts rather than a city.',
   },
@@ -152,6 +172,7 @@ export const catalog: GuideMeta[] = [
     number: '13',
     category: 'washington-county',
     title: 'Raleigh Hills',
+    seoTitle: 'Raleigh Hills, Oregon: Neighborhood Guide',
     summary:
       'An unincorporated commercial area of Washington County at the junction of Beaverton-Hillsdale Highway and Scholls Ferry Road.',
   },
@@ -160,6 +181,7 @@ export const catalog: GuideMeta[] = [
     number: '14',
     category: 'clackamas-county',
     title: 'Lake Oswego',
+    seoTitle: 'Living in Lake Oswego, Oregon: City Guide',
     summary:
       'A city about seven miles south of Portland, built around a privately controlled lake of roughly 415 acres, with a downtown on State Street.',
   },
@@ -168,6 +190,7 @@ export const catalog: GuideMeta[] = [
     number: '15',
     category: 'clackamas-county',
     title: 'West Linn',
+    seoTitle: 'Living in West Linn, Oregon: City Guide',
     summary:
       'A city on bluffs above the Willamette, formed from older neighborhoods by annexation, where landslide and river rules shape lots more than zoning.',
   },
