@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { seo } from '@/config/seo';
+import { captureAttribution, trackContactClicks } from '@/lib/analytics';
 
 /**
  * Google Analytics 4 (GA4) loader — deferred.
@@ -39,6 +40,13 @@ export function Analytics({ route }: { route: string }) {
     } else {
       setTimeout(loadGtag, 1500);
     }
+  }, [id]);
+
+  // Attribution is first-party (saved with leads), so it runs even without GA.
+  useEffect(() => {
+    captureAttribution();
+    if (!id) return;
+    return trackContactClicks();
   }, [id]);
 
   // gtag's `config` call sends one page_view on load. With History API

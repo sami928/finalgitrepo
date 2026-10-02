@@ -1,3 +1,9 @@
 [functions.send-lead-email]
 verify_jwt = false
 entrypoint = "./functions/send-lead-email/index.ts"
+
+# Called by pg_cron, not browsers; authenticates with the Vault-held
+# x-report-token header instead of a JWT.
+[functions.analytics-report]
+verify_jwt = false
+entrypoint = "./functions/analytics-report/index.ts"
