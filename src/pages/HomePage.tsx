@@ -279,7 +279,7 @@ interaction.
 
           <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {featuredGuides.map((g, i) => (
-              <li key={g.slug}>
+              <li key={g.slug} className={i >= 3 ? 'hidden sm:block' : undefined}>
                 <Reveal delay={i * 90} className="h-full">
                   <AppLink
                     to={guideUrl(g)}
