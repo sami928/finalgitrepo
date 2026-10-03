@@ -1,0 +1,8 @@
+# Everything Vite emits into /assets/ has a content hash in its filename, so a
+# changed file always gets a new URL and these can be cached for a year.
+# (Unhashed files elsewhere in public/, like og-image.jpg, keep the default.)
+<IfModule mod_headers.c>
+  <FilesMatch "\.(jpe?g|png|webp|avif|gif|svg)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>

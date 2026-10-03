@@ -15,7 +15,7 @@ import { Reveal } from '@/components/Reveal';
 import { site } from '@/config/site';
 import { navigate } from '@/lib/router';
 import { testimonials } from '@/data/testimonials';
-import { images } from '@/config/images';
+import { images, imageSrcSets } from '@/config/images';
 import { AppLink } from '@/components/AppLink';
 import { catalog, guideUrl, RESOURCES_PATH } from '@/data/guides/catalog';
 
@@ -75,6 +75,8 @@ export function HomePage() {
         <div className="absolute inset-0">
           <img
             src={heroImg}
+            srcSet={imageSrcSets.homeHero}
+            sizes="100vw"
             alt="Portland skyline over the Willamette River"
             fetchPriority="high"
             className="h-full w-full object-cover opacity-45"
@@ -164,8 +166,13 @@ export function HomePage() {
               <div className="overflow-hidden rounded-2xl">
                 <img
                   src={agentPhoto}
+                  srcSet={imageSrcSets.homePortrait}
+                  sizes="(min-width: 1280px) 600px, (min-width: 1024px) 46vw, 100vw"
                   alt={site.agentName}
-                  fetchPriority="high"
+                  width={480}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
                   className="aspect-[4/5] w-full object-cover"
                 />
               </div>
@@ -331,7 +338,7 @@ interaction.
                   <img
                     src={t.avatar}
                     alt={t.name}
-                    fetchPriority="high"
+                    loading="lazy"
                     className="h-10 w-10 rounded-full object-cover"
                   />
                   <div>
@@ -358,8 +365,13 @@ interaction.
               <div className="relative overflow-hidden rounded-2xl">
                 <img
                   src={familyImg}
+                  srcSet={imageSrcSets.homeFamily}
+                  sizes="(min-width: 1152px) 528px, (min-width: 1024px) 46vw, 100vw"
                   alt="A family receiving keys to their new home"
-                  fetchPriority="high"
+                  width={480}
+                  height={360}
+                  loading="lazy"
+                  decoding="async"
                   className="aspect-[4/3] w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink-950/60 to-transparent" />

@@ -31,9 +31,30 @@ function lookup(name: string): string | undefined {
   return undefined;
 }
 
+/**
+ * Pre-sized copies of a photo, named `<slot>@<width>.webp` (e.g.
+ * home-hero@800.webp), sorted narrowest first. A plain `<slot>.jpg` dropped in
+ * takes precedence, so replacing a photo still works without making variants.
+ */
+function variants(name: string): { url: string; width: number }[] {
+  if (lookup(name)) return [];
+  const re = new RegExp(`^${name.toLowerCase()}@(\\d+)\\.`);
+  return Object.keys(uploaded)
+    .map((key) => ({ key, m: key.split('/').pop()!.toLowerCase().match(re) }))
+    .filter((v) => v.m)
+    .map((v) => ({ url: uploaded[v.key], width: Number(v.m![1]) }))
+    .sort((a, b) => a.width - b.width);
+}
+
 /** Return the uploaded file for a slot, or fall back to the stock URL. */
 function slot(name: string, fallback: string): string {
-  return lookup(name) ?? fallback;
+  return lookup(name) ?? variants(name).slice(-1)[0]?.url ?? fallback;
+}
+
+/** `srcset` for a slot with pre-sized copies; undefined when there are none. */
+function srcSetFor(name: string): string | undefined {
+  const v = variants(name);
+  return v.length ? v.map((x) => `${x.url} ${x.width}w`).join(', ') : undefined;
 }
 
 // --- Hero / page images ---------------------------------------------------
@@ -59,6 +80,13 @@ export const images = {
     'https://images.pexels.com/photos/38661693/pexels-photo-38661693.jpeg?auto=compress&cs=tinysrgb&h=800&w=1600'),
   homeValueHero: hero('home-value-hero',
     'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&h=800&w=1600'),
+};
+
+/** Responsive `srcSet` for the images above that have pre-sized copies. */
+export const imageSrcSets = {
+  homeHero: srcSetFor('home-hero'),
+  homePortrait: srcSetFor('home-portrait'),
+  homeFamily: srcSetFor('home-family'),
 };
 
 // --- Listing images -------------------------------------------------------
