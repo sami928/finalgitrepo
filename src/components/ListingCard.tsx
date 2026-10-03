@@ -39,7 +39,8 @@ export function ListingCard({
           src={photo}
           alt={listing.address}
           className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-          fetchPriority="high"
+          loading="lazy"
+          decoding="async"
           onError={(e) => {
             (e.target as HTMLImageElement).src = 'https://images.pexels.com/photos/5502227/pexels-photo-5502227.jpeg?auto=compress&cs=tinysrgb&h=400&w=600';
           }}

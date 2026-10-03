@@ -1,6 +1,7 @@
 import { useEffect, useState, type MouseEvent } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 import { Logo } from './Logo';
+import { GoogleIcon } from './GoogleIcon';
 import { navigate, useRoute } from '@/lib/router';
 import { site } from '@/config/site';
 
@@ -19,8 +20,13 @@ const navItems = [
     (site.mlsSearchEnabled || item.path !== '/mls-search')
 );
 
+/** Section pages (e.g. /resources/<category>/<guide>) keep their tab highlighted. */
+const isActiveFor = (route: string, path: string) =>
+  route === path || (path !== '/' && route.startsWith(`${path}/`));
+
 export function Navbar() {
   const route = useRoute();
+  const isActive = (path: string) => isActiveFor(route, path);
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -63,9 +69,9 @@ export function Navbar() {
               key={item.path}
               href={item.path}
               onClick={(e) => go(e, item.path)}
-              aria-current={route === item.path ? 'page' : undefined}
+              aria-current={isActive(item.path) ? 'page' : undefined}
               className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                route === item.path
+                isActive(item.path)
                   ? 'bg-ink-100 text-ink-900'
                   : 'text-ink-600 hover:bg-ink-50 hover:text-ink-900'
               }`}
@@ -75,7 +81,19 @@ export function Navbar() {
           ))}
         </div>
 
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-4 md:flex">
+          {site.social.googleBusiness && (
+            <a
+              href={site.social.googleBusiness}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${site.agentName} on Google`}
+              className="flex items-center gap-1.5 text-sm font-semibold text-ink-800 hover:text-gold-600"
+            >
+              <GoogleIcon />
+              <span className="hidden lg:inline">Google</span>
+            </a>
+          )}
           <a
             href={site.phoneHref}
             className="flex items-center gap-2 text-sm font-semibold text-ink-800 hover:text-gold-600"
@@ -102,9 +120,9 @@ export function Navbar() {
                 key={item.path}
                 href={item.path}
                 onClick={(e) => go(e, item.path)}
-                aria-current={route === item.path ? 'page' : undefined}
+                aria-current={isActive(item.path) ? 'page' : undefined}
                 className={`block rounded-lg px-3 py-3 text-left text-base font-medium ${
-                  route === item.path
+                  isActive(item.path)
                     ? 'bg-ink-100 text-ink-900'
                     : 'text-ink-700 hover:bg-ink-50'
                 }`}
@@ -112,6 +130,17 @@ export function Navbar() {
                 {item.label}
               </a>
             ))}
+            {site.social.googleBusiness && (
+              <a
+                href={site.social.googleBusiness}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-lg px-3 py-3 text-base font-medium text-ink-700 hover:bg-ink-50"
+              >
+                <GoogleIcon />
+                Find {site.agentName.split(' ')[0]} on Google
+              </a>
+            )}
             <a
               href={site.phoneHref}
               className="mt-2 flex items-center gap-2 rounded-lg bg-gold-500 px-3 py-3 text-base font-semibold text-white"

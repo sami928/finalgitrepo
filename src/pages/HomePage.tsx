@@ -15,16 +15,17 @@ import { Reveal } from '@/components/Reveal';
 import { site } from '@/config/site';
 import { navigate } from '@/lib/router';
 import { testimonials } from '@/data/testimonials';
-import { images } from '@/config/images';
+import { images, imageSrcSets } from '@/config/images';
+import { AppLink } from '@/components/AppLink';
+import { catalog, guideUrl, RESOURCES_PATH } from '@/data/guides/catalog';
 
 const heroImg = images.homeHero;
-const agentPhoto = images.agentPhoto;
+const agentPhoto = images.homePortrait;
 const familyImg = images.homeFamily;
 
 const stats = [
   { value: '120+', label: 'Homes sold' },
   { value: '12 yrs', label: 'In Portland metro' },
-  { value: '4.9★', label: 'Average rating' },
 ];
 
 const services = [
@@ -50,6 +51,22 @@ const services = [
   },
 ];
 
+/**
+ * Guides linked from the home page. Links from the home page tell search
+ * engines these pages matter, and give visitors a way into them.
+ */
+const featuredGuideSlugs = [
+  'relocating-to-portland',
+  'southwest-portland-at-a-glance',
+  'multnomah-village',
+  'forest-heights',
+  'lake-oswego',
+  'west-linn',
+];
+const featuredGuides = featuredGuideSlugs
+  .map((slug) => catalog.find((g) => g.slug === slug))
+  .filter((g): g is (typeof catalog)[number] => Boolean(g));
+
 export function HomePage() {
   return (
     <div>
@@ -58,6 +75,8 @@ export function HomePage() {
         <div className="absolute inset-0">
           <img
             src={heroImg}
+            srcSet={imageSrcSets.homeHero}
+            sizes="100vw"
             alt="Portland skyline over the Willamette River"
             fetchPriority="high"
             className="h-full w-full object-cover opacity-45"
@@ -76,8 +95,8 @@ export function HomePage() {
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-ink-200">
               I'm {site.agentName}, a local broker who helps buyers and sellers
-              move with confidence. Search live listings, get a tailored home
-              plan, and never feel pressured.
+              move with confidence. Search live listings and get a tailored
+              home plan.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Button
@@ -147,8 +166,13 @@ export function HomePage() {
               <div className="overflow-hidden rounded-2xl">
                 <img
                   src={agentPhoto}
+                  srcSet={imageSrcSets.homePortrait}
+                  sizes="(min-width: 1280px) 600px, (min-width: 1024px) 46vw, 100vw"
                   alt={site.agentName}
-                  fetchPriority="high"
+                  width={480}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
                   className="aspect-[4/5] w-full object-cover"
                 />
               </div>
@@ -172,7 +196,7 @@ export function HomePage() {
                 Meet your agent
               </p>
               <h2 className="mt-3 text-3xl font-semibold leading-tight text-ink-900 sm:text-4xl">
-                Hi, I'm {site.agentName}
+                Hi, I'm Catherine
               </h2>
               <p className="mt-5 text-lg leading-relaxed text-ink-600">
                 For over a decade in real estate, I have
@@ -192,12 +216,6 @@ buyer, upgrading to your dream home,
 or preparing to sell, I bring a calm,
 confident presence to every
 interaction.
-              </p>
-              <p className="mt-4 leading-relaxed text-ink-600">
-                My approach is simple: listen first, educate often, and never
-                push. Whether you're buying your first condo or selling a
-                forever home, you'll get straight answers and a plan built
-                around your life.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <Button onClick={() => navigate('/contact')}>
@@ -225,9 +243,6 @@ interaction.
             <h2 className="mt-3 text-3xl font-semibold text-ink-900 sm:text-4xl">
               Full-service, deeply local
             </h2>
-            <p className="mt-4 text-lg leading-relaxed text-ink-600">
-              Every client gets a customized plan. Here's what that looks like.
-            </p>
           </Reveal>
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -249,6 +264,45 @@ interaction.
           </div>
         </div>
       </section>
+
+      {/* Neighborhood guides */}
+      {site.resourcesEnabled && featuredGuides.length > 0 && (
+        <section className="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-28">
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-600">
+              Neighborhood guides
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold text-ink-900 sm:text-4xl">
+              Portland, Lake Oswego and West Linn, street by street
+            </h2>
+          </Reveal>
+
+          <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredGuides.map((g, i) => (
+              <li key={g.slug}>
+                <Reveal delay={i * 90} className="h-full">
+                  <AppLink
+                    to={guideUrl(g)}
+                    className="block h-full rounded-2xl border border-ink-100 bg-white p-6 transition-shadow hover:shadow-md"
+                  >
+                    <h3 className="text-lg font-semibold text-ink-900">{g.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-ink-600">{g.summary}</p>
+                  </AppLink>
+                </Reveal>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-10 text-center">
+            <AppLink
+              to={RESOURCES_PATH}
+              className="text-sm font-semibold text-gold-600 underline-offset-4 hover:underline"
+            >
+              See all neighborhood and relocation guides
+            </AppLink>
+          </div>
+        </section>
+      )}
 
       {/* Featured testimonials */}
       {site.testimonialsEnabled && (
@@ -284,7 +338,7 @@ interaction.
                   <img
                     src={t.avatar}
                     alt={t.name}
-                    fetchPriority="high"
+                    loading="lazy"
                     className="h-10 w-10 rounded-full object-cover"
                   />
                   <div>
@@ -311,8 +365,13 @@ interaction.
               <div className="relative overflow-hidden rounded-2xl">
                 <img
                   src={familyImg}
+                  srcSet={imageSrcSets.homeFamily}
+                  sizes="(min-width: 1152px) 528px, (min-width: 1024px) 46vw, 100vw"
                   alt="A family receiving keys to their new home"
-                  fetchPriority="high"
+                  width={480}
+                  height={360}
+                  loading="lazy"
+                  decoding="async"
                   className="aspect-[4/3] w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink-950/60 to-transparent" />
@@ -344,7 +403,7 @@ interaction.
           </div>
 
           <Reveal delay={150} className="mt-10">
-            <LeadForm source="home" />
+            <LeadForm source="home" subtitle="" />
           </Reveal>
         </div>
       </section>

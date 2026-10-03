@@ -2,6 +2,7 @@ import { useState, type FormEvent } from 'react';
 import { Check, Loader2, AlertCircle } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 import { SUPABASE_URL, SUPABASE_ANON_KEY } from '@/lib/supabase';
+import { getAttribution, track } from '@/lib/analytics';
 import { Button } from './Button';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
@@ -51,11 +52,13 @@ export function LeadForm({
     if (!form.name.trim() || !form.email.trim()) {
       setStatus('error');
       setErrorMsg('Please enter your name and email.');
+      track('lead_form_error', { form_source: source, reason: 'missing_fields' });
       return;
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
       setStatus('error');
       setErrorMsg('That email address doesn\'t look right.');
+      track('lead_form_error', { form_source: source, reason: 'invalid_email' });
       return;
     }
 
@@ -75,10 +78,12 @@ export function LeadForm({
       price_range: form.price_range || null,
       message: form.message.trim() || null,
       source,
+      ...getAttribution(),
     });
 
     if (error) {
       setStatus('error');
+      track('lead_form_error', { form_source: source, reason: error.code || 'unknown' });
       if (error.code === '23505') {
         setErrorMsg(
           "You've already submitted a request recently. Catherine will be in touch soon — no need to submit again.",
@@ -94,6 +99,12 @@ export function LeadForm({
       }
       return;
     }
+
+    track('generate_lead', {
+      form_source: source,
+      interest: form.interest || 'unspecified',
+      price_range: form.price_range || 'unspecified',
+    });
 
     // Fire-and-forget email notification — don't block the success state
     // if the email service is down; the lead is already saved in the DB.
@@ -169,7 +180,7 @@ export function LeadForm({
       {!compact && (
         <div className="mb-5">
           <h3 className="text-xl font-semibold text-ink-900">{title}</h3>
-          <p className="mt-1.5 text-sm leading-relaxed text-ink-600">{subtitle}</p>
+          {subtitle && <p className="mt-1.5 text-sm leading-relaxed text-ink-600">{subtitle}</p>}
         </div>
       )}
 

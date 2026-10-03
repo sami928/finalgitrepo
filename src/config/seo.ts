@@ -88,44 +88,44 @@ export const routeSeo: Record<string, {
     path: '/',
     title: 'Catherine Redmond | Portland Metro Real Estate Broker',
     description:
-      'Search Greater Portland Metro homes with Catherine Redmond, a trusted local broker. Live MLS search, buyer guides, and a personalized, pressure-free home search.',
+      'Search Greater Portland Metro homes with Catherine Redmond, a local Engel & Völkers broker. Live listings, neighborhood guides and a tailored home plan.',
   },
   '/listings': {
     path: '/listings',
     title: 'Portland Metro Home Listings | Catherine Redmond',
     description:
-      'Browse available homes across the Greater Portland Metro. Filter by city, price, beds, and type — or ask Catherine for a custom live MLS search with instant alerts.',
+      'Browse homes for sale across the Greater Portland Metro by city, price, beds and type, or ask Catherine for a custom MLS search with instant alerts.',
   },
   '/testimonials': {
     path: '/testimonials',
-    title: 'Client Reviews & Testimonials | Catherine Redmond, Portland Realtor',
+    title: 'Client Reviews | Catherine Redmond, Portland Realtor',
     description:
       'Read what buyers, sellers, and first-time homeowners say about working with Catherine Redmond across the Greater Portland Metro. ',
   },
   '/resources': {
     path: '/resources',
-    title: 'Buyer Guides, Downloads & Articles | Portland Real Estate Resources',
+    title: 'Portland Neighborhood Guides | Catherine Redmond',
     description:
-      'Free Portland home-buying and selling guides, downloadable PDFs, and local market articles. Practical resources to help you move with confidence — no email wall.',
+      'Free Portland, westside and Oregon relocation and neighborhood guides: history, housing, schools and what to check before buying. Read online or as a PDF.',
   },
   '/home-value': {
     path: '/home-value',
     title: 'Portland Home Value Estimator | Catherine Redmond',
     description:
-      'Find out what your Portland Metro home is worth with an instant online valuation, then get a detailed comparative market analysis from Catherine Redmond — no obligation.',
+      'See what your Portland Metro home is worth with an instant online estimate, then get a free, detailed market analysis from Catherine Redmond.',
   },
   '/mls-search': {
     path: '/mls-search',
-    title: 'Portland MLS Search | Active & Sold Listings | Catherine Redmond',
+    title: 'Portland MLS Search | Catherine Redmond',
     description:
       'Search live Portland Metro MLS listings. Filter active and sold homes by price, beds, baths, location, and property type. Interactive map view available.',
     noindex: true,
   },
   '/contact': {
     path: '/contact',
-    title: 'Contact Catherine Redmond | Portland Metro Real Estate Broker',
+    title: 'Contact Catherine Redmond | Portland Real Estate Broker',
     description:
-      'Get in touch with Catherine Redmond, Portland Metro real estate broker. Call, text, email, or send a message — personal replies within 24 hours.',
+      'Get in touch with Catherine Redmond, Portland Metro real estate broker. Call, text, email or send a message, and Catherine will reply promptly.',
   },
 };
 

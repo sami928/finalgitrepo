@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock, Instagram, Facebook, Linkedin } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin } from 'lucide-react';
 import { PageHero } from '@/components/PageHero';
 import { Reveal } from '@/components/Reveal';
 import { LeadForm } from '@/components/LeadForm';
@@ -26,11 +26,6 @@ export function ContactPage() {
       label: 'Service area',
       value: site.area,
     },
-    {
-      icon: Clock,
-      label: 'Response time',
-      value: 'Within 24 hours',
-    },
   ];
 
   return (
@@ -38,7 +33,7 @@ export function ContactPage() {
       <PageHero
         eyebrow="Get in touch"
         title={<>Let's talk about your move</>}
-        subtitle="Buying, selling, or just have questions about the Portland market? Send a note and Catherine will personally reply within 24 hours."
+        subtitle="Buying, selling, or just have questions about the Portland market? Send a note and Catherine will reply promptly."
         image={heroImg}
       />
 

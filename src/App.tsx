@@ -6,12 +6,15 @@ import { useSEO } from '@/lib/useSEO';
 import { Analytics } from '@/components/Analytics';
 import { site } from '@/config/site';
 import { HomePage } from '@/pages/HomePage';
+import { matchResourceRoute } from '@/data/guides/catalog';
 
 const ListingsPage = lazy(() => import('@/pages/ListingsPage').then((m) => ({ default: m.ListingsPage })));
 const TestimonialsPage = lazy(() => import('@/pages/TestimonialsPage').then((m) => ({ default: m.TestimonialsPage })));
 const ContactPage = lazy(() => import('@/pages/ContactPage').then((m) => ({ default: m.ContactPage })));
 const ResourcesPage = lazy(() => import('@/pages/ResourcesPage').then((m) => ({ default: m.ResourcesPage })));
+const GuidePage = lazy(() => import('@/pages/GuidePage').then((m) => ({ default: m.GuidePage })));
 const HomeValuePage = lazy(() => import('@/pages/HomeValuePage').then((m) => ({ default: m.HomeValuePage })));
+const NotFoundPage = lazy(() => import('@/pages/NotFoundPage').then((m) => ({ default: m.NotFoundPage })));
 const MlsSearchPage = lazy(() => import('@/pages/MlsSearchPage').then((m) => ({ default: m.MlsSearchPage })));
 
 function PageFallback() {
@@ -24,15 +27,7 @@ function PageFallback() {
 
 export default function App() {
   const route = useRoute();
-
-  // A feature-flagged route falls back to the homepage below, so its
-  // metadata must too — otherwise a disabled route keeps its own title,
-  // description, and self-referencing canonical while showing home content.
-  let effectiveRoute = route;
-  if (route === '/testimonials' && !site.testimonialsEnabled) effectiveRoute = '/';
-  if (route === '/resources' && !site.resourcesEnabled) effectiveRoute = '/';
-  if (route === '/mls-search' && !site.mlsSearchEnabled) effectiveRoute = '/';
-  useSEO(effectiveRoute);
+  useSEO(route);
 
   useEffect(() => {
     window.scrollTo({ top: 0 });
@@ -40,11 +35,14 @@ export default function App() {
 
   let page;
   switch (route) {
+    case '/':
+      page = <HomePage />;
+      break;
     case '/listings':
       page = <ListingsPage />;
       break;
     case '/testimonials':
-      page = site.testimonialsEnabled ? <TestimonialsPage /> : <HomePage />;
+      page = site.testimonialsEnabled ? <TestimonialsPage /> : <NotFoundPage />;
       break;
     case '/home-value':
       page = <HomeValuePage />;
@@ -52,14 +50,18 @@ export default function App() {
     case '/contact':
       page = <ContactPage />;
       break;
-    case '/resources':
-      page = site.resourcesEnabled ? <ResourcesPage /> : <HomePage />;
-      break;
     case '/mls-search':
-      page = site.mlsSearchEnabled ? <MlsSearchPage /> : <HomePage />;
+      page = site.mlsSearchEnabled ? <MlsSearchPage /> : <NotFoundPage />;
       break;
-    default:
-      page = <HomePage />;
+    default: {
+      // /resources, /resources/<category>, /resources/<category>/<guide>
+      const resource = site.resourcesEnabled ? matchResourceRoute(route) : null;
+      if (resource?.kind === 'guide') page = <GuidePage slug={resource.guide.slug} />;
+      else if (resource?.kind === 'category') page = <ResourcesPage category={resource.category} />;
+      else if (resource) page = <ResourcesPage />;
+      // Unknown or switched-off URLs get a real "not found" page (marked noindex by useSEO).
+      else page = <NotFoundPage />;
+    }
   }
 
   return (

@@ -1,0 +1,529 @@
+{
+  "relocating-to-portland": {
+    "number": "01",
+    "category": "relocation",
+    "slots": {
+      "cover-portland": {
+        "aspect": 2.098,
+        "minPx": "2550×1216",
+        "subject": "Portland skyline or aerial",
+        "src": "/guides/images/relocating-to-portland/cover-portland.jpg"
+      },
+      "portland-overview": {
+        "aspect": 2.833,
+        "minPx": "2550×900",
+        "subject": "Portland skyline, bridges or Mount Hood",
+        "src": "/guides/images/relocating-to-portland/portland-overview.jpg"
+      },
+      "bridlemile": {
+        "aspect": 2.257,
+        "minPx": "1016×450",
+        "subject": "Bridlemile",
+        "src": "/guides/images/relocating-to-portland/bridlemile.jpg"
+      },
+      "council-crest": {
+        "aspect": 2.257,
+        "minPx": "1016×450",
+        "subject": "Council Crest",
+        "src": "/guides/images/relocating-to-portland/council-crest.jpg"
+      },
+      "forest-heights": {
+        "aspect": 2.257,
+        "minPx": "1016×450",
+        "subject": "Forest Heights",
+        "src": "/guides/images/relocating-to-portland/forest-heights.jpg"
+      },
+      "multnomah-village": {
+        "aspect": 2.257,
+        "minPx": "1016×450",
+        "subject": "Multnomah Village",
+        "src": "/guides/images/relocating-to-portland/multnomah-village.jpg"
+      },
+      "raleigh-hills": {
+        "aspect": 2.257,
+        "minPx": "1016×450",
+        "subject": "Raleigh Hills",
+        "src": "/guides/images/relocating-to-portland/raleigh-hills.jpg"
+      },
+      "sylvan-highlands": {
+        "aspect": 2.257,
+        "minPx": "1016×450",
+        "subject": "Sylvan Highlands",
+        "src": "/guides/images/relocating-to-portland/sylvan-highlands.jpg"
+      },
+      "lake-oswego": {
+        "aspect": 1.328,
+        "minPx": "975×735",
+        "subject": "Lake Oswego",
+        "src": "/guides/images/relocating-to-portland/lake-oswego.jpg"
+      },
+      "west-linn": {
+        "aspect": 1.328,
+        "minPx": "975×735",
+        "subject": "West Linn",
+        "src": "/guides/images/relocating-to-portland/west-linn.jpg"
+      },
+      "west-slope": {
+        "aspect": 1.328,
+        "minPx": "975×735",
+        "subject": "West Slope",
+        "src": "/guides/images/relocating-to-portland/west-slope.jpg"
+      },
+      "close-in": {
+        "aspect": 1.889,
+        "minPx": "2550×1350",
+        "subject": "A close-in Portland street scene",
+        "src": "/guides/images/relocating-to-portland/close-in.jpg"
+      },
+      "portland-market": {
+        "aspect": 2.833,
+        "minPx": "2550×900",
+        "subject": "Portland residential street or home exterior",
+        "src": "/guides/images/relocating-to-portland/portland-market.jpg"
+      },
+      "portland-lifestyle": {
+        "aspect": 2.833,
+        "minPx": "2550×900",
+        "subject": "Forest Park, the Gorge, or a Portland market scene",
+        "src": "/guides/images/relocating-to-portland/portland-lifestyle.jpg"
+      }
+    }
+  },
+  "relocating-to-oregon": {
+    "number": "02",
+    "category": "relocation",
+    "slots": {
+      "cover-oregon": {
+        "aspect": 2.153,
+        "minPx": "2550×1185",
+        "subject": "Wide Oregon landscape — Cascades, coast or Columbia Gorge",
+        "src": "/guides/images/relocating-to-oregon/cover-oregon.jpg"
+      },
+      "oregon-overview": {
+        "aspect": 2.94,
+        "minPx": "2132×725",
+        "subject": "Signature Oregon landscape — Mount Hood, Crater Lake or the coast",
+        "src": "/guides/images/relocating-to-oregon/oregon-overview.jpg"
+      },
+      "columbia-gorge": {
+        "aspect": 2.39,
+        "minPx": "1016×425",
+        "subject": "Gorge cliffs, waterfalls or Hood River",
+        "src": "/guides/images/relocating-to-oregon/columbia-gorge.jpg"
+      },
+      "oregon-coast": {
+        "aspect": 2.39,
+        "minPx": "1016×425",
+        "subject": "Coastline, sea stacks or a harbour town",
+        "src": "/guides/images/relocating-to-oregon/oregon-coast.jpg"
+      },
+      "portland-metro": {
+        "aspect": 2.39,
+        "minPx": "1016×425",
+        "subject": "Portland skyline or a close-in neighborhood street",
+        "src": "/guides/images/relocating-to-oregon/portland-metro.jpg"
+      },
+      "willamette-valley": {
+        "aspect": 2.39,
+        "minPx": "1016×425",
+        "subject": "Vineyard rows, farmland or a valley town main street",
+        "src": "/guides/images/relocating-to-oregon/willamette-valley.jpg"
+      },
+      "central-oregon": {
+        "aspect": 1.268,
+        "minPx": "932×735",
+        "subject": "Bend, the Deschutes River or the Three Sisters",
+        "src": "/guides/images/relocating-to-oregon/central-oregon.jpg"
+      },
+      "eastern-oregon": {
+        "aspect": 1.268,
+        "minPx": "932×735",
+        "subject": "Wallowas, Painted Hills or open ranch country",
+        "src": "/guides/images/relocating-to-oregon/eastern-oregon.jpg"
+      },
+      "southern-oregon": {
+        "aspect": 1.268,
+        "minPx": "932×735",
+        "subject": "Rogue Valley, Ashland or Crater Lake",
+        "src": "/guides/images/relocating-to-oregon/southern-oregon.jpg"
+      },
+      "oregon-climate": {
+        "aspect": 2.94,
+        "minPx": "2132×725",
+        "subject": "Weather with character — coastal storm, Cascade snow or high desert sun",
+        "src": "/guides/images/relocating-to-oregon/oregon-climate.jpg"
+      },
+      "oregon-homes": {
+        "aspect": 1.336,
+        "minPx": "969×725",
+        "subject": "Oregon homes — a craftsman porch, a ranch gate or a Bend contemporary",
+        "src": "/guides/images/relocating-to-oregon/oregon-homes.jpg"
+      },
+      "oregon-lifestyle": {
+        "aspect": 2.94,
+        "minPx": "2132×725",
+        "subject": "Everyday Oregon — a farmers market, trailhead or small-town main street",
+        "src": "/guides/images/relocating-to-oregon/oregon-lifestyle.jpg"
+      }
+    }
+  },
+  "southwest-portland-at-a-glance": {
+    "number": "03",
+    "category": "area-overviews",
+    "slots": {}
+  },
+  "goose-hollow-maplewood-garden-home-west-slope": {
+    "number": "04",
+    "category": "area-overviews",
+    "slots": {
+      "garden-home": {
+        "aspect": 2.589,
+        "minPx": "1044×404",
+        "subject": "Garden Home Recreation Center or a residential street",
+        "src": "/guides/images/goose-hollow-maplewood-garden-home-west-slope/garden-home.jpg"
+      },
+      "goose-hollow": {
+        "aspect": 2.589,
+        "minPx": "1044×404",
+        "subject": "Providence Park, a Goose Hollow street or the MAX platform",
+        "src": "/guides/images/goose-hollow-maplewood-garden-home-west-slope/goose-hollow.jpg"
+      },
+      "maplewood": {
+        "aspect": 2.589,
+        "minPx": "1044×404",
+        "subject": "A Maplewood cottage street or April Hill Park",
+        "src": "/guides/images/goose-hollow-maplewood-garden-home-west-slope/maplewood.jpg"
+      },
+      "west-slope": {
+        "aspect": 2.589,
+        "minPx": "1044×404",
+        "subject": "A West Slope street under mature trees, or the US-26 corridor",
+        "src": "/guides/images/goose-hollow-maplewood-garden-home-west-slope/west-slope.jpg"
+      }
+    }
+  },
+  "lake-oswego-beaverton-highland": {
+    "number": "05",
+    "category": "area-overviews",
+    "slots": {
+      "beaverton": {
+        "aspect": 1.542,
+        "minPx": "810×525",
+        "subject": "Beaverton Transit Center, downtown Beaverton or the Nike campus edge",
+        "src": "/guides/images/lake-oswego-beaverton-highland/beaverton.jpg"
+      },
+      "highland-hyland-hills": {
+        "aspect": 1.542,
+        "minPx": "810×525",
+        "subject": "A Highland street under Douglas firs, or Fir Grove Park",
+        "src": "/guides/images/lake-oswego-beaverton-highland/highland-hyland-hills.jpg"
+      },
+      "lake-oswego": {
+        "aspect": 1.542,
+        "minPx": "810×525",
+        "subject": "Oswego Lake, A Avenue downtown, or a wooded LO street",
+        "src": "/guides/images/lake-oswego-beaverton-highland/lake-oswego.jpg"
+      }
+    }
+  },
+  "multnomah-village": {
+    "number": "06",
+    "category": "portland-neighborhoods",
+    "slots": {
+      "village-center": {
+        "aspect": 4.052,
+        "minPx": "2191×541",
+        "subject": "Capitol Highway storefronts, looking along the village blocks",
+        "src": "/guides/images/multnomah-village/village-center.jpg"
+      },
+      "capitol-highway": {
+        "aspect": 2.299,
+        "minPx": "1035×450",
+        "subject": "The rebuilt Capitol Highway corridor, sidewalk and bike lane",
+        "src": "/guides/images/multnomah-village/capitol-highway.jpg"
+      },
+      "gabriel-park": {
+        "aspect": 2.149,
+        "minPx": "1035×482",
+        "subject": "Gabriel Park — open field, trail, or the natural area",
+        "src": "/guides/images/multnomah-village/gabriel-park.jpg"
+      },
+      "housing-street": {
+        "aspect": 2.299,
+        "minPx": "1035×450",
+        "subject": "A residential street near the village, mature trees",
+        "src": "/guides/images/multnomah-village/housing-street.jpg"
+      }
+    }
+  },
+  "goose-hollow": {
+    "number": "07",
+    "category": "portland-neighborhoods",
+    "slots": {
+      "providence-park": {
+        "aspect": 4.052,
+        "minPx": "2191×541",
+        "subject": "Providence Park exterior, or the stadium above the rooftops",
+        "src": "/guides/images/goose-hollow/providence-park.jpg"
+      },
+      "kings-hill": {
+        "aspect": 2.299,
+        "minPx": "1035×450",
+        "subject": "A King's Hill street — historic houses, or the Vista approach",
+        "src": "/guides/images/goose-hollow/kings-hill.jpg"
+      },
+      "max-platform": {
+        "aspect": 2.299,
+        "minPx": "1035×450",
+        "subject": "Goose Hollow MAX platform, or a streetscape with the train",
+        "src": "/guides/images/goose-hollow/max-platform.jpg"
+      },
+      "west-hills-view": {
+        "aspect": 2.149,
+        "minPx": "1035×482",
+        "subject": "Vista Bridge, the West Hills slope, or a Goose Hollow rooftop view",
+        "src": "/guides/images/goose-hollow/west-hills-view.jpg"
+      }
+    }
+  },
+  "council-crest": {
+    "number": "08",
+    "category": "portland-neighborhoods",
+    "slots": {
+      "council-crest-view": {
+        "aspect": 4.705,
+        "minPx": "2191×466",
+        "subject": "Council Crest Park — the summit, the plaza, or the view east to Mount Hood",
+        "src": null
+      },
+      "hillside-street": {
+        "aspect": 2.299,
+        "minPx": "1035×450",
+        "subject": "A winding hillside street under mature trees",
+        "src": null
+      },
+      "marquam-trail": {
+        "aspect": 2.149,
+        "minPx": "1035×482",
+        "subject": "Marquam Nature Park or the Marquam Trail under forest",
+        "src": null
+      },
+      "vista-bridge": {
+        "aspect": 2.299,
+        "minPx": "1035×450",
+        "subject": "The Vista Bridge, or SW Patton Road climbing the hill",
+        "src": null
+      }
+    }
+  },
+  "bridlemile": {
+    "number": "09",
+    "category": "portland-neighborhoods",
+    "slots": {
+      "bridlemile-street": {
+        "aspect": 4.705,
+        "minPx": "2191×466",
+        "subject": "A residential street with mature trees and postwar houses",
+        "src": null
+      },
+      "albert-kelly-park": {
+        "aspect": 2.149,
+        "minPx": "1035×482",
+        "subject": "Albert Kelly Park or Hamilton Park — field, path or the oaks",
+        "src": null
+      },
+      "bridlemile-house": {
+        "aspect": 2.299,
+        "minPx": "1035×450",
+        "subject": "A postwar ranch or split-level on a large lot",
+        "src": null
+      },
+      "hamilton-street": {
+        "aspect": 2.299,
+        "minPx": "1035×450",
+        "subject": "SW Hamilton Street, or Beaverton-Hillsdale Highway",
+        "src": null
+      }
+    }
+  },
+  "sylvan-highlands": {
+    "number": "10",
+    "category": "portland-neighborhoods",
+    "slots": {
+      "sylvan-hillside": {
+        "aspect": 4.705,
+        "minPx": "2191×466",
+        "subject": "Wooded hillside above the Sunset Highway, or the Sylvan interchange",
+        "src": null
+      },
+      "hoyt-arboretum": {
+        "aspect": 2.149,
+        "minPx": "1035×482",
+        "subject": "Hoyt Arboretum or Washington Park under trees",
+        "src": null
+      },
+      "sylvan-street": {
+        "aspect": 2.299,
+        "minPx": "1035×450",
+        "subject": "A narrow winding lane under Douglas firs",
+        "src": null
+      },
+      "vista-ridge": {
+        "aspect": 2.299,
+        "minPx": "1035×450",
+        "subject": "The Vista Ridge Tunnels or US 26 through the hills",
+        "src": null
+      }
+    }
+  },
+  "forest-heights": {
+    "number": "11",
+    "category": "portland-neighborhoods",
+    "slots": {
+      "forest-heights-hillside": {
+        "aspect": 4.705,
+        "minPx": "2191×466",
+        "subject": "The hillside development, rooflines among trees, or the Village centre",
+        "src": null
+      },
+      "forest-heights-house": {
+        "aspect": 2.299,
+        "minPx": "1035×450",
+        "subject": "A Forest Heights house — traditional or contemporary",
+        "src": null
+      },
+      "mill-pond": {
+        "aspect": 2.149,
+        "minPx": "1035×482",
+        "subject": "Mill Pond Park, Forest Heights Park, or an HOA trail",
+        "src": null
+      },
+      "miller-road": {
+        "aspect": 2.299,
+        "minPx": "1035×450",
+        "subject": "NW Miller Road, or the shuttle at Sunset Transit Center",
+        "src": null
+      }
+    }
+  },
+  "west-slope": {
+    "number": "12",
+    "category": "washington-county",
+    "slots": {
+      "west-slope-aerial": {
+        "aspect": 4.705,
+        "minPx": "2191×466",
+        "subject": "Wooded residential streets between the highways, or the Canyon Road corridor",
+        "src": null
+      },
+      "raleigh-park": {
+        "aspect": 2.149,
+        "minPx": "1035×482",
+        "subject": "Raleigh Park — field, trail or the swim centre",
+        "src": null
+      },
+      "sunset-transit": {
+        "aspect": 2.299,
+        "minPx": "1035×450",
+        "subject": "Sunset Transit Center, or US 26 at the Canyon Road interchange",
+        "src": null
+      },
+      "west-slope-street": {
+        "aspect": 2.299,
+        "minPx": "1035×450",
+        "subject": "A single-family street on a generous lot",
+        "src": null
+      }
+    }
+  },
+  "raleigh-hills": {
+    "number": "13",
+    "category": "washington-county",
+    "slots": {
+      "raleigh-hills-junction": {
+        "aspect": 4.705,
+        "minPx": "2191×466",
+        "subject": "The Beaverton-Hillsdale and Scholls Ferry junction, or the retail node",
+        "src": null
+      },
+      "fanno-creek-path": {
+        "aspect": 2.149,
+        "minPx": "1035×482",
+        "subject": "Fanno Creek, the old Red Electric bridle path, or Vista Brook Park",
+        "src": null
+      },
+      "raleigh-hills-street": {
+        "aspect": 2.299,
+        "minPx": "1035×450",
+        "subject": "A detached single-family street",
+        "src": null
+      },
+      "scholls-ferry": {
+        "aspect": 2.299,
+        "minPx": "1035×450",
+        "subject": "Scholls Ferry Road or Beaverton-Hillsdale Highway",
+        "src": null
+      }
+    }
+  },
+  "lake-oswego": {
+    "number": "14",
+    "category": "clackamas-county",
+    "slots": {
+      "oswego-lake": {
+        "aspect": 4.705,
+        "minPx": "2191×466",
+        "subject": "Oswego Lake — the shoreline, a dock, or the downtown edge",
+        "src": null
+      },
+      "george-rogers-park": {
+        "aspect": 2.149,
+        "minPx": "1035×482",
+        "subject": "George Rogers Park, the smelter stack, or Millennium Plaza",
+        "src": null
+      },
+      "lake-oswego-house": {
+        "aspect": 2.299,
+        "minPx": "1035×450",
+        "subject": "A pre-war revival or a Northwest Regional house",
+        "src": null
+      },
+      "state-street": {
+        "aspect": 2.299,
+        "minPx": "1035×450",
+        "subject": "State Street downtown, or Highway 43 along the river",
+        "src": null
+      }
+    }
+  },
+  "west-linn": {
+    "number": "15",
+    "category": "clackamas-county",
+    "slots": {
+      "west-linn-bluff": {
+        "aspect": 4.705,
+        "minPx": "2191×466",
+        "subject": "The bluffs above the Willamette, or Willamette Falls",
+        "src": null
+      },
+      "highway-43": {
+        "aspect": 2.299,
+        "minPx": "1035×450",
+        "subject": "Highway 43 along the river, or the Oregon City Bridge",
+        "src": null
+      },
+      "mary-s-young": {
+        "aspect": 2.149,
+        "minPx": "1035×482",
+        "subject": "Mary S. Young park, Camassia Preserve, or Historic Willamette Main Street",
+        "src": null
+      },
+      "willamette-house": {
+        "aspect": 2.299,
+        "minPx": "1035×450",
+        "subject": "A Willamette district Queen Anne or bungalow on the grid",
+        "src": null
+      }
+    }
+  }
+}

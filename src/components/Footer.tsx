@@ -1,6 +1,7 @@
 import { type MouseEvent } from 'react';
 import { Instagram, Facebook, Linkedin, Phone, Mail, MapPin } from 'lucide-react';
 import { Logo } from './Logo';
+import { GoogleIcon } from './GoogleIcon';
 import { site } from '@/config/site';
 import { navigate } from '@/lib/router';
 
@@ -37,15 +38,16 @@ export function Footer() {
               <Logo />
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-600">
-              Helping buyers and sellers move confidently across the{' '}
-              {site.area}. Personalized, pressure-free, and deeply local.
+              Helping buyers and sellers move confidently across the Portland,
+              Oregon area.
             </p>
             <div className="mt-5 flex gap-3">
               {[
                 { Icon: Instagram, href: site.social.instagram, label: 'Instagram' },
                 { Icon: Facebook, href: site.social.facebook, label: 'Facebook' },
                 { Icon: Linkedin, href: site.social.linkedin, label: 'LinkedIn' },
-              ].map(({ Icon, href, label }) => (
+                { Icon: GoogleIcon, href: site.social.googleBusiness, label: 'Google Business Profile' },
+              ].filter(({ href }) => href).map(({ Icon, href, label }) => (
                 <a
                   key={label}
                   href={href}
@@ -106,6 +108,19 @@ export function Footer() {
                 <MapPin className="h-4 w-4 text-gold-500" />
                 {site.area}
               </li>
+              {site.social.googleBusiness && (
+                <li>
+                  <a
+                    href={site.social.googleBusiness}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2.5 text-black hover:text-gold-600"
+                  >
+                    <GoogleIcon className="h-4 w-4 text-gold-500" />
+                    Google Business Profile
+                  </a>
+                </li>
+              )}
             </ul>
           </div>
 

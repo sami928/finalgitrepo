@@ -13,7 +13,8 @@ of the default stock photo.
 | File name                        | Used on            | What it shows                |
 |----------------------------------|--------------------|------------------------------|
 | `home-hero.jpg`                  | Home page hero     | Portland skyline / cityscape |
-| `agent-photo.jpg`                | Home about section | Portrait of Catherine        |
+| `agent-photo.jpg`                | Guide contact cards | Portrait of Catherine       |
+| `home-portrait.jpg`              | Home about section | Portrait of Catherine (falls back to `agent-photo.jpg`) |
 | `home-family.jpg`                | Home CTA section   | Family receiving keys        |
 | `listings-hero.jpg`              | Listings page hero | Portland home / neighborhood |
 | `testimonials-hero.jpg`          | Testimonials hero  | Happy client / handshake     |
@@ -52,3 +53,14 @@ of the default stock photo.
 4. Remove the file and the stock photo comes back as a fallback.
 
 Only the slots you replace change. Everything else keeps the stock photos.
+
+## Pre-sized copies (faster loading on phones)
+
+The home page photos ship as several widths so each device downloads only
+what it needs: `home-hero@800.webp`, `home-hero@1280.webp`, `home-hero@1920.webp`,
+`home-portrait@480/960.webp`, `home-family@480/960.webp`. Name new copies
+`<slot>@<width>.webp` and the page builds a responsive `srcset` from them.
+
+Dropping in a plain file (e.g. `home-hero.jpg`) still works and overrides the
+copies, but phones then download the full file. Resize it to at most ~1920px
+wide (hero) or ~960px (other photos) and export at ~70% quality first.

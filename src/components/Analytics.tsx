@@ -1,12 +1,15 @@
 import { useEffect, useRef } from 'react';
 import { seo } from '@/config/seo';
+import { captureAttribution, trackContactClicks } from '@/lib/analytics';
+import { afterInteraction } from '@/lib/afterInteraction';
 
 /**
  * Google Analytics 4 (GA4) loader — deferred.
  *
- * The gtag script is injected after the page becomes interactive
- * (via requestIdleCallback) so it never blocks initial render or
- * enters the critical request chain.
+ * gtag.js is ~180 KB and was the largest source of main-thread blocking in
+ * PageSpeed on mobile, so it loads on the visitor's first interaction, or
+ * 5 s after the page's load event if they just read. Visits that leave
+ * within those 5 s without touching the page aren't counted.
  *
  * Activates only if `googleAnalyticsId` is set in src/config/seo.ts.
  */
@@ -34,11 +37,14 @@ export function Analytics({ route }: { route: string }) {
       document.head.appendChild(script);
     };
 
-    if ('requestIdleCallback' in window) {
-      (window as Window).requestIdleCallback(loadGtag, { timeout: 3000 });
-    } else {
-      setTimeout(loadGtag, 1500);
-    }
+    return afterInteraction(loadGtag, 5000);
+  }, [id]);
+
+  // Attribution is first-party (saved with leads), so it runs even without GA.
+  useEffect(() => {
+    captureAttribution();
+    if (!id) return;
+    return trackContactClicks();
   }, [id]);
 
   // gtag's `config` call sends one page_view on load. With History API
