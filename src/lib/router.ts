@@ -12,9 +12,20 @@ import { useEffect, useState } from 'react';
 /** pushState doesn't fire popstate, so navigate() announces its own changes. */
 const ROUTE_CHANGE = 'app:routechange';
 
+/**
+ * Path used when rendering outside a browser (the build-time prerender in
+ * scripts/prerender-body.mjs). Ignored in the browser.
+ */
+let serverPath = '/';
+export function setServerPath(path: string) {
+  serverPath = normalize(path);
+}
+
 /** Current path, e.g. '/' or '/listings'. */
 export function useRoute(): string {
-  const [path, setPath] = useState(() => normalize(window.location.pathname));
+  const [path, setPath] = useState(() =>
+    typeof window === 'undefined' ? serverPath : normalize(window.location.pathname),
+  );
 
   useEffect(() => {
     const onChange = () => setPath(normalize(window.location.pathname));

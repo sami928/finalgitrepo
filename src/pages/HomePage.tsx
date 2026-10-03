@@ -16,6 +16,8 @@ import { site } from '@/config/site';
 import { navigate } from '@/lib/router';
 import { testimonials } from '@/data/testimonials';
 import { images } from '@/config/images';
+import { AppLink } from '@/components/AppLink';
+import { catalog, guideUrl, RESOURCES_PATH } from '@/data/guides/catalog';
 
 const heroImg = images.homeHero;
 const agentPhoto = images.homePortrait;
@@ -48,6 +50,22 @@ const services = [
     desc: 'Patient, jargon-free guidance from pre-approval to keys — so you never feel rushed.',
   },
 ];
+
+/**
+ * Guides linked from the home page. Links from the home page tell search
+ * engines these pages matter, and give visitors a way into them.
+ */
+const featuredGuideSlugs = [
+  'relocating-to-portland',
+  'southwest-portland-at-a-glance',
+  'multnomah-village',
+  'forest-heights',
+  'lake-oswego',
+  'west-linn',
+];
+const featuredGuides = featuredGuideSlugs
+  .map((slug) => catalog.find((g) => g.slug === slug))
+  .filter((g): g is (typeof catalog)[number] => Boolean(g));
 
 export function HomePage() {
   return (
@@ -239,6 +257,45 @@ interaction.
           </div>
         </div>
       </section>
+
+      {/* Neighborhood guides */}
+      {site.resourcesEnabled && featuredGuides.length > 0 && (
+        <section className="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-28">
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-600">
+              Neighborhood guides
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold text-ink-900 sm:text-4xl">
+              Portland, Lake Oswego and West Linn, street by street
+            </h2>
+          </Reveal>
+
+          <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredGuides.map((g, i) => (
+              <li key={g.slug}>
+                <Reveal delay={i * 90} className="h-full">
+                  <AppLink
+                    to={guideUrl(g)}
+                    className="block h-full rounded-2xl border border-ink-100 bg-white p-6 transition-shadow hover:shadow-md"
+                  >
+                    <h3 className="text-lg font-semibold text-ink-900">{g.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-ink-600">{g.summary}</p>
+                  </AppLink>
+                </Reveal>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-10 text-center">
+            <AppLink
+              to={RESOURCES_PATH}
+              className="text-sm font-semibold text-gold-600 underline-offset-4 hover:underline"
+            >
+              See all neighborhood and relocation guides
+            </AppLink>
+          </div>
+        </section>
+      )}
 
       {/* Featured testimonials */}
       {site.testimonialsEnabled && (
