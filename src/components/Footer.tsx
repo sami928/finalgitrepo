@@ -1,5 +1,5 @@
 import { type MouseEvent } from 'react';
-import { Instagram, Facebook, Linkedin, Phone, Mail, MapPin } from 'lucide-react';
+import { Instagram, Linkedin, Phone, Mail, MapPin } from 'lucide-react';
 import { Logo } from './Logo';
 import { GoogleIcon } from './GoogleIcon';
 import { ProfileIcon, activeProfiles } from './ProfileLinks';
@@ -45,7 +45,6 @@ export function Footer() {
             <div className="mt-5 flex gap-3">
               {[
                 { Icon: Instagram, href: site.social.instagram, label: 'Instagram' },
-                { Icon: Facebook, href: site.social.facebook, label: 'Facebook' },
                 { Icon: Linkedin, href: site.social.linkedin, label: 'LinkedIn' },
                 { Icon: GoogleIcon, href: site.social.googleBusiness, label: 'Google Business Profile' },
                 // Listing-site profiles (Zillow, Homes.com, Realtor.com…) set in site.ts.

@@ -35,7 +35,6 @@ export const site = {
   ] as { id: 'zillow' | 'homes' | 'realtor' | 'redfin' | 'ev'; label: string; url: string }[],
   social: {
     instagram: 'https://instagram.com/_homesbycatherine_',
-    facebook: 'https://facebook.com',
     linkedin: 'https://www.linkedin.com/in/catherine-redmond-40321036',
     // Google Business Profile (the "Homes By Catherine" search panel).
     // Linked from the header and footer; leave empty to hide those links.
