@@ -135,8 +135,7 @@ export function Footer() {
               Ready to move?
             </h4>
             <p className="mt-4 text-sm text-ink-600">
-              Book a free, no-obligation consultation. Tell me what you're
-              looking for and I'll build a plan.
+              Book a free, no-obligation consultation.
             </p>
             <a
               href="/contact"
