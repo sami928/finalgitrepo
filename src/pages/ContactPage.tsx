@@ -2,6 +2,7 @@ import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin } from 'lucide-react
 import { PageHero } from '@/components/PageHero';
 import { Reveal } from '@/components/Reveal';
 import { LeadForm } from '@/components/LeadForm';
+import { ProfileLinks } from '@/components/ProfileLinks';
 import { site } from '@/config/site';
 import { images } from '@/config/images';
 
@@ -104,6 +105,8 @@ export function ContactPage() {
                   ))}
                 </div>
               </div>
+
+              <ProfileLinks />
             </div>
           </Reveal>
 

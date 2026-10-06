@@ -22,6 +22,17 @@ export const site = {
   // gives you (or the widget <div>) into the RealScoutWidget component.
   realscoutNote:
     'Paste your RealScout embed code in src/components/RealScoutWidget.tsx to activate live MLS search here.',
+  // Agent profiles on listing sites. Each one appears in the footer and on the
+  // Contact page ("Find Catherine on") once its url is filled in, and is added
+  // to the structured data Google reads. Only add profiles that show her
+  // current brokerage (Engel & Völkers) — Oregon advertising rules expect it.
+  profiles: [
+    { id: 'zillow', label: 'Zillow', url: '' },
+    { id: 'homes', label: 'Homes.com', url: 'https://www.homes.com/real-estate-agents/catherine-redmond/gpwxskz/' },
+    { id: 'realtor', label: 'Realtor.com', url: 'https://www.realtor.com/realestateagents/587400ce84f63700118a8acb' },
+    { id: 'redfin', label: 'Redfin', url: '' },
+    { id: 'ev', label: 'Engel & Völkers', url: '' },
+  ] as { id: 'zillow' | 'homes' | 'realtor' | 'redfin' | 'ev'; label: string; url: string }[],
   social: {
     instagram: 'https://instagram.com/_homesbycatherine_',
     facebook: 'https://facebook.com',

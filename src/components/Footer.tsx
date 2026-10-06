@@ -2,6 +2,7 @@ import { type MouseEvent } from 'react';
 import { Instagram, Facebook, Linkedin, Phone, Mail, MapPin } from 'lucide-react';
 import { Logo } from './Logo';
 import { GoogleIcon } from './GoogleIcon';
+import { ProfileIcon, activeProfiles } from './ProfileLinks';
 import { site } from '@/config/site';
 import { navigate } from '@/lib/router';
 
@@ -47,6 +48,12 @@ export function Footer() {
                 { Icon: Facebook, href: site.social.facebook, label: 'Facebook' },
                 { Icon: Linkedin, href: site.social.linkedin, label: 'LinkedIn' },
                 { Icon: GoogleIcon, href: site.social.googleBusiness, label: 'Google Business Profile' },
+                // Listing-site profiles (Zillow, Homes.com, Realtor.com…) set in site.ts.
+                ...activeProfiles().map((p) => ({
+                  Icon: ({ className }: { className?: string }) => <ProfileIcon id={p.id} className={className} />,
+                  href: p.url,
+                  label: `${site.agentName} on ${p.label}`,
+                })),
               ].filter(({ href }) => href).map(({ Icon, href, label }) => (
                 <a
                   key={label}
