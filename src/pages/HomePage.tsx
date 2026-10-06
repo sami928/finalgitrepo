@@ -154,7 +154,7 @@ export function HomePage() {
           <span className="hidden h-4 w-px bg-ink-200 sm:block" />
           <span>Equal Housing Opportunity</span>
           <span className="hidden h-4 w-px bg-ink-200 sm:block" />
-          <span>{site.area} local realtor since 2014</span>
+          <span>Oregon Realtor® Since 2014</span>
         </div>
       </section>
 
