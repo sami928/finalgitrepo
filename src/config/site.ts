@@ -28,8 +28,10 @@ export const site = {
   // current brokerage (Engel & Völkers) — Oregon advertising rules expect it.
   profiles: [
     { id: 'zillow', label: 'Zillow', url: '' },
-    { id: 'homes', label: 'Homes.com', url: 'https://www.homes.com/real-estate-agents/catherine-redmond/gpwxskz/' },
-    { id: 'realtor', label: 'Realtor.com', url: 'https://www.realtor.com/realestateagents/587400ce84f63700118a8acb' },
+    // On hold until the profile shows Engel & Völkers: https://www.homes.com/real-estate-agents/catherine-redmond/gpwxskz/
+    { id: 'homes', label: 'Homes.com', url: '' },
+    // On hold until the profile shows Engel & Völkers: https://www.realtor.com/realestateagents/587400ce84f63700118a8acb
+    { id: 'realtor', label: 'Realtor.com', url: '' },
     { id: 'redfin', label: 'Redfin', url: '' },
     { id: 'ev', label: 'Engel & Völkers', url: '' },
   ] as { id: 'zillow' | 'homes' | 'realtor' | 'redfin' | 'ev'; label: string; url: string }[],
