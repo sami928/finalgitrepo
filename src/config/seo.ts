@@ -29,8 +29,6 @@ import { site } from './site';
  * ------------------------------------------------------------------
  */
 
-import { site } from './site';
-
 export const seo = {
   /** TODO: Replace with your production domain — used for canonical URLs, sitemap, OG, JSON-LD. */
   siteUrl: 'https://homesbycatherine.io',
