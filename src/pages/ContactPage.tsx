@@ -1,7 +1,8 @@
-import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, Linkedin } from 'lucide-react';
 import { PageHero } from '@/components/PageHero';
 import { Reveal } from '@/components/Reveal';
 import { LeadForm } from '@/components/LeadForm';
+import { ProfileLinks } from '@/components/ProfileLinks';
 import { site } from '@/config/site';
 import { images } from '@/config/images';
 
@@ -88,7 +89,6 @@ export function ContactPage() {
                 <div className="mt-4 flex gap-3">
                   {[
                     { Icon: Instagram, href: site.social.instagram, label: 'Instagram' },
-                    { Icon: Facebook, href: site.social.facebook, label: 'Facebook' },
                     { Icon: Linkedin, href: site.social.linkedin, label: 'LinkedIn' },
                   ].map(({ Icon, href, label }) => (
                     <a
@@ -104,6 +104,8 @@ export function ContactPage() {
                   ))}
                 </div>
               </div>
+
+              <ProfileLinks />
             </div>
           </Reveal>
 

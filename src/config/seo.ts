@@ -1,3 +1,5 @@
+import { site } from './site';
+
 /**
  * Central SEO configuration.
  *
@@ -69,6 +71,8 @@ export const seo = {
       'https://instagram.com/_homesbycatherine_',
       'https://www.evrealestate.com/en/shops/portlandrosecity',
       site.social.linkedin,
+      // Listing-site profiles set in src/config/site.ts.
+      ...site.profiles.filter((p) => p.url).map((p) => p.url),
     ],
   },
 };

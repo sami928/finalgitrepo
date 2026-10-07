@@ -154,7 +154,7 @@ export function HomePage() {
           <span className="hidden h-4 w-px bg-ink-200 sm:block" />
           <span>Equal Housing Opportunity</span>
           <span className="hidden h-4 w-px bg-ink-200 sm:block" />
-          <span>{site.area} local realtor since 2014</span>
+          <span>Oregon Realtor® Since 2014</span>
         </div>
       </section>
 
@@ -386,9 +386,8 @@ interaction.
                   Let's find your next home
                 </h2>
                 <p className="mt-4 text-lg leading-relaxed text-ink-200">
-                  Tell me what you're looking for. Within 24 hours you'll get a
-                  personalized plan, saved searches, and a real conversation —
-                  not a sales pitch.
+                  For local guidance, market information, or first-time buyer prep,
+                  I'm happy to help.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <a href={site.phoneHref}>
